@@ -5,7 +5,6 @@ set rtp^=/usr/share/vim/vimfiles/
 set runtimepath+=$GOROOT/misc/vim
 syntax on
 set number
-set relativenumber
 filetype plugin indent on
 set hlsearch
 set incsearch
@@ -31,7 +30,7 @@ set splitbelow
 " Make enter finish the completion popup menu
 nnoremap gp `[v`] 
 set backspace=indent,eol,start
-colorscheme hybrid
+colorscheme codedark
 
 " Move lines
 nnoremap <C-Down> :m .+1<CR>==
