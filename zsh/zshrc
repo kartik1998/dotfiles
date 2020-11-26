@@ -1,0 +1,30 @@
+source ~/.antigen/antigen.zsh
+
+antigen use oh-my-zsh
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen bundles <<EOBUNDLES
+	git
+	wd
+	per-directory-history
+	dirhistory
+	tmux
+	git-extras
+	command-not-found
+	rails
+	fancy-ctrl-z
+EOBUNDLES
+
+antigen bundle kennethreitz/autoenv
+
+antigen theme ys
+
+antigen apply
+
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+setopt inc_append_history
+setopt HIST_IGNORE_DUPS
+
+source ~/.zshrc.alias
