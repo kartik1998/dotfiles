@@ -31,7 +31,7 @@ set splitbelow
 " Make enter finish the completion popup menu
 nnoremap gp `[v`] 
 set backspace=indent,eol,start
-colorscheme yowish
+colorscheme hybrid
 
 " Move lines
 nnoremap <C-Down> :m .+1<CR>==
