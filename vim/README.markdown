@@ -16,6 +16,7 @@ Leader is \
 * Leader-q: disable highlights
 * Control-ww: Move between windows
 * Control-w[Arrow/hjkl]: Move between windows directionally
+* Control-m: To open terminal ( ZSH Terminal opened. Ensure zsh is installed. Else Change it to bash in init.vim )
 
 ### Motion
 * Leader-Leader-s[b]: Search for character [b] in both directions
