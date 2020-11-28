@@ -3,7 +3,7 @@
 2. Install zsh
 2. clone repository
 3. To setup vim run ``bash vim_setup.sh``
-4. run install.sh : `bash install.sh`
+4. For complete setup use run install.sh : `bash install.sh`. (Try not to use)
 
 # VIM config
 The vim config is made for working both in vim and neovim.
