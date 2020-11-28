@@ -1,0 +1,11 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "go",
+    "python",
+    "markdown",
+    "json",
+    "jsonc",
+    "java"
+  ],
+  "eslint.autoFixOnSave": true
+}
