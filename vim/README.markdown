@@ -63,9 +63,3 @@ b1,b2: surrounding types. eg. ' " [] () {}
 
 ### Window Selection (choosewin)
 * Leader-w: Select window from open windows
-
-
-### GIT Workflows
-
-* Leader-M: open ViMagit (:Magit)
-* :Gblame : Open Git-blame for current file (fugitive)

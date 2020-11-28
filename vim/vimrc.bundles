@@ -20,9 +20,8 @@ Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-sleuth'
 Plug 'slashmili/alchemist.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
 Plug 'benjie/local-npm-bin.vim', { 'for': ['javascript']}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 if !has('nvim')
 	Plug 'vim-scripts/AutoComplPop'
@@ -51,7 +50,6 @@ Plug 'machakann/vim-highlightedyank'
 "VCS
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
-Plug 'jreybert/vimagit'
 
 "Color Schemes
 Plug 'chriskempson/base16-vim'

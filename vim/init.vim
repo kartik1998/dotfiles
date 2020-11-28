@@ -186,8 +186,6 @@ if has('cscope')
   command -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
 endif
 
-let g:deoplete#enable_at_startup = 1
-
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
