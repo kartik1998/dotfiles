@@ -140,6 +140,20 @@ let g:signify_update_on_focusgained = 0
 "run Neomake on every document save
 autocmd! BufWritePost * Neomake
 
+" open new split panes to right and below
+set splitright
+set splitbelow
+" turn terminal to normal mode with escape
+tnoremap <Esc> <C-\><C-n>
+" start terminal in insert mode
+au BufEnter * if &buftype == 'terminal' | :startinsert | endif
+" open terminal on ctrl+n
+function! OpenTerminal()
+  split term://zsh
+  resize 11
+endfunction
+nnoremap <c-m> :call OpenTerminal()<CR>
+
 "Tagbar config for Go
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
