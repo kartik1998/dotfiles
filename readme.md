@@ -1,3 +1,5 @@
+<p align="center"> <img src = "https://cdn-media-1.freecodecamp.org/images/1*RO3AhbppPUFJBZwt3gUW-A.png" alt="dotfiles"> </p>
+
 # Setup Instructions
 1. Install git
 2. Install zsh
