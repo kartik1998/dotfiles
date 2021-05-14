@@ -15,3 +15,4 @@ sudo git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/p
 
 sed -i '/ZSH_THEME="robbyrussell"/c\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc
 
+source ~/.zshrc
