@@ -1,5 +1,5 @@
-sudo apt-get update # ubdate
-sudo apt-get install zsh # install zsh
+sudo apt update # ubdate
+sudo apt install zsh # install zsh
 
 
 ### Oh-my-zsh ###
