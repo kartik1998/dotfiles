@@ -1,0 +1,7 @@
+set number
+set mouse=a
+set autoindent
+set background=dark
+syntax on
+colorscheme hybrid
+filetype indent plugin on
