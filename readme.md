@@ -1,4 +1,4 @@
-<p align="center"> <img src = "https://cdn-media-1.freecodecamp.org/images/1*RO3AhbppPUFJBZwt3gUW-A.png" alt="dotfiles"> </p>
+<p align="center"> <img src = "https://cdn-media-1.freecodecamp.org/images/1*RO3AhbppPUFJBZwt3gUW-A.png" alt="dotfiles" width=150 height=100> </p>
 
 # Setup Instructions
 1. Install git
