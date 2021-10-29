@@ -13,6 +13,7 @@ set smarttab
 set autoindent
 set autoread
 set tabstop=4 softtabstop=4
+set nowrap
 set shiftwidth=4
 set nohlsearch "remove highlight from text after search 
 set hidden "navigate away from buffers without saving them, takes a little bit more RAM but basically peanuts compared to VS code
