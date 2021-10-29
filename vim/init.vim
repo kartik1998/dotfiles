@@ -12,8 +12,10 @@ set magic
 set smarttab
 set autoindent
 set autoread
-set tabstop=4
+set tabstop=4 softtabstop=4
 set shiftwidth=4
+set nohlsearch "remove highlight from text after search 
+
 map <Esc>[B <Down>]
 
 set undofile
