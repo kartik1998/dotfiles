@@ -3,5 +3,15 @@
     {
         "key": "cmd+m",
         "command": "extension.generateGettersAndSetters"
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
     }
 ]
