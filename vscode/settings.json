@@ -20,47 +20,11 @@
         {
         "before": ["<tab>"],
         "commands": ["workbench.action.nextEditor"]
-        },
-        {
-        "before": ["<S-tab>"],
-        "commands": ["workbench.action.previousEditor"]
-        },
-    ],
-    "vim.insertModeKeyBindings": [
-        {
-        "before": ["j", "k"],
-        "after": ["<Esc>"]
-        },
-        {
-        "before": ["<C-j>"],
-        "after": ["<Esc>"]
-        },
-        {
-        "before": ["<C-k>"],
-        "after": ["<Esc>"]
         }
-    ],
-    "vim.visualModeKeyBindings": [
-        {
-        "before": [">"],
-        "after": [">", "g", "v"]
-        },
-        {
-        "before": ["<"],
-        "after": ["<", "g", "v"]
-        },
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-        "before": ["<leader>", "d"],
-        "after": ["d", "d"]
-        },
-        {
-        "before": ["<C-n>"],
-        "commands": [":nohl"]
-        },
-        {
-        "before": ["<leader>", "w"],
+        "before": ["<leader>", "v"],
         "commands": ["workbench.action.splitEditor"]
         },
         {
@@ -70,10 +34,6 @@
         {
         "before": ["<leader>", "f"],
         "commands": ["revealInExplorer"]
-        },
-        {
-        "before": ["<leader>", "h"],
-        "after": ["_"]
         },
         {
         "before": ["<leader>", "l"],
