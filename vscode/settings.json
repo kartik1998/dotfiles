@@ -13,7 +13,7 @@
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.nohlsearch": true,
-    "vim.sneak": true,
+    "vim.sneak": false,
     "vim.relativenumber": true,
     "vim.easymotionMarkerooundColor": "#020202",
     "vim.normalModeKeyBindings": [
@@ -40,7 +40,6 @@
         "after": ["$"]
         }
     ],
-
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-f>": false,
