@@ -70,7 +70,7 @@ set foldmethod=indent
 set nofoldenable    "Stop from folding at load
 
 if has('mouse')
-  set mouse=v
+  set mouse=a
 endif
 
 "Buffer Mappings
