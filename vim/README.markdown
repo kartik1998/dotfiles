@@ -9,7 +9,7 @@ Although reading through init.vim might be enough, some are listed for completen
 Leader is " "
 
 ### General
-* <leader> e: NERDTreeToggle
+* Leader-e: NERDTreeToggle
 * F9: TagbarToggle
 * gp: visually select last used block
 * Control-Up/Down: Move lines/block up/down
