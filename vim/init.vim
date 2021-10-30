@@ -23,7 +23,8 @@ map <Esc>[B <Down>]
 set undofile
 set undodir=~/.vim/undodir
 
-map <F8> :NERDTreeToggle<cr>
+let mapleader=" "
+map <leader>e :NERDTreeToggle<cr>
 map <F9> :TagbarToggle<cr>
 " let g:NERDTreeDirArrows=0
 

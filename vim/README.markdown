@@ -6,7 +6,7 @@ Although neovim is targetted for primary support.
 ## Shortcuts
 Although reading through init.vim might be enough, some are listed for completeness
 
-Leader is \
+Leader is " "
 
 ### General
 * F8: NERDTreeToggle
