@@ -1,1 +1,1 @@
-* https://vimforvscode.com/enable-key-repeat-vim (directions for faster keyboard)
+* **Directions for faster keyboard**: [link](https://vimforvscode.com/enable-key-repeat-vim)
