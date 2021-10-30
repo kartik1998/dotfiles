@@ -1,7 +1,32 @@
-set number
-set mouse=a
-set autoindent
-set background=dark
 syntax on
-colorscheme hybrid
-filetype indent plugin on
+set smarttab
+set shiftwidth=4
+set expandtab
+set smartindent
+set exrc "only useful for custom execution of vim for specific projects with their own rc's
+set guicursor= "use block editor cursor
+set relativenumber "relative numbered lines
+set number "set numbered lines
+set nohlsearch "remove highlight from text after search
+set hidden "navigate away from buffers without saving them, takes a little bit more RAM but basically peanuts compared to VS code
+set noerrorbells "remove irritating errorbells
+set nowrap "remove wrapping of text for long lines
+set autoread "read changes in vim done from other editor while coding
+
+"backups in undodir
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+
+set incsearch "highlight as you search
+set scrolloff=10 "start scrolling down / up when you are 10 lines away
+set noshowmode
+set signcolumn=yes "column on the left hand side for linting errors, git etc.
+set cmdheight=2 "Give more space for displaying messages
+
+colorscheme hybrid "colorscheme
+
+" Having longer udpatetime (default is 4000 ms = 4s) leads to noticable
+" delays and poor user experience.
+set updatetime=50
