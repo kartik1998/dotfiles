@@ -15,10 +15,10 @@ Although neovim is targetted for primary support.
 ## Shortcuts
 Although reading through init.vim might be enough, some are listed for completeness
 
-Leader is \
+Leader is " "
 
 ### General
-* F8: NERDTreeToggle
+* <Leader>e: NERDTreeToggle
 * F9: TagbarToggle
 * gp: visually select last used block
 * Control-Up/Down: Move lines/block up/down
