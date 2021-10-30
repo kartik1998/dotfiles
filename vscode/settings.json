@@ -51,7 +51,7 @@
         // Cut
         "<C-x>": false,
         // Paste
-        "<C-v>": false,
+        "<C-v>": true,
         "<C-z>": false,
         "<C-y>": false
     },
