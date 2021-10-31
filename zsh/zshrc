@@ -25,14 +25,16 @@ export NVM_DIR="$HOME/.nvm"
 ## -- kafka path -- ##
 export PATH="$PATH:/Users/kartik/kafka/bin" 
 ## -- kafka path -- ##
-alias desktop="cd ~/Desktop"
-alias downloads="cd ~/Downloads"
+
 # alias jrun="bash ~/zsh_apac/java_run.sh"
 alias vim="nvim"
 # alias lsf="bash ~/zsh_apac/readlink.sh"
 alias lint="prettier --write"
 alias sess="tmux -CC new -s kartik"
-
+alias gblista="git for-each-ref --sort=-committerdate refs/heads/ refs/remotes --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
+alias gblist="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
+alias gb="gblist"
+alias gba="gblista"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
