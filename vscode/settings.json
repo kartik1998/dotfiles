@@ -18,9 +18,13 @@
     "vim.easymotionMarkerooundColor": "#020202",
     "vim.normalModeKeyBindings": [
         {
-        "before": ["<tab>"],
+        "before": ["<leader>", "["],
+        "commands": ["workbench.action.previousEditor"]
+        },
+        {
+        "before": ["<leader>", "]"],
         "commands": ["workbench.action.nextEditor"]
-        }
+        },
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
