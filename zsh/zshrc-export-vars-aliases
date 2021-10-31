@@ -1,0 +1,13 @@
+function clean_up_export_vars {
+  unset $(awk -F'[ =]+' '/^export/{print $2}' $(ls -d -1 ~/export_vars/**/*))
+}
+function print_export_vars {
+  file=$1
+  for i in $(awk -F'[ =]+' '/^export/{print $2}' $(ls -d -1 ~/export_vars/$file))
+  do
+    echo $(env | grep $i)
+  done
+}
+
+alias env-dev='clean_up_export_vars && source ~/export_vars/export_dev_vars.sh; print_export_vars export_dev_vars.sh'
+alias env-stag='clean_up_export_vars && source ~/export_vars/export_stag_vars.sh; print_export_vars export_stag_vars.sh'
