@@ -1,0 +1,3 @@
+[submodule "dev-automation"]
+	path = dev-automation
+	url = git@github.com:kartik1998/dev-automation.git
