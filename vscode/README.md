@@ -10,6 +10,7 @@ Going through the keybindings and settings json should be enough but adding some
 * `<leader> e` toggle sidebar visibility
 
 * Toggle terminal: `cmd w`
+* Remap capslock to control: [link](https://dev.to/andy4thehuynh/vim-tip-remap-caps-lock-to-control-3ih8)
 
 * Ensure that your keyboard settings are at fast (system preferences)
 
