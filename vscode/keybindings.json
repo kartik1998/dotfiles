@@ -1,16 +1,16 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-    {
-        "key": "cmd+m",
-        "command": "extension.generateGettersAndSetters"
-    },
-    {
-        "key": "cmd+w",
-        "command": "workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
-    },
-    {
-        "key": "ctrl+s",
-        "command": "workbench.action.files.save"
-    }
+  {
+    "key": "cmd+m",
+    "command": "extension.generateGettersAndSetters"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "workbench.action.files.save"
+  }
 ]
