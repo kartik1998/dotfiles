@@ -87,10 +87,6 @@ map <leader>q :noh<CR>
 "Map CtrlPTag
 map <C-y> :CtrlPTag<CR>
 
-" Error mnemonic (Neomake uses location list)
-nnoremap ]e :lnext<CR>
-nnoremap [e :lprevious<CR>
-
 "Functions
 function Opaq()
   set t_Co=256
@@ -141,9 +137,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*,*/bower_components
 
 "signify: updte git markers when vim gains focus
 let g:signify_update_on_focusgained = 0
-
-"run Neomake on every document save
-autocmd! BufWritePost * Neomake
 
 " open new split panes to right and below
 set splitright
@@ -216,17 +209,6 @@ let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#enabled = 1 
 let g:airline#extensions#neomake#enabled = 0
-
-let g:neomake_elixir_mix_maker = {
-      \ 'exe' : 'mix',
-      \ 'args': ['compile', '--warnings-as-errors'],
-      \ 'cwd': getcwd(),
-      \ 'errorformat':
-        \ '** %s %f:%l: %m,' .
-        \ '%f:%l: warning: %m'
-      \ }
-
-let g:neomake_elixir_enabled_makers = ['mix']
 
 " Append modeline after last line in buffer.
 " Use substitute() instead of printf() to handle '%%s' modeline in LaTeX
