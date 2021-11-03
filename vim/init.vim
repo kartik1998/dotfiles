@@ -211,7 +211,10 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " Trigger a highlight only when pressing f and F.
 let g:qs_highlight_on_keys = ['f', 'F']
 
-let g:airline#extensions#tabline#enabled = 1 "enable tabline
+" Tabline settings
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#enabled = 1 
 let g:airline#extensions#neomake#enabled = 0
 
 let g:neomake_elixir_mix_maker = {
