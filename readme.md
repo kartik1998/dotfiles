@@ -79,3 +79,6 @@ b1,b2: surrounding types. eg. ' " [] () {}
 * Leader-M: open ViMagit (:Magit)
 * :Gblame : Open Git-blame for current file (fugitive)
 
+### Vim references
+* [daniel miessler](https://danielmiessler.com/study/vim/)
+
