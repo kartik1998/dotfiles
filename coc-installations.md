@@ -2,3 +2,4 @@
 - coc-eslint
 - coc-prettier
 - coc-tsserver
+- coc-tabnine
