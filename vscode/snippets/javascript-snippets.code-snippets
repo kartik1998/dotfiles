@@ -1,0 +1,14 @@
+{
+  "console log": {
+    "prefix": ["cl"],
+    "body": ["console.log()"],
+    "description": "console log"
+  },
+  "wrap with console log": {
+    "prefix": ["wrap"],
+    "body": [
+      "console.log('----------------------------------')\nconsole.log('----------------------------------')"
+    ],
+    "description": "wrap with console log"
+  }
+}
