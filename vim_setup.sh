@@ -18,8 +18,7 @@ rm -rf .vim*
 
 # Setup neovim 
 mkdir -p $HOME/.config
-cp -r ./vim $HOME/.config/
-mv $HOME/.config/vim $HOME/.config/nvim
+ln -s $PWD/vim $HOME/.config/nvim
 
 # Install neovim plugins
 nvim +PlugInstall
