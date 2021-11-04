@@ -5,6 +5,7 @@ set rtp^=/usr/share/vim/vimfiles/
 set runtimepath+=$GOROOT/misc/vim
 syntax on
 set number
+set relativenumber
 filetype plugin indent on
 set hlsearch
 set incsearch
