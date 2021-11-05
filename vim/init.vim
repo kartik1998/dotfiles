@@ -45,8 +45,8 @@ nnoremap <C-w> <Esc><C-w>w<cr>
 nnoremap gp `[v`] 
 set backspace=indent,eol,start
 
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+let g:hybrid_custom_term_colors = 1
+colorscheme hybrid
 set background=dark
 
 " Move lines
