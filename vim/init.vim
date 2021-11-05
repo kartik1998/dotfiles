@@ -44,7 +44,7 @@ nnoremap <C-w> <Esc><C-w>w<cr>
 " Make enter finish the completion popup menu
 nnoremap gp `[v`] 
 set backspace=indent,eol,start
-colorscheme codedark
+colorscheme gruvbox
 
 " Move lines
 nnoremap <C-Down> :m .+1<CR>==
