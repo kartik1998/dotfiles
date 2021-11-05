@@ -81,4 +81,5 @@ b1,b2: surrounding types. eg. ' " [] () {}
 
 ### Vim references
 * [daniel miessler](https://danielmiessler.com/study/vim/)
+* [key bindings list](https://hea-www.harvard.edu/~fine/Tech/vi.html)
 
