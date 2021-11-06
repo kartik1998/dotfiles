@@ -39,7 +39,7 @@ inoremap <C-s> <Esc>:w<cr>i
 nnoremap <C-s> <Esc>:w<cr>
 
 " map <ctrl> ww to <ctrl> w
-nnoremap <C-w> <Esc><C-w>w<cr>
+nnoremap <C-w> <C-w>w<cr>
 
 " Make enter finish the completion popup menu
 nnoremap gp `[v`] 
