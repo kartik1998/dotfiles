@@ -38,9 +38,6 @@ inoremap <C-s> <Esc>:w<cr>i
 " saves the buffer in insert mode
 nnoremap <C-s> <Esc>:w<cr>
 
-" map <ctrl> ww to <ctrl> w
-nnoremap <C-w> <C-w>w<cr>
-
 " Make enter finish the completion popup menu
 nnoremap gp `[v`] 
 set backspace=indent,eol,start
