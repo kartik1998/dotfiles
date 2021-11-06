@@ -43,7 +43,7 @@ nnoremap gp `[v`]
 set backspace=indent,eol,start
 
 let g:hybrid_custom_term_colors = 1
-colorscheme hybrid
+colorscheme codedark
 set background=dark
 
 " Move lines
