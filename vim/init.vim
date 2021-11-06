@@ -42,7 +42,7 @@ nnoremap <C-s> <Esc>:w<cr>
 nnoremap gp `[v`] 
 set backspace=indent,eol,start
 
-let g:hybrid_custom_term_colors = 1
+let g:codedark_conservative = 1
 colorscheme codedark
 set background=dark
 
