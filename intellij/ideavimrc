@@ -1,0 +1,23 @@
+syntax on
+set smarttab
+set shiftwidth=4
+set expandtab
+set smartindent
+set exrc "only useful for custom execution of vim for specific projects with their own rc's
+set relativenumber "relative numbered lines
+set number "set numbered lines
+set nohlsearch "remove highlight from text after search
+set hidden "navigate away from buffers without saving them, takes a little bit more RAM but basically peanuts compared to VS code
+set noerrorbells "remove irritating errorbells
+set nowrap "remove wrapping of text for long lines
+set autoread "read changes in vim done from other editor while coding
+set incsearch "highlight as you search
+set scrolloff=10 "start scrolling down / up when you are 10 lines away
+
+" saves the buffer in insert mode
+inoremap <C-s> <Esc>:w<cr>i
+" saves the buffer in insert mode
+nnoremap <C-s> <Esc>:w<cr>
+
+
+
