@@ -43,7 +43,8 @@ nnoremap gp `[v`]
 set backspace=indent,eol,start
 
 " let g:codedark_conservative = 1
-colorscheme codedark
+let g:vscode_style = "dark"
+colorscheme vscode
 set background=dark
 
 " Move lines

@@ -54,6 +54,7 @@ Plug 'mhinz/vim-signify'
 Plug 'chriskempson/base16-vim'
 Plug 'KabbAmine/yowish.vim'
 Plug 'freeo/vim-kalisi'
+Plug 'Mofiqul/vscode.nvim'
 
 call plug#end()
 
