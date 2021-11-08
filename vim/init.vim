@@ -37,6 +37,8 @@ set splitbelow
 inoremap <C-s> <Esc>:w<cr>i
 " saves the buffer in insert mode
 nnoremap <C-s> <Esc>:w<cr>
+" yanks to clipboard in visual mode
+vnoremap <C-c> "+y
 
 " Make enter finish the completion popup menu
 nnoremap gp `[v`] 
