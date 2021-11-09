@@ -17,7 +17,6 @@ set tabstop=4 softtabstop=4
 set nowrap
 set scrolloff=10 "start scrolling down / up when you are 10 lines away
 set shiftwidth=4
-set guicursor=i:block
 set nohlsearch "remove highlight from text after search 
 set hidden "navigate away from buffers without saving them, takes a little bit more RAM but basically peanuts compared to VS code
 map <Esc>[B <Down>]
