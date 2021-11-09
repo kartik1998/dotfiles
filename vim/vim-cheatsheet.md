@@ -36,8 +36,8 @@
 - Use `x` to delete and `number x` to delete number of characters
 - Use `~` to change casing of a letter use `number ~` to change mode than one casings.
 - Use `.` to repeat previous operation
-- <ctrl-o> consider it as going back in a browser
-- <ctrl-i> consider it as going ahead in a browser
+- `<ctrl-o>` consider it as going back in a browser
+- `<ctrl-i>` consider it as going ahead in a browser
 
 ## Visual Mode
 - Press `Shift v` This will allow you to select lines of code by going up and down. And you can copy, paste, delete them easily.
