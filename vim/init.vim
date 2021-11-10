@@ -162,7 +162,7 @@ function! OpenTerminal()
   split term://zsh
   resize 11
 endfunction
-nnoremap <Leader>t :call OpenTerminal()<CR>
+nnoremap <C-t> :call OpenTerminal()<CR>
 
 "Tagbar config for Go
 let g:tagbar_type_go = {
