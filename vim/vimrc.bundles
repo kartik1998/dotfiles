@@ -55,6 +55,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'KabbAmine/yowish.vim'
 Plug 'freeo/vim-kalisi'
 Plug 'Mofiqul/vscode.nvim'
+Plug 'kartik1998/simba.vim'
 
 call plug#end()
 
