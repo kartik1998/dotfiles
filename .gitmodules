@@ -1,3 +1,6 @@
 [submodule "dev-automation"]
 	path = dev-automation
 	url = git@github.com:kartik1998/dev-automation.git
+[submodule "simba.vim"]
+	path = simba.vim
+	url = git@github.com:kartik1998/simba.vim.git
