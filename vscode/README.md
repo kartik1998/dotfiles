@@ -2,6 +2,8 @@
 
 Going through the keybindings and settings json should be enough but adding some info here:
 
+* Enable key repeat with vscode: [stackoverflow first answer](https://stackoverflow.com/questions/39972335/how-do-i-press-and-hold-a-key-and-have-it-repeat-in-vscode)
+
 **leader** is `<spacebar>`
 
 - `<leader> [` previous editor
