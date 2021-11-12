@@ -45,7 +45,8 @@ nnoremap gp `[v`]
 set backspace=indent,eol,start
 
 " let g:codedark_conservative = 1
-let g:vscode_style = "dark"
+let g:gruvbox_contrast_dark = 'dark'
+let g:gruvbox_improved_warnings = 1
 colorscheme gruvbox
 set background=dark
 
