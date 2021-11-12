@@ -46,7 +46,7 @@ set backspace=indent,eol,start
 
 " let g:codedark_conservative = 1
 let g:vscode_style = "dark"
-colorscheme vscode
+colorscheme gruvbox
 set background=dark
 
 " Move lines
