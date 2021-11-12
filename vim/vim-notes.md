@@ -35,6 +35,7 @@
 - Use `f character` to go to character
 - Use `x` to delete and `number x` to delete number of characters
 - Use `~` to change casing of a letter use `number ~` to change mode than one casings.
+- `u`: lower case `U` upper case. eg: `guw` converts word to lowercase `gUw` converts word to uppercase
 - Use `.` to repeat previous operation
 - `<ctrl-o>` consider it as going back in a browser
 - `<ctrl-i>` consider it as going ahead in a browser
