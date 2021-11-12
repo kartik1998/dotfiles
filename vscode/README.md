@@ -4,6 +4,11 @@ Going through the keybindings and settings json should be enough but adding some
 
 * Enable key repeat with vscode: [stackoverflow first answer](https://stackoverflow.com/questions/39972335/how-do-i-press-and-hold-a-key-and-have-it-repeat-in-vscode)
 
+```shell
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+# then restart vscode 
+```
+
 **leader** is `<spacebar>`
 
 - `<leader> [` previous editor
