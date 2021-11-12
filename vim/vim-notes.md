@@ -39,6 +39,7 @@
 - Use `.` to repeat previous operation
 - `<ctrl-o>` consider it as going back in a browser
 - `<ctrl-i>` consider it as going ahead in a browser
+- `shift J` combines current and line below 
 
 ## Visual Mode
 - Press `Shift v` This will allow you to select lines of code by going up and down. And you can copy, paste, delete them easily.
