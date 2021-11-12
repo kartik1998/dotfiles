@@ -1,13 +1,14 @@
-- **Directions for faster keyboard**: [link](https://vimforvscode.com/enable-key-repeat-vim)
 
-Going through the keybindings and settings json should be enough but adding some info here:
+## VScode setup 
 
-* Enable key repeat with vscode: [stackoverflow reference](https://stackoverflow.com/questions/39972335/how-do-i-press-and-hold-a-key-and-have-it-repeat-in-vscode)
+* **Enable key repeat with vscode**: [stackoverflow reference](https://stackoverflow.com/questions/39972335/how-do-i-press-and-hold-a-key-and-have-it-repeat-in-vscode)
 
 ```shell
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 # then restart vscode 
 ```
+
+Going through the keybindings and settings json should be enough but adding some info here:
 
 **leader** is `<spacebar>`
 
