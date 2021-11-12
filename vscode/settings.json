@@ -5,7 +5,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.fontSize": 13,
+  "editor.fontSize": 12.7,
   "editor.formatOnSave": true,
   "vim.leader": "<space>",
   "vim.easymotion": true,
@@ -58,5 +58,6 @@
     "<C-z>": false,
     "<C-y>": false
   },
-  "editor.lineNumbers": "relative"
+  "editor.lineNumbers": "relative",
+  "editor.cursorBlinking": "solid"
 }
