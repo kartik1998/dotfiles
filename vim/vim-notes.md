@@ -41,7 +41,8 @@
 - `<ctrl-i>` consider it as going ahead in a browser
 - `shift J` combines current and line below 
 - `dap` delete a paragraph, `das` delete a sentence
-- `dip` delete inside paragraph, `dis` delete insite sentence
+- `dip` delete inside paragraph, `dis` delete inside sentence
+- `dit` delete inside tag, `das` delte a tag eg: `<p> paragraph </p>`
 
 ## Visual Mode
 - Press `Shift v` This will allow you to select lines of code by going up and down. And you can copy, paste, delete them easily.
