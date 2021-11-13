@@ -46,6 +46,9 @@
 
 ## Visual Mode
 - Press `Shift v` This will allow you to select lines of code by going up and down. And you can copy, paste, delete them easily.
+- > - Shift right
+- < - Shift left
+
 
 # Vim Notes from the Primeagen
 [The Primeagen](https://www.youtube.com/playlist?list=PLm323Lc7iSW9kRCuzB3J_h7vPjIDedplM)
