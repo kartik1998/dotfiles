@@ -6,57 +6,5 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
-"Syntax and autocomplete
-Plug 'sheerun/vim-polyglot'
-Plug 'scrooloose/nerdcommenter'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'tpope/vim-surround'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'tpope/vim-rails', {'for': 'ruby'}
-Plug 'burnettk/vim-angular', { 'for': ['javascript','html']}
-Plug 'mattn/emmet-vim', {'for': 'html'}
-Plug 'cohama/lexima.vim'
-Plug 'tpope/vim-sleuth'
-Plug 'slashmili/alchemist.vim'
-Plug 'benjie/local-npm-bin.vim', { 'for': ['javascript']}
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-if !has('nvim')
-	Plug 'vim-scripts/AutoComplPop'
-endif
-
-"Navigation
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'easymotion/vim-easymotion'
-Plug 'Yggdroot/indentLine'
-Plug 'terryma/vim-expand-region'
-Plug 'unblevable/quick-scope'
-Plug 'bogado/file-line'
-Plug 't9md/vim-choosewin'
-
-"Accessories
-Plug 'bling/vim-airline'
-Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle', 'TagbarOpen'] }
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'jeetsukumaran/vim-buffergator', { 'on': ['BuffergatorOpen', 'BuffergatorToggle'] }
-Plug 'janko-m/vim-test', { 'on': ['TestFile', 'TestLast', 'TestNearest', 'TestSuite', 'TestVisit'] }
-Plug 'rking/ag.vim', { 'on': 'Ag' }
-Plug 'itchyny/vim-cursorword'
-Plug 'machakann/vim-highlightedyank'
-
-"VCS
-Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'
-
-"Color Schemes
-Plug 'chriskempson/base16-vim'
-Plug 'KabbAmine/yowish.vim'
-Plug 'freeo/vim-kalisi'
-Plug 'Mofiqul/vscode.nvim'
-Plug 'kartik1998/simba.vim'
-
 call plug#end()
 
-" vim: set ts=4 sw=2 et :
