@@ -19,6 +19,9 @@ set scrolloff=10 "start scrolling down / up when you are 10 lines away
 set shiftwidth=4
 set nohlsearch "remove highlight from text after search 
 set hidden "navigate away from buffers without saving them, takes a little bit more RAM but basically peanuts compared to VS code
+set ignorecase "ignore case sensitivity while searching
+set smartcase 
+
 map <Esc>[B <Down>]
 
 set undofile
