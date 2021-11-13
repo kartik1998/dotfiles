@@ -61,7 +61,7 @@ let g:lightline = {
       \             [ 'readonly', 'filename', 'modified', 'helloworld' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'gitbranch#name'
+      \   'helloworld': 'gitbranch#name'
       \ },
       \ }
 
