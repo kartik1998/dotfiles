@@ -75,3 +75,8 @@ let g:neoterm_autoinsert = 1
 let g:neoterm_autoscroll = 1
 let g:neoterm_term_per_tab = 1
 nnoremap <C-t> :Ttoggle<CR>
+
+" sbdchd/neoformat
+nnoremap <leader>l :Neoformat prettier<CR> 
+
+" commenting code: gc [in visual mode]
