@@ -13,6 +13,7 @@ set incsearch
 set magic
 set smarttab
 set autoindent
+set smartindent
 set autoread
 set tabstop=4 softtabstop=4
 set nowrap

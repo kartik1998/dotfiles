@@ -18,5 +18,12 @@ Plug 'itchyny/lightline.vim'
 "git
 Plug 'itchyny/vim-gitbranch'
 
+"accessories
+Plug 'szw/vim-maximizer' "to maximize the split
+Plug 'christoomey/vim-tmux-navigator' "to easily move accross splits
+Plug 'kassio/neoterm' "to spawn a terminal
+Plug 'tpope/vim-commentary' "to comment source code
+Plug 'sbdchd/neoformat' "to format source code
+
 call plug#end()
 
