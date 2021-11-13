@@ -6,5 +6,17 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
+"colorschemes
+Plug 'tomasiser/vim-code-dark'
+
+"syntax highlighting
+Plug 'pangloss/vim-javascript'
+
+"status bar
+Plug 'itchyny/lightline.vim'
+
+"git
+Plug 'itchyny/vim-gitbranch'
+
 call plug#end()
 
