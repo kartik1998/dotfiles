@@ -61,8 +61,17 @@ let g:lightline = {
       \             [ 'readonly', 'filename', 'modified', 'helloworld' ] ]
       \ },
       \ 'component_function': {
-      \   'helloworld': 'gitbranch#name'
+      \   'gitbranch': 'gitbranch#name'
       \ },
       \ }
 
+" szw/vim-maximizer - to maximize the split
+nnoremap <leader>m :MaximizerToggle! <CR>
 
+" kassio/neoterm - terminal for neovim
+let g:neoterm_default_mod = 'belowright'
+let g:neoterm_size = 11
+let g:neoterm_autoinsert = 1
+let g:neoterm_autoscroll = 1
+let g:neoterm_term_per_tab = 1
+nnoremap <C-t> :Ttoggle<CR>
