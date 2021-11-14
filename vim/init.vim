@@ -53,6 +53,13 @@ nnoremap <C-s> <Esc>:w<cr>
 " yanks to clipboard in visual mode
 vnoremap <C-c> "+y
 
+" Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" Trigger a highlight only when pressing f and F.
+let g:qs_highlight_on_keys = ['f', 'F']
+
+" --- Plugin Configurations --- "
+
 " lightline and vim-gitbranch
 let g:lightline = {
       \ 'colorscheme': 'codedark',
