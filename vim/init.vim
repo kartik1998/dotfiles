@@ -84,7 +84,7 @@ nnoremap <leader>l :Neoformat prettier<CR>
 
 " junegunn/fzf.vim 
 nnoremap <leader>p :GFiles <CR> 
-" rip-grep needs to be fixed
+" rip-grep needs to be installed via brew / apt-get for this to work
 nnoremap <leader>f :Rg <CR>
 " ensure fzf exit works with Esc
 if has('nvim')
