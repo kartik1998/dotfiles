@@ -168,7 +168,7 @@ let g:rainbow_conf = {
 \	'guifgs': ['#99d6ff', '#e6e600', '#009933', '#bb33ff'],
 \	'ctermfgs': ['darkblue', 'darkyellow', 'darkcyan', 'darkmagenta'],
 \	'operators': '_,_',
-\	'parentheses': map(['start=/{/ end=/}/'], 'v:val." fold"'),
+\	'parentheses': map(['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/'], 'v:val." fold"'),
 \	'parentheses_options': 'contains=@NoSpell',
 \	'separately': {
 \		'csv': {
