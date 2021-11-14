@@ -165,7 +165,7 @@ let g:airline#extensions#neomake#enabled = 0
 " luochen1990/rainbow (bracket pair colorizing)
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 let g:rainbow_conf = {
-\	'guifgs': ['#99d6ff', '#e6e600', '#009933', '#bb33ff'],
+\	'guifgs': ['#99d6ff', '#e6e600', '#00cc44', '#bb33ff'],
 \	'ctermfgs': ['darkblue', 'darkyellow', 'darkcyan', 'darkmagenta'],
 \	'operators': '_,_',
 \	'parentheses': map(['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/'], 'v:val." fold"'),
