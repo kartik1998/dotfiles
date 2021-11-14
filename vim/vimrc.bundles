@@ -16,7 +16,13 @@ Plug 'pangloss/vim-javascript'
 Plug 'itchyny/lightline.vim'
 
 "git
-Plug 'itchyny/vim-gitbranch'
+Plug 'itchyny/vim-gitbranch' 
+Plug 'tpope/vim-fugitive' "git interactions
+Plug 'airblade/vim-gitgutter' "to show git signs in code
+
+"search related 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "fuzzy finding
+Plug 'junegunn/fzf.vim' "fuzzy finding
 
 "accessories
 Plug 'szw/vim-maximizer' "to maximize the split
