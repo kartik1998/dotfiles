@@ -93,5 +93,6 @@ if has('nvim')
 endif
 
 " tpopt/vim-fugitive
+" 's' to stage a file, see diff with '=' & 'cc' to commit
 nnoremap <leader>gst :G<CR>
 
