@@ -86,9 +86,6 @@ let g:lightline = {
 " szw/vim-maximizer - to maximize the split
 nnoremap <leader>m :MaximizerToggle! <CR>
 
-" jeetsukumaran/vim-buffergator - For Lazy loading buffergator
-nnoremap <silent> <Leader>b :BuffergatorOpen<CR>
-
 " kassio/neoterm - terminal for neovim
 let g:neoterm_default_mod = 'belowright'
 let g:neoterm_size = 11
@@ -108,10 +105,12 @@ nnoremap <leader>l :Neoformat prettier<CR>
 
 " commenting code: gc [in visual mode]
 
-" junegunn/fzf.vim 
-nnoremap <C-p> :GFiles <CR> 
-" rip-grep needs to be installed via brew / apt-get for this to work
-nnoremap <C-f> :Rg <CR>
+" nvim-telescope/telescope.nvim
+nnoremap <C-p> :Telescope find_files <CR> 
+nnoremap <C-f> :Telescope live_grep <CR>
+nnoremap <leader>b :Telescope buffers <CR>
+"nnoremap <leader>fh :Telescope help_tags<cr>
+
 " ensure fzf exit works with Esc
 if has('nvim')
 	au! TermOpen * tnoremap <buffer> <Esc> <C-\><C-n>

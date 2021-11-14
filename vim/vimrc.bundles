@@ -23,8 +23,8 @@ Plug 'tpope/vim-fugitive' "git interactions
 Plug 'airblade/vim-gitgutter' "to show git signs in code
 
 "search, navigation related 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "fuzzy finding
-Plug 'junegunn/fzf.vim' "fuzzy finding
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 
 "language server related
@@ -41,7 +41,6 @@ Plug 'kassio/neoterm' "to spawn a terminal
 Plug 'tpope/vim-commentary' "to comment source code
 Plug 'sbdchd/neoformat' "to format source code
 Plug 'janko/vim-test' "test runner to easily run tests
-Plug 'jeetsukumaran/vim-buffergator', { 'on': ['BuffergatorOpen', 'BuffergatorToggle'] } "toggle buffers
 Plug 'machakann/vim-highlightedyank' "highlighted yanking
 Plug 'bling/vim-airline'
 
