@@ -38,6 +38,7 @@ Plug 'kassio/neoterm' "to spawn a terminal
 Plug 'tpope/vim-commentary' "to comment source code
 Plug 'sbdchd/neoformat' "to format source code
 Plug 'janko/vim-test' "test runner to easily run tests
+Plug 'jeetsukumaran/vim-buffergator', { 'on': ['BuffergatorOpen', 'BuffergatorToggle'] } "toggle buffers
 
 call plug#end()
 

@@ -75,6 +75,9 @@ let g:lightline = {
 " szw/vim-maximizer - to maximize the split
 nnoremap <leader>m :MaximizerToggle! <CR>
 
+" jeetsukumaran/vim-buffergator - For Lazy loading buffergator
+nnoremap <silent> <Leader>b :BuffergatorOpen<CR>
+
 " kassio/neoterm - terminal for neovim
 let g:neoterm_default_mod = 'belowright'
 let g:neoterm_size = 11
