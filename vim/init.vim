@@ -167,7 +167,7 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 let g:rainbow_conf = {
 \	'guifgs': ['#99d6ff', '#e6e600', '#00cc44', '#d580ff'],
 \	'ctermfgs': ['darkblue', 'darkyellow', 'darkcyan', 'darkmagenta'],
-\	'operators': '_,_',
+\	'operators': '',
 \	'parentheses': map(['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/'], 'v:val." fold"'),
 \	'parentheses_options': 'contains=@NoSpell',
 \	'separately': {
