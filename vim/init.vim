@@ -87,6 +87,11 @@ let g:neoterm_term_per_tab = 1
 nnoremap <C-t> :Ttoggle<CR>
 tnoremap <C-t> <C-\><C-n>:Ttoggle<CR>
 
+" machakann/vim-highlightedyank for highlighted yankiing
+if !has('nvim')
+  map y <Plug>(highlightedyank)
+endif
+
 " sbdchd/neoformat
 nnoremap <leader>l :Neoformat prettier<CR> 
 
