@@ -9,8 +9,9 @@ call plug#begin('~/.vim/plugged')
 "colorschemes
 Plug 'tomasiser/vim-code-dark'
 
-"syntax highlighting
+"syntax highlighting / autocompletion
 Plug 'pangloss/vim-javascript'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "status bar
 Plug 'itchyny/lightline.vim'
