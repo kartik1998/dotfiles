@@ -34,6 +34,7 @@ Plug 'christoomey/vim-tmux-navigator' "to easily move accross splits
 Plug 'kassio/neoterm' "to spawn a terminal
 Plug 'tpope/vim-commentary' "to comment source code
 Plug 'sbdchd/neoformat' "to format source code
+Plug 'janko/vim-test' "test runner to easily run tests
 
 call plug#end()
 

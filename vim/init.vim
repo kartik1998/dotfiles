@@ -108,3 +108,10 @@ nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> gR    <cmd>lua vim.lsp.buf.rename()<CR>
 
+" janko/vim-test
+nnoremap <silent> tt :TestNearest<CR>
+nnoremap <silent> tf :TestFile<CR>
+nnoremap <silent> ts :TestSuite<CR>
+nnoremap <silent> t_ :TestLast<CR>
+let test#strategy = "neovim"
+let test#neovim#term_position = "vertical"
