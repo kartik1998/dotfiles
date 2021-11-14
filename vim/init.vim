@@ -111,12 +111,6 @@ nnoremap <C-f> :Telescope live_grep <CR>
 nnoremap <leader>b :Telescope buffers <CR>
 "nnoremap <leader>fh :Telescope help_tags<cr>
 
-" ensure fzf exit works with Esc
-if has('nvim')
-	au! TermOpen * tnoremap <buffer> <Esc> <C-\><C-n>
-	au! FileType fzf tunmap <buffer> <Esc>
-endif
-
 " tpopt/vim-fugitive
 " 's' to stage a file, see diff with '=' & 'cc' to commit
 nnoremap <leader>gst :G<CR>
