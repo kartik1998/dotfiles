@@ -12,6 +12,7 @@ Plug 'tomasiser/vim-code-dark'
 "syntax highlighting / autocompletion
 Plug 'pangloss/vim-javascript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sheerun/vim-polyglot'
 
 "status bar
 Plug 'itchyny/lightline.vim'
