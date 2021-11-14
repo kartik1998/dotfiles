@@ -106,7 +106,7 @@ nnoremap <leader>l :Neoformat prettier<CR>
 " commenting code: gc [in visual mode]
 
 " nvim-telescope/telescope.nvim
-nnoremap <C-p> :Telescope find_files <CR> 
+nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <C-f> :Telescope live_grep <CR>
 nnoremap <leader>b :Telescope buffers <CR>
 "nnoremap <leader>fh :Telescope help_tags<cr>
