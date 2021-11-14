@@ -96,7 +96,14 @@ endif
 " 's' to stage a file, see diff with '=' & 'cc' to commit
 nnoremap <leader>gst :G<CR>
 
-" neovim/nvim-lspconfig and nvim-lua/completion-nvim
+" neovim/nvim-lspconfig and nvim-lua/completion-nvim (for this to work ensure
+" typescript language server is installed: 'npm install -g typescript-language-server -s')
 lua require'lspconfig'.tsserver.setup{ on_attach=require'completion'.on_attach} " node-js tsserver - autocompletion
-
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gh     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> gH    <cmd>:Telescope lsp_code_actions<CR>
+nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gR    <cmd>lua vim.lsp.buf.rename()<CR>
 
