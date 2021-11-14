@@ -28,6 +28,8 @@ Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'puremourning/vimspector' " debugger
 
 "accessories
+Plug 'vim-airline/vim-airline' "statusline, tabline, etc 
+Plug 'vim-airline/vim-airline-themes' "statusline, tabline, etc 
 Plug 'szw/vim-maximizer' "to maximize the split
 Plug 'christoomey/vim-tmux-navigator' "to easily move accross splits
 Plug 'kassio/neoterm' "to spawn a terminal
