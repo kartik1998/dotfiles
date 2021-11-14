@@ -96,3 +96,7 @@ endif
 " 's' to stage a file, see diff with '=' & 'cc' to commit
 nnoremap <leader>gst :G<CR>
 
+" neovim/nvim-lspconfig and nvim-lua/completion-nvim
+lua require'lspconfig'.tsserver.setup{ on_attach=require'completion'.on_attach} " node-js tsserver - autocompletion
+
+

@@ -24,6 +24,10 @@ Plug 'airblade/vim-gitgutter' "to show git signs in code
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "fuzzy finding
 Plug 'junegunn/fzf.vim' "fuzzy finding
 
+"language server related
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim' " auto completion
+
 "accessories
 Plug 'szw/vim-maximizer' "to maximize the split
 Plug 'christoomey/vim-tmux-navigator' "to easily move accross splits
