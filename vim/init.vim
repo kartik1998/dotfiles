@@ -98,7 +98,8 @@ nnoremap <leader>gst :G<CR>
 
 " neovim/nvim-lspconfig and nvim-lua/completion-nvim (for this to work ensure
 " typescript language server is installed: 'npm install -g typescript-language-server -s')
-lua require'lspconfig'.tsserver.setup{ on_attach=require'completion'.on_attach} " node-js tsserver - autocompletion
+" node-js tsserver - autocompletion (@todo fix this autocomplete isn't working)
+lua require'lspconfig'.tsserver.setup{ on_attach=require'completion'.on_attach } 
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gh     <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> gH    <cmd>:Telescope lsp_code_actions<CR>
