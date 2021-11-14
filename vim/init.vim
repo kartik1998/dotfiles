@@ -133,6 +133,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='codedark'
 let g:airline#extensions#neomake#enabled = 0
+nnoremap <leader>[ :bprevious<CR>
+nnoremap <leader>] :bnext<CR>
 
 " luochen1990/rainbow (bracket pair colorizing)
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
