@@ -20,6 +20,9 @@ rm -rf .vim*
 mkdir -p $HOME/.config
 ln -s $PWD/vim $HOME/.config/nvim
 
+# brew install ripgrep (for mac)
+# sudo apt-get install ripgrep (for linux)
+
 # Install neovim plugins
 nvim +PlugInstall
 
