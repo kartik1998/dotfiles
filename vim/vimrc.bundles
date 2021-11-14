@@ -27,10 +27,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 
-"language server related
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim' " auto completion
-
 "debugging
 Plug 'puremourning/vimspector' " debugger
 
