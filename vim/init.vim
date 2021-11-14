@@ -85,7 +85,7 @@ nnoremap <leader>l :Neoformat prettier<CR>
 " junegunn/fzf.vim 
 nnoremap <leader>p :GFiles <CR> 
 " rip-grep needs to be fixed
-nnoremap <leader>ff :Rg <CR>
+nnoremap <leader>f :Rg <CR>
 " ensure fzf exit works with Esc
 if has('nvim')
 	au! TermOpen * tnoremap <buffer> <Esc> <C-\><C-n>
