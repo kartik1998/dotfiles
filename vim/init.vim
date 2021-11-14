@@ -115,3 +115,18 @@ nnoremap <silent> ts :TestSuite<CR>
 nnoremap <silent> t_ :TestLast<CR>
 let test#strategy = "neovim"
 let test#neovim#term_position = "vertical"
+
+" puremourning/vimspector
+" run :VimspectorInstall vscode-node-debug2 for nodejs debugging. 
+" launch.json will be .vimspector.json 
+nnoremap <leader>dl :call vimspector#Launch()<CR>
+nnoremap <leader>dr :call vimspector#Reset()<CR>
+nnoremap <S-k> :call vimspector#StepOut()<CR>
+nnoremap <S-l> :call vimspector#StepInto()<CR>
+nnoremap <S-j> :call vimspector#StepOver()<CR>
+nnoremap <leader>d_ :call vimspector#Restart()<CR>
+nnoremap <leader>dn :call vimspector#Continue()<CR>
+nnoremap <leader>drn :call vimspector#RunToCursor()<CR>
+nnoremap <leader>dh :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <leader>de :call vimspector#ToggleConditionalBreakpoint()<CR>
+nnoremap <leader>dX :call vimspector#ClearBreakpoints()<CR>

@@ -28,6 +28,9 @@ Plug 'junegunn/fzf.vim' "fuzzy finding
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim' " auto completion
 
+"debugging
+Plug 'puremourning/vimspector' " debugger
+
 "accessories
 Plug 'szw/vim-maximizer' "to maximize the split
 Plug 'christoomey/vim-tmux-navigator' "to easily move accross splits
