@@ -43,5 +43,6 @@ Plug 'sbdchd/neoformat' "to format source code
 Plug 'janko/vim-test' "test runner to easily run tests
 Plug 'machakann/vim-highlightedyank' "highlighted yanking
 Plug 'bling/vim-airline'
+Plug 'luochen1990/rainbow' "bracket pair colorizing
 
 call plug#end()

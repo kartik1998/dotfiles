@@ -161,3 +161,19 @@ let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#enabled = 1 
 let g:airline#extensions#neomake#enabled = 0
+
+" luochen1990/rainbow (bracket pair colorizing)
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+let g:rainbow_conf = {
+\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+\	'ctermfgs': ['darkblue', 'darkyellow', 'darkcyan', 'darkmagenta'],
+\	'operators': '_,_',
+\	'parentheses': map(['start=/{/ end=/}/'], 'v:val." fold"'),
+\	'parentheses_options': 'contains=@NoSpell',
+\	'separately': {
+\		'csv': {
+\			'parentheses': ['start=/\v[^,]*\,/ step=// end=/$/ keepend'],
+\		},
+\		'coq': 0,
+\	}
+\}
