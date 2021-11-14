@@ -2,7 +2,7 @@
 
 function check_nvim {
 while true; do
-    read -p "Please Install nvim before setup starts. Is nvim installed? [Y/n]" yn
+    read -p "Please Install nvim and node before setup starts. Is nvim, node installed? [Y/n]" yn
     case $yn in
         [Yy]* ) break;;
         [Nn]* ) echo "Please install nvim first." 
@@ -20,6 +20,9 @@ rm -rf .vim*
 mkdir -p $HOME/.config
 ln -s $PWD/vim $HOME/.config/nvim
 
+# brew install ripgrep (for mac)
+# sudo apt-get install ripgrep (for linux)
+sudo npm install -g typescript-language-server
 # Install neovim plugins
 nvim +PlugInstall
 
