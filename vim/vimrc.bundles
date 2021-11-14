@@ -20,9 +20,10 @@ Plug 'itchyny/vim-gitbranch'
 Plug 'tpope/vim-fugitive' "git interactions
 Plug 'airblade/vim-gitgutter' "to show git signs in code
 
-"search related 
+"search, navigation related 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "fuzzy finding
 Plug 'junegunn/fzf.vim' "fuzzy finding
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 
 "language server related
 Plug 'neovim/nvim-lspconfig'

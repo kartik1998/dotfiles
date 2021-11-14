@@ -60,6 +60,9 @@ let g:qs_highlight_on_keys = ['f', 'F']
 
 " --- Plugin Configurations --- "
 
+"scrooloose/nerdtree
+map <leader>e :NERDTreeToggle<cr>
+
 " lightline and vim-gitbranch
 let g:lightline = {
       \ 'colorscheme': 'codedark',
