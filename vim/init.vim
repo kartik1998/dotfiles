@@ -71,18 +71,6 @@ inoremap { {}<left>
 "scrooloose/nerdtree
 map <leader>e :NERDTreeToggle<cr>
 
-" lightline and vim-gitbranch
-let g:lightline = {
-      \ 'colorscheme': 'codedark',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified', 'helloworld' ] ]
-      \ },
-      \ 'component_function': {
-      \   'helloworld': 'gitbranch#name'
-      \ },
-      \ }
-
 " szw/vim-maximizer - to maximize the split
 nnoremap <leader>m :MaximizerToggle! <CR>
 
@@ -139,10 +127,10 @@ nnoremap <leader>de :call vimspector#ToggleConditionalBreakpoint()<CR>
 nnoremap <leader>dX :call vimspector#ClearBreakpoints()<CR>
 
 " bling/vim-airline tabline settings
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#enabled = 1 
-let g:airline#extensions#neomake#enabled = 0
+" let g:airline#extensions#tabline#left_sep = ''
+" let g:airline#extensions#tabline#left_alt_sep = ''
+" let g:airline#extensions#tabline#enabled = 1 
+" let g:airline#extensions#neomake#enabled = 0
 
 " luochen1990/rainbow (bracket pair colorizing)
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle

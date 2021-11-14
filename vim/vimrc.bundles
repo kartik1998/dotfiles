@@ -14,9 +14,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 
-"status bar
-Plug 'itchyny/lightline.vim'
-
 "git
 Plug 'itchyny/vim-gitbranch' 
 Plug 'tpope/vim-fugitive' "git interactions
@@ -38,7 +35,6 @@ Plug 'tpope/vim-commentary' "to comment source code
 Plug 'sbdchd/neoformat' "to format source code
 Plug 'janko/vim-test' "test runner to easily run tests
 Plug 'machakann/vim-highlightedyank' "highlighted yanking
-Plug 'bling/vim-airline'
 Plug 'luochen1990/rainbow' "bracket pair colorizing
 
 call plug#end()
