@@ -16,6 +16,8 @@
   "vim.sneak": false,
   "vim.relativenumber": true,
   "vim.easymotionMarkerooundColor": "#020202",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 300,
   "vim.normalModeKeyBindings": [
     {
       "before": ["<leader>", "["],
