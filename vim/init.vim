@@ -74,6 +74,8 @@ map <leader>e :NERDTreeToggle<cr>
 autocmd BufEnter NERD_tree_* | execute 'normal R' 
 " show dotfiles in NERDTree
 let NERDTreeShowHidden=1
+" ignore .git directory in nerd tree
+let NERDTreeIgnore=['\.git$']
 
 " szw/vim-maximizer - to maximize the split
 nnoremap <leader>m :MaximizerToggle! <CR>
