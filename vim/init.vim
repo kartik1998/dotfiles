@@ -72,6 +72,9 @@ set fcs=eob:-
 "go to definition with coc-definition
 nmap <silent> gd <Plug>(coc-definition)
 
+"remap <ctrl>+q to quit buffer
+nnoremap <C-q> :bd <CR>
+
 " --- Plugin Configurations --- "
 
 "scrooloose/nerdtree
