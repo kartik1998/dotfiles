@@ -69,6 +69,9 @@ inoremap { {}<left>
 "replace ~ (EndOfBuffer) with '-', ref: https://github.com/neovim/neovim/issues/2067 
 set fcs=eob:- 
 
+"go to definition with coc-definition
+nmap <silent> gd <Plug>(coc-definition)
+
 " --- Plugin Configurations --- "
 
 "scrooloose/nerdtree
