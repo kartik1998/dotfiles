@@ -71,6 +71,7 @@ set fcs=eob:-
 
 "go to definition with coc-definition
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gD <Plug>(coc-implementation)
 
 "remap <ctrl>+q to quit buffer
 function! NumberOfOpenBuffers()
