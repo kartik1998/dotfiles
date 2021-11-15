@@ -66,6 +66,9 @@ inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 
+"replace ~ (EndOfBuffer) with '-', ref: https://github.com/neovim/neovim/issues/2067 
+set fcs=eob:- 
+
 " --- Plugin Configurations --- "
 
 "scrooloose/nerdtree
