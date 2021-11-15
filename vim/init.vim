@@ -73,7 +73,19 @@ set fcs=eob:-
 nmap <silent> gd <Plug>(coc-definition)
 
 "remap <ctrl>+q to quit buffer
-nnoremap <C-q> :bd <CR>
+function! NumberOfOpenBuffers()
+    let i = bufnr('$')
+    let j = 0
+    while i >= 1
+        if buflisted(i)
+            let j+=1
+        endif
+        let i-=1
+    endwhile
+    return j
+endfunction
+
+nnoremap <expr> <C-q> (NumberOfOpenBuffers() <= 1 ? ':q<cr>' : ':bd<cr>')
 
 " --- Plugin Configurations --- "
 
