@@ -147,7 +147,7 @@ let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#enabled = 1 
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='codedark'
-let g:airline#extensions#neomake#enabled = 0
+let g:airline#extensions#tabline#buffers_label = ''
 nnoremap <leader>[ :bprevious<CR>
 nnoremap <leader>] :bnext<CR>
 
