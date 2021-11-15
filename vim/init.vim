@@ -72,6 +72,8 @@ inoremap { {}<left>
 map <leader>e :NERDTreeToggle<cr>
 " auto refresh nerd tree for when a file is added / removed
 autocmd BufEnter NERD_tree_* | execute 'normal R' 
+" show dotfiles in NERDTree
+let NERDTreeShowHidden=1
 
 " szw/vim-maximizer - to maximize the split
 nnoremap <leader>m :MaximizerToggle! <CR>
