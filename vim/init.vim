@@ -70,7 +70,7 @@ inoremap { {}<left>
 set fcs=eob:- 
 
 "go to definition with coc-definition
-nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gd :call CocAction('jumpDefinition', 'vsplit')<CR>
 nmap <silent> gD <Plug>(coc-implementation)
 
 "remap <ctrl>+q to quit buffer
