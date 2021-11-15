@@ -2,6 +2,7 @@
   "tabnine.experimentalAutoImports": true,
   "editor.fontFamily": "Monaco",
   "solidity.compileUsingRemoteVersion": "v0.4.11+commit.68ef5810",
+  "editor.mouseWheelScrollSensitivity": 1.3,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
