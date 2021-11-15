@@ -12,5 +12,13 @@
   {
     "key": "ctrl+s",
     "command": "workbench.action.files.save"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "workbench.action.findInFiles"
   }
 ]
