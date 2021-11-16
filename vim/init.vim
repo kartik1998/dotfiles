@@ -124,6 +124,13 @@ nnoremap <leader>l :Neoformat prettier<CR>
 " nvim-telescope/telescope.nvim
 nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <C-f> :Telescope live_grep <CR>
+"ignore node modules for live grep
+lua << EOF
+require('telescope').setup{
+  defaults = { file_ignore_patterns = {"node_modules"} }
+}
+EOF
+
 nnoremap <leader>b :Telescope buffers <CR>
 "nnoremap <leader>fh :Telescope help_tags<cr>
 
