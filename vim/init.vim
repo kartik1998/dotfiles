@@ -15,13 +15,13 @@ set smarttab
 set autoindent
 set smartindent
 set autoread
-set tabstop=4 softtabstop=4
+set tabstop=2 softtabstop=2
 set nowrap
 set diffopt+=vertical
 set hidden
 set cmdheight=1
 set scrolloff=10 "start scrolling down / up when you are 10 lines away
-set shiftwidth=4
+set shiftwidth=2
 set nohlsearch "remove highlight from text after search 
 set hidden "navigate away from buffers without saving them, takes a little bit more RAM but basically peanuts compared to VS code
 set ignorecase "ignore case sensitivity while searching
