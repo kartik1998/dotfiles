@@ -24,14 +24,6 @@ ln -s $PWD/vim $HOME/.config/nvim
 nvim +PlugInstall
 
 # Install coc plugins
-nvim +'CocInstall coc-pairs'
-nvim +'CocInstall coc-tabnine'
-nvim +'CocInstall coc-tsserver'
-nvim +'CocInstall coc-html'
-nvim +'CocInstall coc-css'
-nvim +'CocInstall coc-highlight'
-nvim +'CocInstall coc-eslint'
-nvim +'CocInstall coc-yaml'
-nvim +'CocInstall coc-prettier'
+nvim +'CocInstall coc-pairs coc-tabnine coc-tsserver coc-html coc-css coc-highlight coc-eslint coc-yaml coc-prettier'
 
 

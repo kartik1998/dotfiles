@@ -152,9 +152,9 @@ let test#neovim#term_position = "vertical"
 " launch.json will be .vimspector.json 
 nnoremap <leader>dl :call vimspector#Launch()<CR>
 nnoremap <leader>dr :call vimspector#Reset()<CR>
-nnoremap <S-k> :call vimspector#StepOut()<CR>
-nnoremap <S-l> :call vimspector#StepInto()<CR>
-nnoremap <S-j> :call vimspector#StepOver()<CR>
+" nnoremap <S-k> :call vimspector#StepOut()<CR>
+" nnoremap <S-l> :call vimspector#StepInto()<CR>
+" nnoremap <S-j> :call vimspector#StepOver()<CR>
 nnoremap <leader>d_ :call vimspector#Restart()<CR>
 nnoremap <leader>dn :call vimspector#Continue()<CR>
 nnoremap <leader>drn :call vimspector#RunToCursor()<CR>
