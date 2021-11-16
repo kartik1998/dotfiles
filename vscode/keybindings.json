@@ -5,7 +5,7 @@
     "command": "extension.generateGettersAndSetters"
   },
   {
-    "key": "cmd+w",
+    "key": "ctrl+t",
     "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
   },
@@ -20,5 +20,5 @@
   {
     "key": "ctrl+f",
     "command": "workbench.action.findInFiles"
-  }
+  },
 ]
