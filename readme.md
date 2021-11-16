@@ -1,11 +1,14 @@
 <p align="center"> <img src = "https://cdn-media-1.freecodecamp.org/images/1*RO3AhbppPUFJBZwt3gUW-A.png" alt="dotfiles" width=150 height=100> </p>
 
 # Setup Instructions
-1. Install git
-2. Install zsh
-2. clone repository
-3. To setup vim run ``bash vim_setup.sh``
-4. For complete setup use run install.sh : `bash install.sh`. (Try not to use)
+* To setup vim:
+```shell 
+curl https://raw.githubusercontent.com/kartik1998/dotfiles/master/scripts/vim-setup.sh | sh
+```
+
+1. clone repository
+2. To setup neovim run ``bash neovim_setup.sh``
+3. For complete setup use run install.sh : `bash install.sh`. (Try not to use)
 
 # VIM config
 The vim config is made for working both in vim and neovim.
