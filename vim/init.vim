@@ -127,7 +127,7 @@ nnoremap <C-f> :Telescope live_grep <CR>
 "ignore node modules for live grep
 lua << EOF
 require('telescope').setup{
-  defaults = { file_ignore_patterns = {"node_modules"} }
+  defaults = { file_ignore_patterns = {"node_modules",".git"} }
 }
 EOF
 
