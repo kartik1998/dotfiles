@@ -30,6 +30,7 @@ set smartcase
 set undofile
 set undodir=~/.vim/undodir
 set background=dark
+set cursorline
 set updatetime=750
 colorscheme codedark
 
