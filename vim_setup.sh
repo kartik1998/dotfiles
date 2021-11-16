@@ -23,5 +23,15 @@ ln -s $PWD/vim $HOME/.config/nvim
 # Install neovim plugins
 nvim +PlugInstall
 
+# Install coc plugins
+nvim +'CocInstall coc-pairs'
+nvim +'CocInstall coc-tabnine'
+nvim +'CocInstall coc-tsserver'
+nvim +'CocInstall coc-html'
+nvim +'CocInstall coc-css'
+nvim +'CocInstall coc-highlight'
+nvim +'CocInstall coc-eslint'
+nvim +'CocInstall coc-yaml'
+nvim +'CocInstall coc-prettier'
 
 
