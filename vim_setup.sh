@@ -8,4 +8,3 @@ curl -O https://raw.githubusercontent.com/kartik1998/dotfiles/master/vim/colors/
 
 # install plugins
 vi +PlugInstall +qall
-
