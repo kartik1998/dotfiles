@@ -20,10 +20,8 @@ rm -rf .vim*
 mkdir -p $HOME/.config
 ln -s $PWD/vim $HOME/.config/nvim
 
-# Install neovim plugins
-nvim +PlugInstall
+# Install neovim and coc plugins
+nvim +PlugInstall +'CocInstall coc-pairs coc-tabnine coc-tsserver coc-html coc-css coc-highlight coc-eslint coc-yaml coc-prettier'
 
-# Install coc plugins
-nvim +'CocInstall coc-pairs coc-tabnine coc-tsserver coc-html coc-css coc-highlight coc-eslint coc-yaml coc-prettier'
 
 
