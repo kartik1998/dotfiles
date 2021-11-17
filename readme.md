@@ -47,6 +47,8 @@ Leader is `<spacebar>`
 - Control-ww: Move between windows
 - Control-w[Arrow/hjkl]: Move between windows directionally
 - Control-t: toggle terminal
+- Control-v: to open in vertical split
+- Control-h: to open in horizontal split
 
 ### Buffers/Tabs
 
