@@ -25,11 +25,6 @@ sudo apt-get install ripgrep
 2. To setup neovim run `bash neovim_setup.sh`
 3. For complete setup use run install.sh : `bash install.sh`. (Try not to use)
 
-```bash
-git clone https://github.com/kartik1998/dotfiles ~/ && cd ~/dotfiles && mkdir -p ~/.config && cp -r $PWD/vim $HOME/.config/nvim && nvim +PlugInstall +'CocInstall coc-pairs coc-tabnine coc-tsserver coc-html coc-css coc-highlight coc-eslint coc-yaml coc-prettier'
-
-```
-
 # VIM config
 
 The vim config is made for working both in vim and neovim.
