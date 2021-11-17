@@ -54,6 +54,12 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " Trigger a highlight only when pressing f and F.
 let g:qs_highlight_on_keys = ['f', 'F']
 
+"split view remaps 
+"vertical split
+nnoremap <C-v> :vsplit <CR> 
+"horizontal split
+nnoremap <C-h> :split <CR>
+
 call plug#begin('~/.vim/plugged')
 
 " autocompletion and intellisense
