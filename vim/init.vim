@@ -89,6 +89,12 @@ endfunction
 
 nnoremap <expr> <C-q> (NumberOfOpenBuffers() <= 1 ? ':q<cr>' : ':bd<cr>')
 
+"split view remaps 
+"vertical split
+nnoremap <C-v> :vsplit <CR> 
+"horizontal split
+nnoremap <C-h> :split <CR>
+
 " --- Plugin Configurations --- "
 
 "scrooloose/nerdtree
