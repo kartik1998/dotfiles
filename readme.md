@@ -48,7 +48,6 @@ Leader is `<spacebar>`
 | `<C-t>`        | toggle terminal          |
 | `<C-v>`         | open in vertical split                                   |
 | `<C-h>`        |  open in horizontal split                     |
-| `<C-v>`        | Go to file selection as a vsplit                     |
 | `<Leader-b>`        | List all buffers via telescope                          |
 | `<Leader-[>`        | previous buffer :bprev                       |
 | `<Leader-]>`        | next buffer :bnext       |
@@ -57,4 +56,7 @@ Leader is `<spacebar>`
 | `<C-n>`        | Select same word as multiple cursors                    |
 | `<Leader-m>`        | maximize window         |
 | `<Leader>gst`      | git status        |
+| `gd`      | go to definition        |
+| `gc`      | comment visual selection        |
+| `gcc`      | comment a line        |
 
