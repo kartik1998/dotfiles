@@ -1,6 +1,6 @@
 <p align="center"> <img src = "https://twilio-cms-prod.s3.amazonaws.com/images/7iwai15WuuZ-1YLS6UzvVdC4vtbpjLMIoG8kABoHmrNLML.width-808.png" alt="dotfiles" width=200 height=60> </p>
 
-# Setup Instructions
+## Setup Instructions ![](https://img.shields.io/badge/dot-files-blue)
 
 - To setup vim:
 
@@ -12,7 +12,7 @@ curl -o $HOME/.vimrc https://raw.githubusercontent.com/kartik1998/dotfiles/maste
 vi +PlugInstall +qall
 ```
 
-- Install ripgrep to support live grep
+- Install ripgrep to support live grep: 
 
 ```bash
 #mac
@@ -20,92 +20,53 @@ brew install ripgrep
 #ubuntu
 sudo apt-get install ripgrep
 ```
+- To setup neovim:
 
-1. clone repository
-2. To setup neovim run `bash neovim_setup.sh`
-3. For complete setup use run install.sh : `bash install.sh`. (Try not to use)
+```bash
+git clone git@github.com:kartik1998/dotfiles.git`
+cd dotfiles 
+# install neovim >= 0.5.1 first
+bash neovim_setup.sh
+```
 
 # VIM config
 
-The vim config is made for working both in vim and neovim.
-
-Although neovim is targetted for primary support.
+The vim config is different for vim and neovim. (Mostly similar) <br/>
+Neovim is targeted for main support. 
 
 ## Shortcuts
 
 Although reading through init.vim might be enough, some are listed for completeness
 
-Leader is " "
+Leader is `<spacebar>`
 
 ### General
 
 - Leader-e: NERDTreeToggle
-- F9: TagbarToggle
-- gp: visually select last used block
-- Control-Up/Down: Move lines/block up/down
-- Leader-q: disable highlights
+- Control-q: To quit buffer / quit vim if number of buffers = 1
 - Control-ww: Move between windows
 - Control-w[Arrow/hjkl]: Move between windows directionally
-
-### Motion
-
-- Leader-Leader-s[b]: Search for character [b] in both directions
-- Leader-Leader-f[b]: Search for character [b] forwards
-- Leader-Leader-w: Start general forward find
-- Leader-Leader-b: Start general backward find
+- Control-t: toggle terminal
 
 ### Buffers/Tabs
 
-- Leader-b: List all buffers
-
-> Control-v/s/t to open in verticalsplit/horizontalsplit/tab
-
-- Control-e: Toggle last used buffer
-- Control-PgUp/Dn: Switch between buffers
-- Control-Alt-PgUp/Dn: Switch between tabs
-
-### Comments
-
-- Leader-ci: toggle comments on line/block
-- Leader-cc: comment out line/block (warning! will add multiple comments on existing)
-- Leader-cu: Uncomment as above
-
-### Surround
-
-b1,b2: surrounding types. eg. ' " [] () {}
-
-- cs[b1][b2]: replace b1 with b2 on selected block. eg. 'asv' -> "asv".
-
-> cs[( adds space after replacing while cs[) does not, prefer the latter
-
-- ys[text-object][b1]: wrap the verb block with b1. eg. ysw[, ys$[
+- Leader-b: List all buffers via telescope
+- Leader-[: previous buffer
+- Leader-]: next buffer
 
 ### Ctrl-P
 
 - Control-p: fuzzy search filenames
-- Control-y: fuzzy search tags in files
+- Control-f: fuzzy search words in current directory
 
-#### Once open
-
-- Enter: open in current window
-- Control-v: to open in vertical split
-- Control-x: to open in horizontal split
-- Control-t: to open in new tab
-- Control-o: prompt how to open
-- Control-z: select multiple
-
-### Multiple Cursors
+### Multiple Cursors | Windows
 
 - Ctrl-n: Select same word as multiple cursors
+- Leader-m: maximize window
 
-### Window Selection (choosewin)
+### Git workflow
+- Leader-gst: git status
 
-- Leader-w: Select window from open windows
-
-### GIT Workflows
-
-- Leader-M: open ViMagit (:Magit)
-- :Gblame : Open Git-blame for current file (fugitive)
 
 ### Vim references
 
