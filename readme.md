@@ -15,10 +15,8 @@ vi +PlugInstall +qall
 - Install ripgrep to support live grep: 
 
 ```bash
-#mac
-brew install ripgrep
-#ubuntu
-sudo apt-get install ripgrep
+brew install ripgrep #mac
+sudo apt-get install ripgrep #ubuntu
 ```
 - To setup neovim:
 
