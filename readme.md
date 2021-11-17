@@ -1,4 +1,4 @@
-<p align="center"> <img src = "https://cdn-media-1.freecodecamp.org/images/1*RO3AhbppPUFJBZwt3gUW-A.png" alt="dotfiles" width=150 height=100> </p>
+<p align="center"> <img src = "https://twilio-cms-prod.s3.amazonaws.com/images/7iwai15WuuZ-1YLS6UzvVdC4vtbpjLMIoG8kABoHmrNLML.width-808.png" alt="dotfiles" width=300 height=100> </p>
 
 # Setup Instructions
 * To setup vim:
