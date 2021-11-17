@@ -39,5 +39,6 @@ Plug 'janko/vim-test' "test runner to easily run tests
 Plug 'machakann/vim-highlightedyank' "highlighted yanking
 Plug 'luochen1990/rainbow' "bracket pair colorizing
 Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround' "surround your test effectively
 
 call plug#end()
