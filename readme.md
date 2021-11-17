@@ -63,3 +63,6 @@ Leader is `<spacebar>`
 | `gcc`               | comment a line                                     |
 | `<C-u>`             | page up                                            |
 | `<C-d>`             | pade down                                          |
+
+
+- **LICENSE**: [WTFPL](http://www.wtfpl.net/)
