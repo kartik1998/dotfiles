@@ -9,7 +9,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 curl -o $HOME/.vimrc https://raw.githubusercontent.com/kartik1998/dotfiles/master/vim/.vimrc
 vi +PlugInstall +qall
 ```
-* Install ripgrep
+* Install  ripgrep to support live grep
 ```shell
 #mac
 brew install ripgrep
