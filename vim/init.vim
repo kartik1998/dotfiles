@@ -91,9 +91,9 @@ nnoremap <expr> <C-q> (NumberOfOpenBuffers() <= 1 ? ':q<cr>' : ':bd<cr>')
 
 "split view remaps 
 "vertical split
-nnoremap <C-v> :vsplit <CR> 
+nnoremap <leader>v :vsplit <cr> 
 "horizontal split
-nnoremap <C-h> :split <CR>
+nnoremap <leader>h :split <cr>
 
 " --- Plugin Configurations --- "
 

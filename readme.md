@@ -47,8 +47,8 @@ Leader is `<spacebar>`
 | `<C-ww>`            | Move between windows                               |
 | `<C-w[Arrow/hjkl]>` | Move between windows directionally                 |
 | `<C-t>`             | toggle terminal `(doesn't work for vim)`           |
-| `<C-v>`             | open in vertical split                             |
-| `<C-h>`             | open in horizontal split                           |
+| `<Leader-v>`        | open in vertical split                             |
+| `<Leader-h>`        | open in horizontal split                           |
 | `<Leader-b>`        | List all buffers via telescope                     |
 | `<Leader-l>`        | Prettify file                                      |
 | `<Leader-[>`        | previous buffer :bprev                             |
@@ -63,6 +63,5 @@ Leader is `<spacebar>`
 | `gcc`               | comment a line                                     |
 | `<C-u>`             | page up                                            |
 | `<C-d>`             | pade down                                          |
-
 
 - **LICENSE**: [WTFPL](http://www.wtfpl.net/)
