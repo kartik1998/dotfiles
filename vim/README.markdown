@@ -1,66 +1,45 @@
 # VIM config
-The vim config is made for working both in vim and neovim.
 
-Although neovim is targetted for primary support.
+The vim config is different for vim and neovim. (Mostly similar) <br/>
+Neovim is targeted for main support. 
 
 ## Shortcuts
+
 Although reading through init.vim might be enough, some are listed for completeness
 
-Leader is " "
+Leader is `<spacebar>`
 
 ### General
-* Leader-e: NERDTreeToggle
-* F9: TagbarToggle
-* gp: visually select last used block
-* Control-Up/Down: Move lines/block up/down
-* Leader-q: disable highlights
-* Control-ww: Move between windows
-* Control-w[Arrow/hjkl]: Move between windows directionally
-* Control-m: To open terminal ( ZSH Terminal opened. Ensure zsh is installed. Else Change it to bash in init.vim )
 
-### Motion
-* Leader-Leader-s[b]: Search for character [b] in both directions
-* Leader-Leader-f[b]: Search for character [b] forwards
-* Leader-Leader-w: Start general forward find
-* Leader-Leader-b: Start general backward find
-
+- Leader-e: NERDTreeToggle
+- Control-q: To quit buffer / quit vim if number of buffers = 1
+- Control-ww: Move between windows
+- Control-w[Arrow/hjkl]: Move between windows directionally
+- Control-t: toggle terminal
+- Control-v: to open in vertical split
+- Control-h: to open in horizontal split
 
 ### Buffers/Tabs
-* Leader-b: List all buffers
 
-> Control-v/s/t to open in verticalsplit/horizontalsplit/tab
-
-* Control-e: Toggle last used buffer
-* Control-PgUp/Dn: Switch between buffers
-* Control-Alt-PgUp/Dn: Switch between tabs
-
-### Comments
-* Leader-ci: toggle comments on line/block
-* Leader-cc: comment out line/block (warning! will add multiple comments on existing)
-* Leader-cu: Uncomment as above
-
-### Surround
-b1,b2: surrounding types. eg. ' " [] () {}
-* cs[b1][b2]: replace b1 with b2 on selected block. eg. 'asv' -> "asv".
-
-> cs[( adds space after replacing while cs[) does not, prefer the latter
-
-* ys[text-object][b1]: wrap the verb block with b1. eg. ysw[, ys$[
+- Leader-b: List all buffers via telescope
+- Leader-[: previous buffer
+- Leader-]: next buffer
 
 ### Ctrl-P
-* Control-p: fuzzy search filenames
-* Control-y: fuzzy search tags in files
 
-#### Once open
-* Enter: open in current window
-* Control-v: to open in vertical split
-* Control-x: to open in horizontal split
-* Control-t: to open in new tab
-* Control-o: prompt how to open
-* Control-z: select multiple
+- Control-p: fuzzy search filenames
+- Control-f: fuzzy search words in current directory
 
-### Multiple Cursors
-* Ctrl-n: Select same word as multiple cursors
+### Multiple Cursors | Windows
 
-### Window Selection (choosewin)
-* Leader-w: Select window from open windows
+- Ctrl-n: Select same word as multiple cursors
+- Leader-m: maximize window
+
+### Git workflow
+- Leader-gst: git status
+
+
+### Vim references
+
+- [daniel miessler](https://danielmiessler.com/study/vim/)
+- [key bindings list](https://hea-www.harvard.edu/~fine/Tech/vi.html)
