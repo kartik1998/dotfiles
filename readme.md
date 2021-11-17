@@ -46,10 +46,11 @@ Leader is `<spacebar>`
 | `<C-q>`             | To quit buffer / quit vim if number of buffers = 1 |
 | `<C-ww>`            | Move between windows                               |
 | `<C-w[Arrow/hjkl]>` | Move between windows directionally                 |
-| `<C-t>`             | toggle terminal                                    |
+| `<C-t>`             | toggle terminal `(doesn't work for vim)`           |
 | `<C-v>`             | open in vertical split                             |
 | `<C-h>`             | open in horizontal split                           |
 | `<Leader-b>`        | List all buffers via telescope                     |
+| `<Leader-l>`        | Prettify file                                      |
 | `<Leader-[>`        | previous buffer :bprev                             |
 | `<Leader-]>`        | next buffer :bnext                                 |
 | `<C-p>`             | fuzzy search filenames                             |
@@ -60,3 +61,5 @@ Leader is `<spacebar>`
 | `gd`                | go to definition                                   |
 | `gc`                | comment visual selection                           |
 | `gcc`               | comment a line                                     |
+| `<C-u>`             | page up                                            |
+| `<C-d>`             | pade down                                          |
