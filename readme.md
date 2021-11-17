@@ -12,17 +12,18 @@ curl -o $HOME/.vimrc https://raw.githubusercontent.com/kartik1998/dotfiles/maste
 vi +PlugInstall +qall
 ```
 
-- Install ripgrep to support live grep: 
+- Install ripgrep to support live grep:
 
 ```bash
 brew install ripgrep #mac
 sudo apt-get install ripgrep #ubuntu
 ```
+
 - To setup neovim:
 
 ```bash
 git clone git@github.com:kartik1998/dotfiles.git`
-cd dotfiles 
+cd dotfiles
 # install neovim >= 0.5.1 first
 bash neovim_setup.sh
 ```
@@ -30,7 +31,7 @@ bash neovim_setup.sh
 ## VIM config
 
 The vim config is different for vim and neovim. (Mostly similar) <br/>
-Neovim is targeted for main support. 
+Neovim is targeted for main support.
 
 ## Key bindings
 
@@ -39,24 +40,23 @@ The mappings are fully customizable. Many familiar mapping patterns are setup as
 
 Leader is `<spacebar>`
 
-| Mappings       | Action                                               |
-|----------------|------------------------------------------------------|
-| `<Leader-e>`   | NerdTreeToggle                                       |
-| `<C-q>`   | To quit buffer / quit vim if number of buffers = 1                                      |
-| `<C-ww>`          | Move between windows                     |
-| `<C-w[Arrow/hjkl]>`        | Move between windows directionally            |
-| `<C-t>`        | toggle terminal          |
-| `<C-v>`         | open in vertical split                                   |
-| `<C-h>`        |  open in horizontal split                     |
-| `<Leader-b>`        | List all buffers via telescope                          |
-| `<Leader-[>`        | previous buffer :bprev                       |
-| `<Leader-]>`        | next buffer :bnext       |
-| `<C-p>`            | fuzzy search filenames       |
-| `<C-f>`        |   fuzzy search words in current directory                                   |
-| `<C-n>`        | Select same word as multiple cursors                    |
-| `<Leader-m>`        | maximize window         |
-| `<Leader>gst`      | git status        |
-| `gd`      | go to definition        |
-| `gc`      | comment visual selection        |
-| `gcc`      | comment a line        |
-
+| Mappings            | Action                                             |
+| ------------------- | -------------------------------------------------- |
+| `<Leader-e>`        | NerdTreeToggle                                     |
+| `<C-q>`             | To quit buffer / quit vim if number of buffers = 1 |
+| `<C-ww>`            | Move between windows                               |
+| `<C-w[Arrow/hjkl]>` | Move between windows directionally                 |
+| `<C-t>`             | toggle terminal                                    |
+| `<C-v>`             | open in vertical split                             |
+| `<C-h>`             | open in horizontal split                           |
+| `<Leader-b>`        | List all buffers via telescope                     |
+| `<Leader-[>`        | previous buffer :bprev                             |
+| `<Leader-]>`        | next buffer :bnext                                 |
+| `<C-p>`             | fuzzy search filenames                             |
+| `<C-f>`             | fuzzy search words in current directory            |
+| `<C-n>`             | Select same word as multiple cursors               |
+| `<Leader-m>`        | maximize window                                    |
+| `<Leader>gst`       | git status                                         |
+| `gd`                | go to definition                                   |
+| `gc`                | comment visual selection                           |
+| `gcc`               | comment a line                                     |
