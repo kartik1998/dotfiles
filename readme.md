@@ -1,16 +1,20 @@
 <p align="center"> <img src = "https://twilio-cms-prod.s3.amazonaws.com/images/7iwai15WuuZ-1YLS6UzvVdC4vtbpjLMIoG8kABoHmrNLML.width-808.png" alt="dotfiles" width=200 height=60> </p>
 
 # Setup Instructions
-* To setup vim:
-```zsh
+
+- To setup vim:
+
+```bash
 mkdir -p $HOME/.vim/colors
 curl -o $HOME/.vim/colors/hybrid.vim https://raw.githubusercontent.com/kartik1998/dotfiles/master/vim/colors/hybrid.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -o $HOME/.vimrc https://raw.githubusercontent.com/kartik1998/dotfiles/master/vim/.vimrc
 vi +PlugInstall +qall
 ```
-* Install  ripgrep to support live grep
-```shell
+
+- Install ripgrep to support live grep
+
+```bash
 #mac
 brew install ripgrep
 #ubuntu
@@ -18,82 +22,97 @@ sudo apt-get install ripgrep
 ```
 
 1. clone repository
-2. To setup neovim run ``bash neovim_setup.sh``
+2. To setup neovim run `bash neovim_setup.sh`
 3. For complete setup use run install.sh : `bash install.sh`. (Try not to use)
 
+```bash
+git clone https://github.com/kartik1998/dotfiles ~/ && cd ~/dotfiles && mkdir -p ~/.config && cp -r $PWD/vim $HOME/.config/nvim && nvim +PlugInstall +'CocInstall coc-pairs coc-tabnine coc-tsserver coc-html coc-css coc-highlight coc-eslint coc-yaml coc-prettier'
+
+```
+
 # VIM config
+
 The vim config is made for working both in vim and neovim.
 
 Although neovim is targetted for primary support.
 
 ## Shortcuts
+
 Although reading through init.vim might be enough, some are listed for completeness
 
 Leader is " "
 
 ### General
-* Leader-e: NERDTreeToggle
-* F9: TagbarToggle
-* gp: visually select last used block
-* Control-Up/Down: Move lines/block up/down
-* Leader-q: disable highlights
-* Control-ww: Move between windows
-* Control-w[Arrow/hjkl]: Move between windows directionally
+
+- Leader-e: NERDTreeToggle
+- F9: TagbarToggle
+- gp: visually select last used block
+- Control-Up/Down: Move lines/block up/down
+- Leader-q: disable highlights
+- Control-ww: Move between windows
+- Control-w[Arrow/hjkl]: Move between windows directionally
 
 ### Motion
-* Leader-Leader-s[b]: Search for character [b] in both directions
-* Leader-Leader-f[b]: Search for character [b] forwards
-* Leader-Leader-w: Start general forward find
-* Leader-Leader-b: Start general backward find
 
+- Leader-Leader-s[b]: Search for character [b] in both directions
+- Leader-Leader-f[b]: Search for character [b] forwards
+- Leader-Leader-w: Start general forward find
+- Leader-Leader-b: Start general backward find
 
 ### Buffers/Tabs
-* Leader-b: List all buffers
+
+- Leader-b: List all buffers
 
 > Control-v/s/t to open in verticalsplit/horizontalsplit/tab
 
-* Control-e: Toggle last used buffer
-* Control-PgUp/Dn: Switch between buffers
-* Control-Alt-PgUp/Dn: Switch between tabs
+- Control-e: Toggle last used buffer
+- Control-PgUp/Dn: Switch between buffers
+- Control-Alt-PgUp/Dn: Switch between tabs
 
 ### Comments
-* Leader-ci: toggle comments on line/block
-* Leader-cc: comment out line/block (warning! will add multiple comments on existing)
-* Leader-cu: Uncomment as above
+
+- Leader-ci: toggle comments on line/block
+- Leader-cc: comment out line/block (warning! will add multiple comments on existing)
+- Leader-cu: Uncomment as above
 
 ### Surround
+
 b1,b2: surrounding types. eg. ' " [] () {}
-* cs[b1][b2]: replace b1 with b2 on selected block. eg. 'asv' -> "asv".
+
+- cs[b1][b2]: replace b1 with b2 on selected block. eg. 'asv' -> "asv".
 
 > cs[( adds space after replacing while cs[) does not, prefer the latter
 
-* ys[text-object][b1]: wrap the verb block with b1. eg. ysw[, ys$[
+- ys[text-object][b1]: wrap the verb block with b1. eg. ysw[, ys$[
 
 ### Ctrl-P
-* Control-p: fuzzy search filenames
-* Control-y: fuzzy search tags in files
+
+- Control-p: fuzzy search filenames
+- Control-y: fuzzy search tags in files
 
 #### Once open
-* Enter: open in current window
-* Control-v: to open in vertical split
-* Control-x: to open in horizontal split
-* Control-t: to open in new tab
-* Control-o: prompt how to open
-* Control-z: select multiple
+
+- Enter: open in current window
+- Control-v: to open in vertical split
+- Control-x: to open in horizontal split
+- Control-t: to open in new tab
+- Control-o: prompt how to open
+- Control-z: select multiple
 
 ### Multiple Cursors
-* Ctrl-n: Select same word as multiple cursors
+
+- Ctrl-n: Select same word as multiple cursors
 
 ### Window Selection (choosewin)
-* Leader-w: Select window from open windows
 
+- Leader-w: Select window from open windows
 
 ### GIT Workflows
 
-* Leader-M: open ViMagit (:Magit)
-* :Gblame : Open Git-blame for current file (fugitive)
+- Leader-M: open ViMagit (:Magit)
+- :Gblame : Open Git-blame for current file (fugitive)
 
 ### Vim references
-* [daniel miessler](https://danielmiessler.com/study/vim/)
-* [key bindings list](https://hea-www.harvard.edu/~fine/Tech/vi.html)
 
+- [daniel miessler](https://danielmiessler.com/study/vim/)
+- [key bindings list](https://hea-www.harvard.edu/~fine/Tech/vi.html)
