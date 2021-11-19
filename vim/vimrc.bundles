@@ -40,5 +40,6 @@ Plug 'machakann/vim-highlightedyank' "highlighted yanking
 Plug 'luochen1990/rainbow' "bracket pair colorizing
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround' "surround your text effectively
+Plug 'jiangmiao/auto-pairs' "auto pairing improved
 
 call plug#end()
