@@ -66,7 +66,7 @@ Leader is `<spacebar>`
 
 ## Debugger
 
-![debugger](./assets/debugger.png)
+<p align="center"> <img src = "https://raw.githubusercontent.com/kartik1998/dotfiles/master/assets/debugger.png" alt="dotfiles" width=400 height=100> </p>
 **vimspector** is used for debugging applications. [docs](https://puremourning.github.io/vimspector-web/demo-setup.html). <br/>
 You'll need a `.vimspector.json` file in your project to run the debugger. <br/>
 Sample `.vimspector.json`:
