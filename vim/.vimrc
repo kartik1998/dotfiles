@@ -74,7 +74,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'szw/vim-maximizer' "to maximize the split
 Plug 'tpope/vim-commentary' "to comment source code
 Plug 'machakann/vim-highlightedyank' "highlighted yanking
-Plug 'jiangmiao/auto-pairs' "auto pairing
 
 call plug#end()
 
