@@ -109,4 +109,30 @@ Sample `.vimspector.json`:
 | `<Leader-dj>`  | Step over          |
 | `<Leader-drc>` | Run to cursor      |
 
+* `.vimspector.json` to attach to a node server:
+
+```json
+{
+  "configurations": {
+    "run": {
+      "adapter": "vscode-node",
+      "default": true,
+      "breakpoints": {
+        "exception": {
+          "all": "N",
+          "uncaught": "N"
+        }
+      },
+      "configuration": {
+        "name": "Attaching to a process ID",
+        "type": "node",
+        "request": "attach",
+        "skipFiles": ["node_modules/**/*.js", "<node_internals>/**/*.js"],
+        "processId": "${processId}"
+      }
+    }
+  }
+}
+```
+
 - **LICENSE**: [WTFPL](http://www.wtfpl.net/)
