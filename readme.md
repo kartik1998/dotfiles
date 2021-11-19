@@ -64,4 +64,47 @@ Leader is `<spacebar>`
 | `<C-u>`             | page up                                            |
 | `<C-d>`             | pade down                                          |
 
+## Debugger
+
+vimspector is used for debugging applications. [docs](https://puremourning.github.io/vimspector-web/demo-setup.html). <br/>
+you'll need a `.vimspector.json` file in your project to run the debugger. <br/>
+sample `.vimspector.json`:
+
+```json
+{
+  "configurations": {
+    "run": {
+      "adapter": "vscode-node",
+      "configuration": {
+        "request": "launch",
+        "protocol": "auto",
+        "stopOnEntry": true,
+        "console": "integratedTerminal",
+        "program": "${workspaceRoot}/index.js",
+        "cwd": "${workspaceRoot}"
+      },
+      "breakpoints": {
+        "exception": {
+          "all": "Y",
+          "uncaught": "Y"
+        }
+      }
+    }
+  }
+}
+```
+
+| Mappings       | Action             |
+| -------------- | ------------------ |
+| `<Leader-ds>`  | debugger start     |
+| `<Leader-de>`  | debugger end       |
+| `<Leader-dc>`  | debugger continue  |
+| `<Leader-dr>`  | debugger restart   |
+| `<Leader-dt>`  | toggle break point |
+| `<Leader-dT>`  | clear break points |
+| `<Leader-dk>`  | Step out           |
+| `<Leader-dl>`  | Step into          |
+| `<Leader-dj>`  | Step over          |
+| `<Leader-drc>` | Run to cursor      |
+
 - **LICENSE**: [WTFPL](http://www.wtfpl.net/)
