@@ -159,6 +159,7 @@ let test#neovim#term_position = "vertical"
 nnoremap <leader>ds :call vimspector#Launch()<CR> 
 nnoremap <leader>de :call vimspector#Reset()<CR>
 nnoremap <Leader>dc :call vimspector#Continue()<CR>
+nmap <Leader>dr <Plug>VimspectorRestart
 
 nnoremap <leader>dt :call vimspector#ToggleBreakpoint()<CR>
 nnoremap <leader>dT :call vimspector#ClearBreakpoints()<CR>
