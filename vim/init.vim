@@ -182,7 +182,7 @@ nnoremap <leader>] :bnext<CR>
 " luochen1990/rainbow (bracket pair colorizing)
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 let g:rainbow_conf = {
-\	'guifgs': ['#99d6ff', '#e6e600', '#00cc44', '#d580ff'],
+\	'guifgs': ['#61AFEF', '#e6e600', 'darkcyan', '#C678DD'],
 \	'ctermfgs': ['darkblue', 'darkyellow', 'darkcyan', 'darkmagenta'],
 \	'operators': '',
 \	'parentheses': map(['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/'], 'v:val." fold"'),
@@ -197,8 +197,9 @@ let g:rainbow_conf = {
 
 "lukas-reineke/indent-blankline.nvim
 lua << EOF
+vim.opt.list = true
+
 require("indent_blankline").setup {
-    char = "|",
-    buftype_exclude = {"terminal"}
+    show_end_of_line = true,
 }
 EOF
