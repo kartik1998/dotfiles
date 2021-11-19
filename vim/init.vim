@@ -194,3 +194,11 @@ let g:rainbow_conf = {
 \		'coq': 0,
 \	}
 \}
+
+"lukas-reineke/indent-blankline.nvim
+lua << EOF
+require("indent_blankline").setup {
+    char = "|",
+    buftype_exclude = {"terminal"}
+}
+EOF
