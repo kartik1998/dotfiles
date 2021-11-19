@@ -41,6 +41,6 @@ Plug 'luochen1990/rainbow' "bracket pair colorizing
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround' "surround your text effectively
 Plug 'jiangmiao/auto-pairs' "auto pairing improved
-Plug 'lukas-reineke/indent-blankline.nvim' "lines inside brackets like vscode highlighting them, ref: https://www.reddit.com/r/neovim/comments/n3b74y/question_how_i_make_line_inside_brackets_like/
+" Plug 'lukas-reineke/indent-blankline.nvim' "lines inside brackets like vscode highlighting them, ref: https://www.reddit.com/r/neovim/comments/n3b74y/question_how_i_make_line_inside_brackets_like/
 
 call plug#end()

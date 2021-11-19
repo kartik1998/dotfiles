@@ -195,11 +195,11 @@ let g:rainbow_conf = {
 \	}
 \}
 
-"lukas-reineke/indent-blankline.nvim
-lua << EOF
-vim.opt.list = true
+""lukas-reineke/indent-blankline.nvim
+"lua << EOF
+"vim.opt.list = true
 
-require("indent_blankline").setup {
-    show_end_of_line = true,
-}
-EOF
+"require("indent_blankline").setup {
+"    show_end_of_line = true,
+"}
+"EOF
