@@ -110,6 +110,7 @@ Sample `.vimspector.json`:
 | `<Leader-drc>` | Run to cursor      |
 
 * `.vimspector.json` to attach to a node server:
+* run `node --inspect <filename>.js` and start the debugger with `<Leader-ds>`
 
 ```json
 {
