@@ -28,6 +28,10 @@
     {
       "before": ["<leader>", "]"],
       "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
