@@ -46,10 +46,6 @@
     {
       "before": ["<leader>", "f"],
       "commands": ["revealInExplorer"]
-    },
-    {
-      "before": ["<leader>", "l"],
-      "after": ["$"]
     }
   ],
   "vim.handleKeys": {
