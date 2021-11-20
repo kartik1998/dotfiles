@@ -53,6 +53,8 @@ inoremap <C-s> <Esc>:w<cr>i
 nnoremap <C-s> <Esc>:w<cr>
 " yanks to clipboard in visual mode
 vnoremap <C-c> "+y
+" make Y effect to end of line instead of whole line
+map Y y$
 
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
