@@ -21,4 +21,8 @@
     "key": "ctrl+f",
     "command": "workbench.action.findInFiles"
   },
+  {
+    "key": "ctrl+c",
+    "command": "editor.action.clipboardCopyAction"
+  }
 ]
