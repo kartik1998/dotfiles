@@ -1,7 +1,7 @@
 ## tmux
 
 <blockquote>
-sudo apt-get update
+sudo apt-get update <br/>
 sudo apt-get install tmux
 </blockquote>
 
