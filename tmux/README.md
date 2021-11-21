@@ -5,16 +5,17 @@ sudo apt-get update
 sudo apt-get install tmux
 </blockquote>
 
-| Mappings                 | Action                            |
-| ------------------------ | --------------------------------- |
-| `tmux`                   | start tmux                        |
-| `ctrl+b %`               | new pane (vertical split)         |
-| `ctrl+b "`               | new pane (horizontal split)       |
-| `ctrl+b [direction key]` | move between panes                |
-| `ctrl+b c`               | new window                        |
-| `ctrl+b <number>`        | move to window of specific number |
-| `ctrl+b ,`               | rename window                     |
-| `exit`                   | exit window                       |
+| Mappings                 | Action                                            |
+| ------------------------ | ------------------------------------------------- |
+| `tmux`                   | start tmux                                        |
+| `ctrl+b %`               | new pane (vertical split)                         |
+| `ctrl+b "`               | new pane (horizontal split)                       |
+| `ctrl+b [direction key]` | move between panes                                |
+| `ctrl+b c`               | new window                                        |
+| `ctrl+b <number>`        | move to window of specific number                 |
+| `ctrl+b ,`               | rename window                                     |
+| `ctrl+b w`               | view windows (enter to open window and x to kill) |
+| `exit`                   | exit window                                       |
 
 ## Sessions
 
