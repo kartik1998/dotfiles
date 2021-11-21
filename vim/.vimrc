@@ -60,6 +60,8 @@ nnoremap <C-v> :vsplit <CR>
 "horizontal split
 nnoremap <C-h> :split <CR>
 
+" make Y effect to end of line instead of whole line
+map Y y$
 call plug#begin('~/.vim/plugged')
 
 " autocompletion and intellisense
