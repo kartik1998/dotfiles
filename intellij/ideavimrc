@@ -18,3 +18,6 @@ set scrolloff=10 "start scrolling down / up when you are 10 lines away
 inoremap <C-s> <Esc>:w<cr>i
 " saves the buffer in insert mode
 nnoremap <C-s> <Esc>:w<cr>
+
+" make Y effect to end of line instead of whole line
+map Y y$
