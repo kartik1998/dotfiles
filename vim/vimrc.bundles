@@ -7,7 +7,7 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 "colorschemes
-Plug 'martinsione/darkplus.nvim'
+Plug 'tomasiser/vim-code-dark'
 
 "syntax highlighting / autocompletion
 Plug 'pangloss/vim-javascript'
