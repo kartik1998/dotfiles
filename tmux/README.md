@@ -5,6 +5,8 @@ sudo apt-get update
 sudo apt-get install tmux
 </blockquote>
 
+- tmux cheatsheet: https://tmuxcheatsheet.com
+
 | Mappings                 | Action                                            |
 | ------------------------ | ------------------------------------------------- |
 | `tmux`                   | start tmux                                        |
