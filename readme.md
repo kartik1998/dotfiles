@@ -28,6 +28,13 @@ cd dotfiles
 bash neovim_setup.sh
 ```
 
+- Tmux conf:
+
+```bash
+curl -o ~/.tmux.conf https://raw.githubusercontent.com/kartik1998/dotfiles/master/tmux/tmux.conf
+
+```
+
 ## VIM config
 
 The vim config is different for vim and neovim. (Mostly similar) <br/>
@@ -109,8 +116,8 @@ Sample `.vimspector.json`:
 | `<Leader-dj>`  | Step over          |
 | `<Leader-drc>` | Run to cursor      |
 
-* `.vimspector.json` to attach to a node server:
-* run `node --inspect <filename>.js` and start the debugger with `<Leader-ds>`
+- `.vimspector.json` to attach to a node server:
+- run `node --inspect <filename>.js` and start the debugger with `<Leader-ds>`
 
 ```json
 {
