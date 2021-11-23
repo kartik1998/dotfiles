@@ -1,6 +1,10 @@
 
 ## VScode setup 
 
+<blockquote>
+  For debugging node: "Javascript Debug Terminal". For go, python etc. check the docs
+</blockquote>
+
 * **Enable key repeat with vscode**: [stackoverflow reference](https://stackoverflow.com/questions/39972335/how-do-i-press-and-hold-a-key-and-have-it-repeat-in-vscode)
 
 ```shell
