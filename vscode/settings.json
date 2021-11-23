@@ -69,11 +69,6 @@
       "when": "debugState == 'stopped'"
     },
     {
-      "before": ["<leader>", "d", "r"],
-      "commands": ["workbench.action.debug.restart"],
-      "when": "inDebugMode"
-    },
-    {
       "before": ["<leader>", "d", "e"],
       "commands": ["workbench.action.debug.stop"],
       "when": "inDebugMode && !focusedSessionIsAttach"
