@@ -82,6 +82,10 @@
       "before": ["<leader>", "d", "v"],
       "commands": ["workbench.debug.action.toggleRepl"],
       "when": "workbench.panel.repl.view.active"
+    },
+    {
+      "before": ["<leader>", "d", "r", "c"],
+      "commands": ["editor.debug.action.runToCursor"]
     }
   ],
   "vim.handleKeys": {
