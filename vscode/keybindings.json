@@ -24,5 +24,13 @@
   {
     "key": "ctrl+c",
     "command": "editor.action.clipboardCopyAction"
+  },
+  {
+    "key": "ctrl+q",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "cmd+w",
+    "command": "-workbench.action.closeActiveEditor"
   }
 ]
