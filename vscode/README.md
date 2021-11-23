@@ -19,6 +19,7 @@ Going through the keybindings and settings json should be enough but adding some
 - `<leader> ]` next tab
 - `<leader> v` split editor
 - `<leader> e` toggle sidebar visibility
+- `<leader> l` run prettier on current file
 - Toggle terminal: `ctrl+t`
 - Remap capslock to control: [link](https://dev.to/andy4thehuynh/vim-tip-remap-caps-lock-to-control-3ih8)
 
