@@ -95,4 +95,4 @@ nnoremap <leader>m :MaximizerToggle! <CR>
 nnoremap <C-p> :Files <CR>
 nnoremap <C-f> :Rg <CR>
 "ignore node_modules and .git with fzf
-let $FZF_DEFAULT_COMMAND='find . ! -path "*node_modules*" ! -path "*.git/*" | fzf'
+" let $FZF_DEFAULT_COMMAND='find . ! -path "*node_modules*" ! -path "*.git/*" | fzf'
