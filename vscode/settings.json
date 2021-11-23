@@ -48,6 +48,11 @@
       "before": ["<leader>", "l"],
       "commands": ["editor.action.formatDocument"],
       "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+      "before": ["<leader>", "d", "s"],
+      "commands": ["workbench.action.debug.start"],
+      "when": "debuggersAvailable && debugState == 'inactive'"
     }
   ],
   "vim.handleKeys": {
