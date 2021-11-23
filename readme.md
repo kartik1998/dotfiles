@@ -5,11 +5,7 @@
 - To setup vim:
 
 ```bash
-mkdir -p $HOME/.vim/colors
-curl -o $HOME/.vim/colors/hybrid.vim https://raw.githubusercontent.com/kartik1998/dotfiles/master/vim/colors/hybrid.vim
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-curl -o $HOME/.vimrc https://raw.githubusercontent.com/kartik1998/dotfiles/master/vim/.vimrc
-vi +PlugInstall +qall
+bash <(curl -s https://raw.githubusercontent.com/kartik1998/dotfiles/master/scripts/vim-setup.sh)
 ```
 
 - Install ripgrep to support live grep:
