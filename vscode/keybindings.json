@@ -32,5 +32,9 @@
   {
     "key": "cmd+w",
     "command": "-workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "extension.js-debug.createDebuggerTerminal"
   }
 ]
