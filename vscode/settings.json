@@ -58,6 +58,30 @@
       "before": ["<leader>", "d", "t"],
       "commands": ["editor.debug.action.toggleBreakpoint"],
       "when": "debuggersAvailable && editorTextFocus"
+    },
+    {
+      "before": ["<leader>", "d", "T"],
+      "commands": ["workbench.debug.viewlet.action.removeAllBreakpoints"]
+    },
+    {
+      "before": ["<leader>", "d", "c"],
+      "commands": ["workbench.action.debug.continue"],
+      "when": "debugState == 'stopped'"
+    },
+    {
+      "before": ["<leader>", "d", "r"],
+      "commands": ["workbench.action.debug.restart"],
+      "when": "inDebugMode"
+    },
+    {
+      "before": ["<leader>", "d", "e"],
+      "commands": ["workbench.action.debug.stop"],
+      "when": "inDebugMode && !focusedSessionIsAttach"
+    },
+    {
+      "before": ["<leader>", "d", "v"],
+      "commands": ["workbench.debug.action.toggleRepl"],
+      "when": "workbench.panel.repl.view.active"
     }
   ],
   "vim.handleKeys": {
@@ -96,4 +120,3 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
-
