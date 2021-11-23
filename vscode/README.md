@@ -26,4 +26,4 @@ Going through the keybindings and settings json should be enough but adding some
 - Remember to setup the snippets! -> [docs](https://code.visualstudio.com/docs/editor/userdefinedsnippets#:~:text=In%20Visual%20Studio%20Code%2C%20snippets,Snippet%20in%20the%20Command%20Palette.&text=tabCompletion%22%3A%20%22on%22%20%2C,Tab%20to%20insert%20a%20snippet.)
 - Ensure that your keyboard settings are at fast (system preferences)
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/22555088/139585698-956a4554-1fac-4dba-867d-4d6a1508b1ab.png">  </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/22555088/139585698-956a4554-1fac-4dba-867d-4d6a1508b1ab.png" height=400 width=380>  </p>
