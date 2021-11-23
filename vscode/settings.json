@@ -53,6 +53,11 @@
       "before": ["<leader>", "d", "s"],
       "commands": ["workbench.action.debug.start"],
       "when": "debuggersAvailable && debugState == 'inactive'"
+    },
+    {
+      "before": ["<leader>", "d", "t"],
+      "commands": ["editor.debug.action.toggleBreakpoint"],
+      "when": "debuggersAvailable && editorTextFocus"
     }
   ],
   "vim.handleKeys": {
@@ -91,3 +96,4 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
+
