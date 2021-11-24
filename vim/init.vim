@@ -209,3 +209,19 @@ let g:closetag_regions = {
     \ 'typescriptreact': 'jsxRegion,tsxRegion',
     \ 'javascriptreact': 'jsxRegion',
     \ }
+
+" neoclide/coc.nvim
+
+" coc config
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-tsserver',
+  \ 'coc-eslint',
+  \ 'coc-prettier',
+  \ 'coc-json',
+  \ 'coc-tabnine',
+  \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-highlight',
+  \ 'coc-yaml',
+  \ ]
