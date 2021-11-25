@@ -14,6 +14,7 @@ set magic
 set smarttab
 set autoindent
 set smartindent
+set showmatch "Highlights matching parentheses
 set autoread
 set tabstop=2 softtabstop=2
 set nowrap
