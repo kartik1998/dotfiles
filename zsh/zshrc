@@ -13,7 +13,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 ## -- vim bindings for shell -- ##
-bindkey -v
+# bindkey -v
 ## -- vim bindings for shell -- ##
 
 ## -- nvm -- ##
@@ -21,11 +21,12 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 ## -- nvm -- ##
-
+export CC="gcc-11"
 ## -- kafka path -- ##
 export PATH="$PATH:/Users/kartik/kafka/bin" 
 ## -- kafka path -- ##
-
+alias desktop="cd ~/Desktop"
+alias downloads="cd ~/Downloads"
 # alias jrun="bash ~/zsh_apac/java_run.sh"
 alias vim="nvim"
 # alias lsf="bash ~/zsh_apac/readlink.sh"
@@ -33,20 +34,29 @@ alias lint="prettier --write"
 alias sess="tmux -CC new -s kartik"
 alias gblista="git for-each-ref --sort=-committerdate refs/heads/ refs/remotes --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 alias gblist="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
-alias gb="gblist"
-alias gba="gblista"
+alias gbl="gblist"
+alias gbla="gblista"
+alias v="nvim"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+
+# fzf specific stuff
+export FZF_COMPLETION_TRIGGER='*'
+bindkey ^P fzf-cd-widget
+# Automatically define aliases for first 16 directories on the directory stack (directories visited)
+alias d="dirs -v"
+for index ({1..15}) alias "$index"="cd +${index}"; unset index 
+#-- 
 
 function get_ssh_string {
 	ssh -A kartik.rawat@$1
 }
 alias sshv="get_ssh_string $1"
 
-# fzf specific stuff
-export FZF_COMPLETION_TRIGGER='*'
-bindkey ^P fzf-cd-widget
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ssh-add ~/.ssh/id_rsa &> /dev/null
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
