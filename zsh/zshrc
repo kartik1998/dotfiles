@@ -40,12 +40,18 @@ alias v="nvim"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # fzf specific stuff
+fzf_branch_recur() {
+ git branch --all | fzf | tr -d '[:space:]';
+}
+zle -N fzf_branch_recur
+
 export FZF_COMPLETION_TRIGGER='*'
 bindkey ^P fzf-cd-widget
+bindkey ^F fzf_branch_recur
 # Automatically define aliases for first 16 directories on the directory stack (directories visited)
 alias d="dirs -v"
 for index ({1..15}) alias "$index"="cd +${index}"; unset index 
-export FZF_ALT_C_COMMAND="fd --full-path ~/. ~/dotfiles ~/Desktop ~/Documents ~/Downloads ~/.config ~/.ssh ~/ips ~/deploy --type d"
+export FZF_ALT_C_COMMAND="fd --full-path ~/. ~/dotfiles ~/Desktop ~/Documents ~/Downloads ~/.config ~/.config/nvim ~/.ssh ~/ips ~/deploy --type d"
 gcoo() {
  git checkout "$(git branch --all | fzf | tr -d '[:space:]')"
 }
