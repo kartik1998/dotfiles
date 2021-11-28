@@ -42,6 +42,10 @@ function get_ssh_string {
 }
 alias sshv="get_ssh_string $1"
 
+# fzf specific stuff
+export FZF_COMPLETION_TRIGGER='*'
+bindkey ^P fzf-cd-widget
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
