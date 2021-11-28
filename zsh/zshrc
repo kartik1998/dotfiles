@@ -40,11 +40,6 @@ alias v="nvim"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # fzf specific stuff
-fzf_branch_recur() {
- git branch --all | fzf | tr -d '[:space:]';
-}
-zle -N fzf_branch_recur
-
 export FZF_COMPLETION_TRIGGER='*'
 bindkey ^P fzf-cd-widget
 # Automatically define aliases for first 16 directories on the directory stack (directories visited)
