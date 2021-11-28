@@ -45,6 +45,8 @@ bindkey ^P fzf-cd-widget
 # Automatically define aliases for first 16 directories on the directory stack (directories visited)
 alias d="dirs -v"
 for index ({1..15}) alias "$index"="cd +${index}"; unset index 
+export FZF_ALT_C_COMMAND="fd --full-path ~/. ~/dotfiles ~/Desktop ~/Documents ~/Downloads ~/.config ~/.ssh ~/ips ~/deploy --type d"
+
 #-- 
 
 function get_ssh_string {
