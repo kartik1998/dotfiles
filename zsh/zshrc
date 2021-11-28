@@ -46,7 +46,9 @@ bindkey ^P fzf-cd-widget
 alias d="dirs -v"
 for index ({1..15}) alias "$index"="cd +${index}"; unset index 
 export FZF_ALT_C_COMMAND="fd --full-path ~/. ~/dotfiles ~/Desktop ~/Documents ~/Downloads ~/.config ~/.ssh ~/ips ~/deploy --type d"
-
+gcoo() {
+ git checkout "$(git branch --all | fzf | tr -d '[:space:]')"
+}
 #-- 
 
 function get_ssh_string {
