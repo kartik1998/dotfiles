@@ -139,4 +139,6 @@ Sample `.vimspector.json`:
 }
 ```
 
-- **LICENSE**: [WTFPL](http://www.wtfpl.net/)
+## LICENSE
+
+<b>[WTFPL](http://www.wtfpl.net/)</b>
