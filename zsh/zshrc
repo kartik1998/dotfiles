@@ -8,7 +8,7 @@ fi
 export ZSH="/Users/kartik/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf-tab)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,16 +40,10 @@ alias v="nvim"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # fzf specific stuff
-# disable sort when completing `git checkout`
-zstyle ':completion:*:git-checkout:*' sort false
-# set descriptions format to enable group support
-zstyle ':completion:*:descriptions' format '[%d]'
-# set list-colors to enable filename colorizing
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-# preview directory's content with exa when completing cd
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
-# switch group using `,` and `.`
-zstyle ':fzf-tab:*' switch-group ',' '.'
+fzf_branch_recur() {
+ git branch --all | fzf | tr -d '[:space:]';
+}
+zle -N fzf_branch_recur
 
 export FZF_COMPLETION_TRIGGER='*'
 bindkey ^P fzf-cd-widget
