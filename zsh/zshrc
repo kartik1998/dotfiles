@@ -47,7 +47,6 @@ zle -N fzf_branch_recur
 
 export FZF_COMPLETION_TRIGGER='*'
 bindkey ^P fzf-cd-widget
-bindkey ^F fzf_branch_recur
 # Automatically define aliases for first 16 directories on the directory stack (directories visited)
 alias d="dirs -v"
 for index ({1..15}) alias "$index"="cd +${index}"; unset index 
