@@ -177,7 +177,7 @@ nnoremap <leader>] :bnext<CR>
 " luochen1990/rainbow (bracket pair colorizing)
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 let g:rainbow_conf = {
-\	'guifgs': ['#61AFEF', '#e6e600', 'darkcyan', '#C678DD'],
+\	'guifgs': ['#61AFEF', '#e6e600', '#00a550', '#C678DD'],
 \	'ctermfgs': ['darkblue', 'darkyellow', 'darkcyan', 'darkmagenta'],
 \	'operators': '',
 \	'parentheses': map(['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/'], 'v:val." fold"'),
