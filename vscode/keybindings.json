@@ -30,11 +30,12 @@
     "command": "workbench.action.closeActiveEditor"
   },
   {
-    "key": "cmd+w",
-    "command": "-workbench.action.closeActiveEditor"
-  },
-  {
     "key": "ctrl+j",
     "command": "extension.js-debug.createDebuggerTerminal"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
   }
 ]
