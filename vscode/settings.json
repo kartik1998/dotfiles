@@ -9,6 +9,7 @@
   "editor.fontSize": 12.4,
   "vim.leader": "<space>",
   "vim.easymotion": true,
+  "vim.surround": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": false,
   "vim.useCtrlKeys": true,
@@ -120,6 +121,8 @@
   },
   "editor.renderLineHighlight": "line",
   "workbench.colorCustomizations": {
-    "editor.lineHighlightBackground": "#242323"
+    "editor.lineHighlightBackground": "#242323",
+    "statusBar.background": "#1d5b8f",
+    "statusBar.debuggingBackground": "#4e6656"
   }
 }
