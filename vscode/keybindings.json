@@ -14,6 +14,10 @@
     "command": "workbench.action.files.save"
   },
   {
+    "key": "ctrl+d",
+    "command": "workbench.action.files.save"
+  },
+  {
     "key": "ctrl+p",
     "command": "workbench.action.quickOpen"
   },
@@ -36,6 +40,11 @@
   {
     "key": "ctrl+n",
     "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "editor.action.moveSelectionToNextFindMatch",
     "when": "editorFocus"
   }
 ]
