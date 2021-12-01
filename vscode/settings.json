@@ -117,5 +117,9 @@
   "debug.javascript.autoAttachFilter": "onlyWithFlag",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.renderLineHighlight": "line",
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#242323"
   }
 }
