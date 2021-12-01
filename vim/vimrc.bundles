@@ -27,6 +27,9 @@ Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 "debugging
 Plug 'puremourning/vimspector' " debugger
 
+"go specific
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 "accessories
 Plug 'vim-airline/vim-airline' "statusline, tabline, etc 
 Plug 'vim-airline/vim-airline-themes' "statusline, tabline, etc 
