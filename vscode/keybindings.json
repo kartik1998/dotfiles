@@ -15,7 +15,7 @@
   },
   {
     "key": "ctrl+d",
-    "command": "workbench.action.files.save"
+    "command": ""
   },
   {
     "key": "ctrl+p",
