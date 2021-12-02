@@ -123,7 +123,6 @@
   "workbench.colorCustomizations": {
     "editor.lineHighlightBackground": "#242323",
     "statusBar.background": "#1d5b8f",
-    "statusBar.debuggingBackground": "#37644a"
-    // "statusBar.debuggingBackground": "#577062",
+    "statusBar.debuggingBackground": "#456151"
   }
 }
