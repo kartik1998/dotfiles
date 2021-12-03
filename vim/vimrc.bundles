@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 
 "colorschemes
 Plug 'tomasiser/vim-code-dark'
+Plug 'martinsione/darkplus.nvim'
 
 "syntax highlighting / autocompletion
 Plug 'pangloss/vim-javascript'
@@ -29,6 +30,9 @@ Plug 'puremourning/vimspector' " debugger
 
 "go specific
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+"treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  
 
 "accessories
 Plug 'vim-airline/vim-airline' "statusline, tabline, etc 

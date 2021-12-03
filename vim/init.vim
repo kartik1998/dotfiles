@@ -34,6 +34,7 @@ set background=dark
 set cursorline
 set updatetime=750
 set autowrite
+" colorscheme darkplus
 colorscheme codedark
 
 if has('mouse')
