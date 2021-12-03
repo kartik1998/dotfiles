@@ -4,6 +4,5 @@
 - ensure that you've installed ideavim and to source run: `:source ~/.ideavimrc`
 
 <blockquote> 
-grazie makes ideavim really slow. Disable it and restart ideavim. <br/>
- reference: https://youtrack.jetbrains.com/issue/WI-58070
+Use intellij ~2019, faced a lot of lag issues with 2021, plus crazy amount of ram usage
 </blockquote>
