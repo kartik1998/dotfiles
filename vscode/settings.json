@@ -82,6 +82,10 @@
     {
       "before": ["<leader>", "d", "r", "c"],
       "commands": ["editor.debug.action.runToCursor"]
+    },
+    {
+      "before": ["<leader>", "d", "a"],
+      "commands": ["extension.pwa-node-debug.attachNodeProcess"]
     }
   ],
   "vim.handleKeys": {
@@ -124,5 +128,8 @@
     "editor.lineHighlightBackground": "#242323",
     "statusBar.background": "#1d5b8f",
     "statusBar.debuggingBackground": "#456151"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
