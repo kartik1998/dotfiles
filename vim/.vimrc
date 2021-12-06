@@ -56,9 +56,9 @@ let g:qs_highlight_on_keys = ['f', 'F']
 
 "split view remaps 
 "vertical split
-nnoremap <C-v> :vsplit <CR> 
+nnoremap <leader>v :vsplit <CR> 
 "horizontal split
-nnoremap <C-h> :split <CR>
+nnoremap <leader>h :split <CR>
 
 " make Y effect to end of line instead of whole line
 map Y y$
@@ -101,7 +101,7 @@ let g:ctrlp_cmd = 'CtrlP'
 if exists("g:ctrl_user_command")
   unlet g:ctrlp_user_command
 endif
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*,*/bower_components/*,*/node_modules/*,*/dist/*,*/build/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*,*/bower_components/*,*/node_modules/*
 
 " buffergator
 nnoremap <silent> <Leader>b :BuffergatorOpen<CR>
