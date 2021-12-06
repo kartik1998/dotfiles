@@ -1,6 +1,7 @@
 # get colorscheme
 mkdir -p $HOME/.vim/colors
-curl -o $HOME/.vim/colors/hybrid.vim https://raw.githubusercontent.com/kartik1998/dotfiles/master/vim/colors/hybrid.vim > /dev/null
+curl -o $HOME/.vim/colors/hybrid.vim https://raw.githubusercontent.com/kartik1998/dotfiles/master/vim/colors/hybrid.vim 
+curl -o $HOME/.vim/colors/codedark.vim https://raw.githubusercontent.com/kartik1998/dotfiles/master/vim/colors/codedark.vim 
 
 # get vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
