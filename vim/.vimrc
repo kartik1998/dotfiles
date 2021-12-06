@@ -69,13 +69,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "search, navigation related
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 "accessories
 Plug 'szw/vim-maximizer' "to maximize the split
 Plug 'tpope/vim-commentary' "to comment source code
 Plug 'machakann/vim-highlightedyank' "highlighted yanking
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround' "surround your text effectively
+Plug 'jiangmiao/auto-pairs' "auto pairing improved
+Plug 'jeetsukumaran/vim-buffergator', { 'on': ['BuffergatorOpen', 'BuffergatorToggle'] }
 
 call plug#end()
 
@@ -91,8 +94,14 @@ let NERDTreeIgnore=['\.git$']
 " szw/vim-maximizer - to maximize the split
 nnoremap <leader>m :MaximizerToggle! <CR>
 
-"junegunn/fzf
-nnoremap <C-p> :Files <CR>
-nnoremap <C-f> :Rg <CR>
-"ignore node_modules and .git with fzf
-" let $FZF_DEFAULT_COMMAND='find . ! -path "*node_modules*" ! -path "*.git/*" | fzf'
+"ctrlp navigation
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+"Custom ignore for ctrlp
+if exists("g:ctrl_user_command")
+  unlet g:ctrlp_user_command
+endif
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*,*/bower_components/*,*/node_modules/*,*/dist/*,*/build/*
+
+" buffergator
+nnoremap <silent> <Leader>b :BuffergatorOpen<CR>
