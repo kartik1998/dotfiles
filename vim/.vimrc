@@ -77,7 +77,6 @@ Plug 'machakann/vim-highlightedyank' "highlighted yanking
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround' "surround your text effectively
 Plug 'jiangmiao/auto-pairs' "auto pairing improved
-Plug 'jeetsukumaran/vim-buffergator', { 'on': ['BuffergatorOpen', 'BuffergatorToggle'] }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
@@ -94,9 +93,8 @@ let NERDTreeIgnore=['\.git$']
 " szw/vim-maximizer - to maximize the split
 nnoremap <leader>m :MaximizerToggle! <CR>
 
-" buffergator
-nnoremap <silent> <Leader>b :BuffergatorOpen<CR>
-
+" fzf remaps
+nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <C-p> :Files <CR>
 nnoremap <C-f> :Rg <CR>
 
