@@ -27,7 +27,7 @@ set undodir=~/.vim/undodir
 set background=dark
 set cursorline
 set updatetime=750
-colorscheme codedark
+colorscheme hybrid
 
 if has('mouse')
   set mouse=a
