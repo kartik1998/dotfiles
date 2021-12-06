@@ -69,7 +69,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "search, navigation related
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'ctrlpvim/ctrlp.vim'
 
 "accessories
 Plug 'szw/vim-maximizer' "to maximize the split
@@ -79,7 +78,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround' "surround your text effectively
 Plug 'jiangmiao/auto-pairs' "auto pairing improved
 Plug 'jeetsukumaran/vim-buffergator', { 'on': ['BuffergatorOpen', 'BuffergatorToggle'] }
-
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 "scrooloose/nerdtree
@@ -94,14 +94,10 @@ let NERDTreeIgnore=['\.git$']
 " szw/vim-maximizer - to maximize the split
 nnoremap <leader>m :MaximizerToggle! <CR>
 
-"ctrlp navigation
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-"Custom ignore for ctrlp
-if exists("g:ctrl_user_command")
-  unlet g:ctrlp_user_command
-endif
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*,*/bower_components/*,*/node_modules/*
-
 " buffergator
 nnoremap <silent> <Leader>b :BuffergatorOpen<CR>
+
+nnoremap <C-p> :Files <CR>
+nnoremap <C-f> :Rg <CR>
+
+let $FZF_DEFAULT_COMMAND='find . | grep -v node_modules | grep -v .git'
