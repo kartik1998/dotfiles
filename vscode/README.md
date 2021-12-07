@@ -42,5 +42,6 @@ Repl is present in Debug Console (very useful)
 | `<Leader-dc>`  | debugger continue              |
 | `<Leader-dt>`  | toggle break point             |
 | `<Leader-dT>`  | clear break points             |
+| `<Leader-da>`  | attach to process to debug     |
 | `<Leader-drc>` | Run to cursor                  |
 | `<C-j>`        | Open javascript debug terminal |
