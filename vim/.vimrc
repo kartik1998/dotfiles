@@ -62,6 +62,11 @@ nnoremap <leader>h :split <CR>
 
 " make Y effect to end of line instead of whole line
 map Y y$
+
+" join line i.e. <shift> j takes the cursor to the joined line first char.
+" Below remap keeps the cursor IN PLACE
+nnoremap J mzJ`z
+
 call plug#begin('~/.vim/plugged')
 
 " autocompletion and intellisense
