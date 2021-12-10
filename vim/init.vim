@@ -92,6 +92,10 @@ nnoremap <leader>v :vsplit <cr>
 "horizontal split
 nnoremap <leader>h :split <cr>
 
+" join line i.e. <shift> j takes the cursor to the joined line first char.
+" Below remap keeps the cursor IN PLACE
+nnoremap J mzJ`z
+
 " --- Plugin Configurations --- "
 
 "scrooloose/nerdtree
