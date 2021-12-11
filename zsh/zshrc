@@ -45,17 +45,19 @@ bindkey ^P fzf-cd-widget
 # Automatically define aliases for first 16 directories on the directory stack (directories visited)
 alias d="dirs -v"
 for index ({1..15}) alias "$index"="cd +${index}"; unset index 
-export FZF_ALT_C_COMMAND="fd --full-path ~/. ~/dotfiles ~/Desktop ~/Documents ~/Downloads ~/.config ~/.config/nvim ~/.ssh ~/ips ~/deploy --type d"
+export FZF_ALT_C_COMMAND="fd --full-path ~/. ~/Desktop ~/Downloads ~/Documents ~/dotfiles ~/.config ~/.ssh --type d"
 gcoo() {
  git checkout "$(git branch --all | fzf | tr -d '[:space:]')"
 }
+zle -N gcoo
+bindkey "^G^B" gcoo
+
 #-- 
 
 function get_ssh_string {
 	ssh -A kartik.rawat@$1
 }
 alias sshv="get_ssh_string $1"
-
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
