@@ -134,6 +134,7 @@ nnoremap <leader>l :Neoformat prettier<CR>
 nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <C-f> :Telescope live_grep <CR>
 nnoremap <C-g>b :Telescope git_branches<cr>
+nnoremap <C-g><C-b> :Telescope git_branches<cr>
 nnoremap <C-g>log :Telescope git_commits<cr>
 nnoremap <C-g>st :Telescope git_status<cr>
 nnoremap <leader>st :Telescope git_stash<cr>
