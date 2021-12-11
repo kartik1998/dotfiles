@@ -135,6 +135,7 @@ nnoremap <C-f> :Telescope live_grep <CR>
 nnoremap <leader>gb :Telescope git_branches 
 nnoremap <leader>glog :Telescope git_commits
 nnoremap <leader>gst :Telescope git_status
+nnoremap <leader>st :Telescope git_stash<CR>
 
 "ignore node modules for live grep
 lua << EOF
