@@ -6,7 +6,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.fontSize": 12.6,
+  "editor.fontSize": 12.7,
   "vim.leader": "<space>",
   "vim.easymotion": true,
   "vim.surround": true,
