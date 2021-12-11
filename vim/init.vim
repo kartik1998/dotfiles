@@ -108,7 +108,7 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.git$']
 
 " szw/vim-maximizer - to maximize the split
-nnoremap <leader>m :MaximizerToggle! <CR>
+nnoremap <C-m> :MaximizerToggle! <CR>
 
 " kassio/neoterm - terminal for neovim
 let g:neoterm_default_mod = 'belowright'
