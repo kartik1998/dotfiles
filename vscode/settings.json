@@ -38,6 +38,10 @@
       "commands": ["workbench.action.splitEditor"]
     },
     {
+      "before": ["<leader>", "j"],
+      "commands": ["extension.js-debug.createDebuggerTerminal"]
+    },
+    {
       "before": ["J"],
       "after": ["m", "z", "J", "`", "z"]
     },
