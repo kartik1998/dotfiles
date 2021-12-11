@@ -124,5 +124,13 @@
     "key": "enter",
     "command": "list.select",
     "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+g ctrl+b",
+    "command": "git.checkout"
+  },
+  {
+    "key": "ctrl+g b",
+    "command": "git.checkout"
   }
 ]
