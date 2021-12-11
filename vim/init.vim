@@ -132,10 +132,10 @@ nnoremap <leader>l :Neoformat prettier<CR>
 " nvim-telescope/telescope.nvim
 nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <C-f> :Telescope live_grep <CR>
-nnoremap <leader>gb :Telescope git_branches 
-nnoremap <leader>glog :Telescope git_commits
-nnoremap <leader>gst :Telescope git_status
-nnoremap <leader>st :Telescope git_stash<CR>
+nnoremap <leader>gb :Telescope git_branches<cr>
+nnoremap <leader>glog :Telescope git_commits<cr>
+nnoremap <leader>gst :Telescope git_status<cr>
+nnoremap <leader>st :Telescope git_stash<cr>
 
 "ignore node modules for live grep
 lua << EOF
