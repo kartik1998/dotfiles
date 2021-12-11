@@ -19,6 +19,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/vim-gitbranch' 
 Plug 'tpope/vim-fugitive' "git interactions
 Plug 'airblade/vim-gitgutter' "to show git signs in code
+Plug 'jreybert/vimagit'
 
 "search, navigation related 
 Plug 'nvim-lua/plenary.nvim'

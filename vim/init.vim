@@ -267,3 +267,6 @@ endfunction
 autocmd FileType go nmap <leader>gob :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>gor  <Plug>(go-run)
 autocmd FileType go nmap <leader>got  <Plug>(go-test)
+
+"jreybert/vimagit
+nnoremap <leader>m :Magit <cr>
