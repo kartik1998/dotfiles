@@ -6,7 +6,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.fontSize": 12.4,
+  "editor.fontSize": 12.6,
   "vim.leader": "<space>",
   "vim.easymotion": true,
   "vim.surround": true,
@@ -36,6 +36,10 @@
     {
       "before": ["<leader>", "v"],
       "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["J"],
+      "after": ["m", "z", "J", "`", "z"]
     },
     {
       "before": ["<leader>", "e"],
