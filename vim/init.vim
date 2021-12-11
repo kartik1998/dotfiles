@@ -132,6 +132,10 @@ nnoremap <leader>l :Neoformat prettier<CR>
 " nvim-telescope/telescope.nvim
 nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <C-f> :Telescope live_grep <CR>
+nnoremap <leader>gb :Telescope git_branches 
+nnoremap <leader>glog :Telescope git_commits
+nnoremap <leader>gst :Telescope git_status
+
 "ignore node modules for live grep
 lua << EOF
 require('telescope').setup{
@@ -144,7 +148,7 @@ nnoremap <leader>b :Telescope buffers <CR>
 
 " tpopt/vim-fugitive
 " 's' to stage a file, see diff with '=' & 'cc' to commit
-nnoremap <leader>gst :G<CR>
+" nnoremap <leader>gst :G<CR>
 
 " janko/vim-test
 nnoremap <silent> tt :TestNearest<CR>
