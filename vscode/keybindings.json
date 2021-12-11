@@ -151,5 +151,10 @@
     "key": "ctrl+m",
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "workbench.action.maximizeEditor",
+    "when": "!terminalFocus"
   }
 ]
