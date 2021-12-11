@@ -264,9 +264,9 @@ function! s:build_go_files()
   endif
 endfunction
 
-autocmd FileType go nmap <leader>gob :<C-u>call <SID>build_go_files()<CR>
-autocmd FileType go nmap <leader>gor  <Plug>(go-run)
-autocmd FileType go nmap <leader>got  <Plug>(go-test)
+autocmd FileType go nmap <leader>gb :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>gr  <Plug>(go-run)
+autocmd FileType go nmap <leader>gt  <Plug>(go-test)
 
 "jreybert/vimagit
 nnoremap <leader>m :Magit <cr>
