@@ -34,7 +34,7 @@
     "command": "workbench.action.closeActiveEditor"
   },
   {
-    "key": "ctrl+j",
+    "key": "ctrl+j ctrl+j",
     "command": "extension.js-debug.createDebuggerTerminal"
   },
   {
@@ -51,6 +51,10 @@
     "key": "ctrl+w ctrl+w",
     "command": "workbench.action.terminal.focus",
     "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.focus"
   },
   {
     "key": "ctrl+w w",
@@ -88,6 +92,16 @@
     "when": "terminalFocus"
   },
   {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "explorerViewletFocus"
+  },
+  {
     "key": "ctrl+w l",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "explorerViewletFocus"
@@ -106,6 +120,10 @@
     "key": "ctrl+w ctrl+w",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "explorerViewletFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.files.action.focusFilesExplorer"
   },
   {
     "key": "ctrl+w ctrl+h",
