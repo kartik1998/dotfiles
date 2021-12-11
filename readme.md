@@ -58,13 +58,13 @@ Leader is `<spacebar>`
 | `<Leader-]>`        | next buffer :bnext                                 |
 | `<C-p>`             | fuzzy search filenames                             |
 | `<C-f>`             | fuzzy search words in current directory            |
-| `<leader-gb>`       | Telescope git_branches                             |
-| `<leader-glog>`     | Telescope git_commits                              |
-| `<leader-gst>`      | Telescope git_status                               |
+| `<C-g>b`            | Telescope git_branches                             |
+| `<C-g>log`          | Telescope git_commits                              |
+| `<C-g>st`           | Telescope git_status                               |
 | `<leader-st>`       | Telescope git_stash                                |
 | `<C-n>`             | Select same word as multiple cursors               |
 | `<C-m>`             | maximize window                                    |
-| `<Leader>gst`       | git status                                         |
+| `<leader-m>`        | Vimmagit                                           |
 | `gd`                | go to definition                                   |
 | `gc`                | comment visual selection                           |
 | `gcc`               | comment a line                                     |
