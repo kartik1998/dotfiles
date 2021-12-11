@@ -132,5 +132,10 @@
   {
     "key": "ctrl+g b",
     "command": "git.checkout"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
   }
 ]
