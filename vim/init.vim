@@ -88,6 +88,7 @@ nnoremap <expr> <C-q> (NumberOfOpenBuffers() <= 1 ? ':q<cr>' : ':bd<cr>')
 
 "split view remaps 
 "vertical split
+"alternate commands <C-w> v (vertical split) & <C-w> s (horizontal split)
 nnoremap <leader>v :vsplit <cr> 
 "horizontal split
 nnoremap <leader>h :split <cr>
