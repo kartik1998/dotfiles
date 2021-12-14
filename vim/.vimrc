@@ -103,4 +103,4 @@ nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <C-p> :Files <CR>
 nnoremap <C-f> :Rg <CR>
 
-let $FZF_DEFAULT_COMMAND='find . | grep -v node_modules | grep -v .git'
+let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
