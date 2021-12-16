@@ -36,6 +36,7 @@ set updatetime=750
 set autowrite
 " colorscheme darkplus
 colorscheme codedark
+set clipboard=unnamedplus
 
 if has('mouse')
   set mouse=a

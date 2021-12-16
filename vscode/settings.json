@@ -11,13 +11,13 @@
   "vim.easymotion": true,
   "vim.surround": true,
   "vim.incsearch": true,
-  "vim.useSystemClipboard": false,
   "vim.useCtrlKeys": true,
   "vim.nohlsearch": true,
   "vim.sneak": false,
   "vim.relativenumber": true,
   "vim.easymotionMarkerooundColor": "#020202",
   "vim.highlightedyank.enable": true,
+  "vim.useSystemClipboard": true,
   "vim.normalModeKeyBindings": [
     {
       "before": ["<leader>", "["],
