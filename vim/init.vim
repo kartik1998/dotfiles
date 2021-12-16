@@ -59,6 +59,9 @@ vnoremap <C-c> "+y
 " make Y effect to end of line instead of whole line
 map Y y$
 
+" select entire file
+map <C-a> ggVG
+
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " Trigger a highlight only when pressing f and F.

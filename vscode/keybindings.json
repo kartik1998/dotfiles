@@ -30,6 +30,10 @@
     "command": "extension.vim_cmd+c"
   },
   {
+    "key": "ctrl+a",
+    "command": "extension.vim_cmd+a"
+  },
+  {
     "key": "ctrl+q",
     "command": "workbench.action.closeActiveEditor"
   },
