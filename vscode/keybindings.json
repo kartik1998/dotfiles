@@ -160,5 +160,13 @@
     "key": "ctrl+m",
     "command": "workbench.action.maximizeEditor",
     "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "redo"
+  },
+  {
+    "key": "shift+cmd+z",
+    "command": "-redo"
   }
 ]
