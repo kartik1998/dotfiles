@@ -14,6 +14,7 @@
   "vim.useCtrlKeys": true,
   "vim.nohlsearch": true,
   "vim.sneak": false,
+  "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
   "vim.relativenumber": true,
   "vim.easymotionMarkerooundColor": "#020202",
   "vim.highlightedyank.enable": true,
@@ -108,6 +109,19 @@
     {
       "before": ["<leader>", "d", "a"],
       "commands": ["extension.pwa-node-debug.attachNodeProcess"]
+    },
+    {
+      "before": ["leader", "f"],
+      "after": ["leader", "leader", "leader", "b", "d", "w"]
+      // https://github.com/VSCodeVim/Vim/issues/1481
+    },
+    {
+      "before": ["\\"],
+      "after": ["leader", "leader", "s"]
+    },
+    {
+      "before": [","],
+      "after": ["leader", "leader", "s"]
     }
   ],
   "vim.handleKeys": {
