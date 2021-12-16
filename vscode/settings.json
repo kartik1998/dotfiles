@@ -41,20 +41,12 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["y", "i"],
-      "after": ["\"", "+", "y", "i"]
-    },
-    {
-      "before": ["y", "a"],
-      "after": ["\"", "+", "y", "a"]
+      "before": ["y"],
+      "after": ["\"", "+", "y"]
     },
     {
       "before": ["y", "w"],
       "after": ["\"", "+", "y", "i", "w"]
-    },
-    {
-      "before": ["y", "y"],
-      "after": ["\"", "*", "y", "y"]
     },
     {
       "before": ["u"],

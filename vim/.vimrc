@@ -66,8 +66,8 @@ map Y "+y$
 nnoremap yy "+yy
 " copy visual mode text selections to clipboard
 vnoremap y "+y
-nnoremap yi "+yi
-nnoremap ya "+ya
+" paste all yanks in clipboard
+nnoremap y "+y
 nnoremap yw "+yiw
 
 " select entire file

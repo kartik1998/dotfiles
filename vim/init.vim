@@ -60,13 +60,10 @@ nnoremap <C-s> <Esc>:w<cr>
 vnoremap <C-c> "+y
 " make Y effect to end of line instead of whole line and copy to clipboard
 map Y "+y$
-" copy line yanks to clipboard
-nnoremap yy "+yy
 " copy visual mode text selections to clipboard
 vnoremap y "+y 
-
-nnoremap yi "+yi
-nnoremap ya "+ya
+" paste all yanks in clipboard
+nnoremap y "+y
 nnoremap yw "+yiw
 " note: this works with visual, line and Y kind of yank. not for count yanks
 " like: (normal mode: <count>y<command>)
