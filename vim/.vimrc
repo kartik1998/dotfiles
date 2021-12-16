@@ -66,6 +66,9 @@ map Y "+y$
 nnoremap yy "+yy
 " copy visual mode text selections to clipboard
 vnoremap y "+y
+nnoremap yi "+yi
+nnoremap ya "+ya
+nnoremap yw "+yiw
 
 " select entire file
 map <C-a> ggVG

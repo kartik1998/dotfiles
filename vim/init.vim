@@ -64,6 +64,10 @@ map Y "+y$
 nnoremap yy "+yy
 " copy visual mode text selections to clipboard
 vnoremap y "+y 
+
+nnoremap yi "+yi
+nnoremap ya "+ya
+nnoremap yw "+yiw
 " note: this works with visual, line and Y kind of yank. not for count yanks
 " like: (normal mode: <count>y<command>)
 " -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
