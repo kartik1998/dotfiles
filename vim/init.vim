@@ -36,7 +36,6 @@ set updatetime=750
 set autowrite
 " colorscheme darkplus
 colorscheme codedark
-set clipboard=unnamedplus
 
 if has('mouse')
   set mouse=a
@@ -57,8 +56,12 @@ inoremap <C-s> <Esc>:w<cr>i
 nnoremap <C-s> <Esc>:w<cr>
 " yanks to clipboard in visual mode
 vnoremap <C-c> "+y
-" make Y effect to end of line instead of whole line
-map Y y$
+" make Y effect to end of line instead of whole line and copy to clipboard
+map Y "+y$
+" copy line yanks to clipboard
+nnoremap yy "+yy
+" copy visual mode text selections to clipboard
+vnoremap y "+y 
 
 " select entire file
 map <C-a> ggVG
