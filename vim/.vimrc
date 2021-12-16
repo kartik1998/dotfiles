@@ -91,6 +91,7 @@ Plug 'tpope/vim-surround' "surround your text effectively
 Plug 'jiangmiao/auto-pairs' "auto pairing improved
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'easymotion/vim-easymotion' "easymotion
 call plug#end()
 
 "scrooloose/nerdtree
@@ -111,3 +112,10 @@ nnoremap <C-p> :Files <CR>
 nnoremap <C-f> :Rg <CR>
 
 let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
+
+"easymotion/vim-easymotion
+" Move to word
+map  <Leader>f <Plug>(easymotion-bd-w)
+
+" <Leader>f{char} to move to {char}
+map  , <Plug>(easymotion-bd-f)
