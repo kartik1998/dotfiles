@@ -54,6 +54,8 @@ let g:markdown_fenced_languages = ["javascript", "js=javascript", "json=javascri
 inoremap <C-s> <Esc>:w<cr>i
 " saves the buffer in insert mode
 nnoremap <C-s> <Esc>:w<cr>
+
+" -- yank remaps (remap yanks to clipboard and main register) ---
 " yanks to clipboard in visual mode
 vnoremap <C-c> "+y
 " make Y effect to end of line instead of whole line and copy to clipboard
@@ -62,6 +64,9 @@ map Y "+y$
 nnoremap yy "+yy
 " copy visual mode text selections to clipboard
 vnoremap y "+y 
+" note: this works with visual, line and Y kind of yank. not for count yanks
+" like: (normal mode: <count>y<command>)
+" -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
 " select entire file
 map <C-a> ggVG

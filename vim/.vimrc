@@ -60,8 +60,15 @@ nnoremap <leader>v :vsplit <CR>
 "horizontal split
 nnoremap <leader>h :split <CR>
 
-" make Y effect to end of line instead of whole line
-map Y y$
+" make Y effect to end of line instead of whole line and copy to clipboard
+map Y "+y$
+" copy line yanks to clipboard
+nnoremap yy "+yy
+" copy visual mode text selections to clipboard
+vnoremap y "+y
+
+" select entire file
+map <C-a> ggVG
 
 " join line i.e. <shift> j takes the cursor to the joined line first char.
 " Below remap keeps the cursor IN PLACE
