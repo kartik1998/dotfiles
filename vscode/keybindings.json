@@ -27,7 +27,7 @@
   },
   {
     "key": "ctrl+c",
-    "command": "editor.action.clipboardCopyAction"
+    "command": "extension.vim_cmd+c"
   },
   {
     "key": "ctrl+q",
