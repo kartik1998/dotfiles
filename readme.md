@@ -70,6 +70,8 @@ Leader is `<spacebar>`
 | `gcc`               | comment a line                                     |
 | `<C-u>`             | page up                                            |
 | `<C-d>`             | pade down                                          |
+| `<leader> f`        | vim easy motion (find beginning of word)           |
+| `,`                 | vim easy motion (find char)                        |
 
 ## Debugger
 

@@ -35,13 +35,15 @@ Going through the keybindings and settings json should be enough but adding some
 Repl is present in Debug Console (very useful)
 </blockquote>
 
-| Mappings       | Action                         |
-| -------------- | ------------------------------ |
-| `<Leader-ds>`  | debugger start                 |
-| `<Leader-de>`  | debugger end                   |
-| `<Leader-dc>`  | debugger continue              |
-| `<Leader-dt>`  | toggle break point             |
-| `<Leader-dT>`  | clear break points             |
-| `<Leader-da>`  | attach to process to debug     |
-| `<Leader-drc>` | Run to cursor                  |
-| `<C-j>`        | Open javascript debug terminal |
+| Mappings (normal mode) | Action                                   |
+| ---------------------- | ---------------------------------------- |
+| `<Leader-ds>`          | debugger start                           |
+| `<Leader-de>`          | debugger end                             |
+| `<Leader-dc>`          | debugger continue                        |
+| `<Leader-dt>`          | toggle break point                       |
+| `<Leader-dT>`          | clear break points                       |
+| `<Leader-da>`          | attach to process to debug               |
+| `<Leader-drc>`         | Run to cursor                            |
+| `<Leader-j>`           | Open javascript debug terminal           |
+| `<leader> f`           | vim easy motion (find beginning of word) |
+| `,`                    | vim easy motion (find char)              |
