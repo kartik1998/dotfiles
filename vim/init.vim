@@ -283,3 +283,11 @@ autocmd FileType go nmap <leader>gt  <Plug>(go-test)
 
 "jreybert/vimagit
 nnoremap <leader>m :Magit <cr>
+
+"easymotion/vim-easymotion 
+" Move to word
+map  <Leader>f <Plug>(easymotion-bd-w)
+
+" <Leader>f{char} to move to {char}
+map  , <Plug>(easymotion-bd-f)
+
