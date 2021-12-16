@@ -34,6 +34,10 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
       "before": ["<leader>", "v"],
       "commands": ["workbench.action.splitEditor"]
     },
