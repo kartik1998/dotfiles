@@ -29,10 +29,20 @@
     },
     {
       "before": ["Y"],
-      "after": ["\"", "*", "y", "$"]
+      "after": ["\"", "+", "y", "$"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["y"],
+      "after": ["\"", "*", "y"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["y", "y"],
+      "after": ["\"", "*", "y", "y"]
+    },
     {
       "before": ["u"],
       "commands": ["undo"]
