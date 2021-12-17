@@ -69,6 +69,9 @@ nnoremap yw "+yiw
 " like: (normal mode: <count>y<command>)
 " -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
+" remap ctrl+v to paste from clipboard
+inoremap <C-v> <ESC>"+p<cr>i
+
 " select entire file
 map <C-a> ggVG
 

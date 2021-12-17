@@ -39,6 +39,12 @@
       "after": ["\"", "*", "y"]
     }
   ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-v>"],
+      "commands": ["editor.action.clipboardPasteAction"]
+    }
+  ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["y"],
