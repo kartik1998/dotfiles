@@ -123,7 +123,6 @@ autocmd BufEnter NERD_tree_* | execute 'normal R'
 let NERDTreeShowHidden=1
 " ignore .git directory in nerd tree
 let NERDTreeIgnore=['\.git$']
-let g:NERDTreeWinPos = "right" "open nerd tree to the right
 
 " szw/vim-maximizer - to maximize the split
 nnoremap <C-m> :MaximizerToggle! <CR>

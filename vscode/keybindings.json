@@ -97,17 +97,17 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+h",
+    "key": "ctrl+l",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "explorerViewletFocus"
   },
   {
-    "key": "ctrl+w h",
+    "key": "ctrl+w l",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "explorerViewletFocus"
   },
   {
-    "key": "ctrl+w ctrl+h",
+    "key": "ctrl+w ctrl+l",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "explorerViewletFocus"
   },
@@ -122,15 +122,15 @@
     "when": "explorerViewletFocus"
   },
   {
-    "key": "ctrl+l",
+    "key": "ctrl+h",
     "command": "workbench.files.action.focusFilesExplorer"
   },
   {
-    "key": "ctrl+w ctrl+l",
+    "key": "ctrl+w ctrl+h",
     "command": "workbench.files.action.focusFilesExplorer"
   },
   {
-    "key": "ctrl+w l",
+    "key": "ctrl+w h",
     "command": "workbench.files.action.focusFilesExplorer"
   },
   {
