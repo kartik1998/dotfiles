@@ -180,5 +180,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active"
+  "editor.guides.bracketPairs": "active",
+  "window.restoreFullscreen": true,
+  "workbench.editor.restoreViewState": true,
+  "window.newWindowDimensions": "maximized"
 }
