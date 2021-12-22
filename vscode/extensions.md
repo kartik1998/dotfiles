@@ -1,6 +1,5 @@
 ## Extensions
 
-- CoenraadS.bracket-pair-colorizer
 - DigitalBrainstem.javascript-ejs-support
 - dsznajder.es7-react-js-snippets
 - esbenp.prettier-vscode
