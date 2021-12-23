@@ -168,5 +168,10 @@
   {
     "key": "shift+cmd+z",
     "command": "-redo"
+  },
+  {
+    "key": "ctrl+enter ctrl+enter",
+    "command": "workbench.action.toggleFullScreen",
+    "when": "!isIOS"
   }
 ]
