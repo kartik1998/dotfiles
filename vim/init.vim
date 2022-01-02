@@ -65,8 +65,6 @@ vnoremap y "+y
 " paste all yanks in clipboard
 nnoremap y "+y
 nnoremap yw "+yiw
-" note: this works with visual, line and Y kind of yank. not for count yanks
-" like: (normal mode: <count>y<command>)
 " -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
 " remap ctrl+v to paste from clipboard
