@@ -72,5 +72,3 @@ DBCollection.prototype.updateMany = function (...args) {
   print({ "backup id": id, location: local.dir });
   return defaultUpdateOne.apply(this, args);
 };
-
-
