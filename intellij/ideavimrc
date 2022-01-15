@@ -51,4 +51,4 @@ map <C-a> ggVG
 " Below remap keeps the cursor IN PLACE
 nnoremap J mzJ`z
 
-
+set ideajoin
