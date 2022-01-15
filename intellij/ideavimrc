@@ -1,5 +1,4 @@
 syntax on
-set completeopt=menuone,noinsert,noselect
 set splitright
 set splitbelow
 set number
@@ -12,43 +11,84 @@ set autoindent
 set smartindent
 set autoread
 set tabstop=2 softtabstop=2
-set nowrap
 set hidden
-set cmdheight=1
 set scrolloff=10 "start scrolling down / up when you are 10 lines away
-set shiftwidth=2
 set nohlsearch "remove highlight from text after search 
-set hidden "navigate away from buffers without saving them, takes a little bit more RAM but basically peanuts compared to VS code
 set ignorecase "ignore case sensitivity while searching
 set smartcase 
+set idearefactormode=keep
+set ideajoin
+set surround
+set easymotion
+set multiple-cursors
+set NERDTree
+set commentary
+set highlightedyank
 
-" saves the buffer in insert mode
-inoremap <C-s> <Esc>:w<cr>i
-" saves the buffer in insert mode
-nnoremap <C-s> <Esc>:w<cr>
-" yanks to clipboard in visual mode
-vnoremap <C-c> "+y
+let mapleader = " " 
 
-" Trigger a highlight in the appropriate direction when pressing these keys:
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-" Trigger a highlight only when pressing f and F.
-let g:qs_highlight_on_keys = ['f', 'F']
+""" NERDTree isn't working, TODO: fix required
 
-" make Y effect to end of line instead of whole line and copy to clipboard
+
+""" Editing and Reloading the Config
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :source ~/.ideavimrc<CR>
+
+"""" Split view remaps 
+nnoremap <leader>v :vsplit <CR> 
+nnoremap <leader>h :split <CR>
+
+""" yank config
 map Y "+y$
-" copy line yanks to clipboard
 nnoremap yy "+yy
-" copy visual mode text selections to clipboard
 vnoremap y "+y
-" paste all yanks in clipboard
 nnoremap y "+y
 nnoremap yw "+yiw
 
-" select entire file
+""" Navigation
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+" nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <leader>[ :action PreviousTab<cr>
+nnoremap <leader>] :action NextTab<cr>
+
+"""Searching and source code navigation
+nmap <leader>gd :action GotoDeclaration<cr>
+nmap <C-p> :action GotoFile<cr> 
+nnoremap <leader>fs :action FileStructurePopup<CR>
+nmap <leader>c :action GotoClass<cr>
+nmap <leader>u :action FindUsages<cr>
+nmap <leader>gi :action GotoImplementation<cr>
+nmap <leader>gt :action GotoTest<cr>
+nmap <C-f> :action FindInPath<cr>
+
+" Building, running, debugging
+nmap tt :action RerunTests<cr>                                         
+nmap TT :action RerunFailedTests<cr>
+nmap <leader>ds :action Debug<cr>
+nmap <leader>dd :action DebugClass<cr>
+nmap <leader>dT :action Debugger.RemoveAllBreakpoints<cr>
+nmap <leader>dc :action Debugger.ResumeThread<cr>
+nmap <leader>dt :action ToggleLineBreakpoint<cr>
+nmap <leader>r :action Run<cr>
+nmap <leader>R :action RunAnything<cr>
+nnoremap <leader>o :action OptimizeImports<CR>
+
+""" Miscellaneous
 map <C-a> ggVG
+nnoremap J mzJ`z 
+nmap <leader>je :action ShowErrorDescription<cr>
+nmap <C-t> :action ActivateTerminalToolWindow<cr>                          
+nmap <C-j> :action ActivateTerminalToolWindow<cr>                          
 
-" join line i.e. <shift> j takes the cursor to the joined line first char.
-" Below remap keeps the cursor IN PLACE
-nnoremap J mzJ`z
+" Use leader l for formatting the current paragraph (or visual selection)
+vmap <leader>l gq
+nmap <leader>l gqap
 
-set ideajoin
+"highlightedyank - TODO: this is not working, need to fix
+let g:highlightedyank_highlight_duration = "1000"
+let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
+
