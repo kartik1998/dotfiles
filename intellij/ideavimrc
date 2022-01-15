@@ -1,23 +1,54 @@
 syntax on
+set completeopt=menuone,noinsert,noselect
+set splitright
+set splitbelow
+set number
+set relativenumber
+set hlsearch
+set incsearch
+set magic
 set smarttab
-set shiftwidth=4
-set expandtab
+set autoindent
 set smartindent
-set exrc "only useful for custom execution of vim for specific projects with their own rc's
-set relativenumber "relative numbered lines
-set number "set numbered lines
-set nohlsearch "remove highlight from text after search
-set hidden "navigate away from buffers without saving them, takes a little bit more RAM but basically peanuts compared to VS code
-set noerrorbells "remove irritating errorbells
-set nowrap "remove wrapping of text for long lines
-set autoread "read changes in vim done from other editor while coding
-set incsearch "highlight as you search
+set autoread
+set tabstop=2 softtabstop=2
+set nowrap
+set hidden
+set cmdheight=1
 set scrolloff=10 "start scrolling down / up when you are 10 lines away
+set shiftwidth=2
+set nohlsearch "remove highlight from text after search 
+set hidden "navigate away from buffers without saving them, takes a little bit more RAM but basically peanuts compared to VS code
+set ignorecase "ignore case sensitivity while searching
+set smartcase 
 
 " saves the buffer in insert mode
 inoremap <C-s> <Esc>:w<cr>i
 " saves the buffer in insert mode
 nnoremap <C-s> <Esc>:w<cr>
+" yanks to clipboard in visual mode
+vnoremap <C-c> "+y
 
-" make Y effect to end of line instead of whole line
-map Y y$
+" Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" Trigger a highlight only when pressing f and F.
+let g:qs_highlight_on_keys = ['f', 'F']
+
+" make Y effect to end of line instead of whole line and copy to clipboard
+map Y "+y$
+" copy line yanks to clipboard
+nnoremap yy "+yy
+" copy visual mode text selections to clipboard
+vnoremap y "+y
+" paste all yanks in clipboard
+nnoremap y "+y
+nnoremap yw "+yiw
+
+" select entire file
+map <C-a> ggVG
+
+" join line i.e. <shift> j takes the cursor to the joined line first char.
+" Below remap keeps the cursor IN PLACE
+nnoremap J mzJ`z
+
+
