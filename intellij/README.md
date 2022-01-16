@@ -14,5 +14,5 @@ Version: 2019.2.4 <br/>
 ### VimIdea preferences
 
 - Your VimIdea preferences should look something like:
-  ![](./assets/vimidea-pre
-  f.png)
+
+<p> <img src = "https://raw.githubusercontent.com/kartik1998/dotfiles/master/assets/vimidea-pref.png" alt="vimidea-preferences" width=700 height=460> </p>
