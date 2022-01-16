@@ -29,7 +29,6 @@ let mapleader = " "
 
 """ NERDTree isn't working, TODO: fix required
 
-
 """ Editing and Reloading the Config
 nnoremap \e :e ~/.ideavimrc<CR>
 nnoremap \r :source ~/.ideavimrc<CR>
@@ -48,7 +47,7 @@ nnoremap yw "+yiw
 """ Navigation
 sethandler <c-j> a:vim
 sethandler <c-k> a:vim
-nnoremap <c-h> <c-w>h
+nnoremap <c-h> :action ActivateProjectToolWindow<CR>
 nnoremap <c-l> <c-w>l
 " nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -91,4 +90,3 @@ nmap <leader>l gqap
 "highlightedyank - TODO: this is not working, need to fix
 let g:highlightedyank_highlight_duration = "1000"
 let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
-
