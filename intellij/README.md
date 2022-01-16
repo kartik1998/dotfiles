@@ -10,3 +10,9 @@ Mac dmg link: https://download.jetbrains.com/idea/ideaIC-2019.2.4.dmg <br/>
 Mac bundled with JRE: (https://download.jetbrains.com/idea/ideaIC-2019.2.4-jbr8.dmg <br/>
 Version: 2019.2.4 <br/>
 </blockquote>
+
+### VimIdea preferences
+
+- Your VimIdea preferences should look something like:
+  ![](./assets/vimidea-pre
+  f.png)
