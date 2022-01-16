@@ -21,13 +21,14 @@ set ideajoin
 set surround
 set easymotion
 set multiple-cursors
-set NERDTree
+" set NERDTree
 set commentary
 set highlightedyank
 
 let mapleader = " " 
 
 """ NERDTree isn't working, TODO: fix required
+nnoremap <leader>e :action HideAllWindows<CR>
 
 """ Editing and Reloading the Config
 nnoremap \e :e ~/.ideavimrc<CR>
@@ -90,3 +91,6 @@ nmap <leader>l gqap
 "highlightedyank - TODO: this is not working, need to fix
 let g:highlightedyank_highlight_duration = "1000"
 let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
+
+" Multi selection
+nmap <C-n> :action SelectNextOccurrence<cr>
