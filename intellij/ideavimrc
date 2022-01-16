@@ -70,7 +70,7 @@ nmap TT :action RerunFailedTests<cr>
 nmap <leader>ds :action Debug<cr>
 nmap <leader>dd :action DebugClass<cr>
 nmap <leader>dT :action Debugger.RemoveAllBreakpoints<cr>
-nmap <leader>dc :action Debugger.ResumeThread<cr>
+nmap <leader>dc :action Resume<cr>
 nmap <leader>dt :action ToggleLineBreakpoint<cr>
 nmap <leader>r :action Run<cr>
 nmap <leader>R :action RunAnything<cr>
