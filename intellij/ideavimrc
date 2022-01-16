@@ -84,9 +84,9 @@ nmap <leader>je :action ShowErrorDescription<cr>
 nmap <C-t> :action ActivateTerminalToolWindow<cr>                          
 nmap <C-j> :action ActivateTerminalToolWindow<cr>                          
 
-" Use leader l for formatting the current paragraph (or visual selection)
+" Use leader l for formatting the current file (or visual selection)
 vmap <leader>l gq
-nmap <leader>l gqap
+nmap <leader>l mzggVGgq`z
 
 "highlightedyank - TODO: this is not working, need to fix
 let g:highlightedyank_highlight_duration = "1000"
