@@ -10,13 +10,13 @@ sudo apt-get install tmux
 | Mappings                 | Action                                            |
 | ------------------------ | ------------------------------------------------- |
 | `tmux`                   | start tmux                                        |
-| `ctrl+a v`               | new pane (vertical split)                         |
-| `ctrl+a h`               | new pane (horizontal split)                       |
-| `ctrl+a [direction key]` | move between panes                                |
-| `ctrl+a c`               | new window                                        |
-| `ctrl+a <number>`        | move to window of specific number                 |
-| `ctrl+a ,`               | rename window                                     |
-| `ctrl+a w`               | view windows (enter to open window and x to kill) |
+| `ctrl+w v`               | new pane (vertical split)                         |
+| `ctrl+w h`               | new pane (horizontal split)                       |
+| `ctrl+w [direction key]` | move between panes                                |
+| `ctrl+w c`               | new window                                        |
+| `ctrl+w <number>`        | move to window of specific number                 |
+| `ctrl+w ,`               | rename window                                     |
+| `ctrl+w w`               | view windows (enter to open window and x to kill) |
 | `exit`                   | exit window                                       |
 
 ## Sessions
