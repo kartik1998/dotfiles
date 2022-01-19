@@ -190,7 +190,7 @@ nnoremap <leader>dT :call vimspector#ClearBreakpoints()<CR>
 nnoremap <leader>dk :call vimspector#StepOut()<CR>
 nnoremap <leader>dl :call vimspector#StepInto()<CR>
 nnoremap <leader>dj :call vimspector#StepOver()<CR>
-nnoremap <leader>drc :call vimspector#RunToCursor()<CR>
+" nnoremap <leader>drc :call vimspector#RunToCursor()<CR>
 
 " vim-airline/vim-airline tabline settings
 let g:airline#extensions#tabline#left_sep = ''
