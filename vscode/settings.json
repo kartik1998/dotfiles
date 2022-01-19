@@ -53,7 +53,7 @@
     },
     {
       "before": ["y", "w"],
-      "after": ["\"", "+", "y", "i", "w"]
+      "after": ["m", "z", "\"", "+", "y", "i", "w", "`", "z"]
     },
     {
       "before": ["u"],
@@ -90,6 +90,11 @@
       "when": "debuggersAvailable && debugState == 'inactive'"
     },
     {
+      "before": ["<leader>", "d", "r"],
+      "commands": ["workbench.action.debug.restart"],
+      "when": "debuggersAvailable && debugState == 'active'"
+    },
+    {
       "before": ["<leader>", "d", "t"],
       "commands": ["editor.debug.action.toggleBreakpoint"],
       "when": "debuggersAvailable && editorTextFocus"
@@ -112,10 +117,6 @@
       "before": ["<leader>", "d", "v"],
       "commands": ["workbench.debug.action.toggleRepl"],
       "when": "workbench.panel.repl.view.active"
-    },
-    {
-      "before": ["<leader>", "d", "r", "c"],
-      "commands": ["editor.debug.action.runToCursor"]
     },
     {
       "before": ["<leader>", "d", "a"],
