@@ -43,7 +43,7 @@ map Y "+y$
 nnoremap yy "+yy
 vnoremap y "+y
 nnoremap y "+y
-nnoremap yw "+yiw
+nnoremap yw mz"+yiw`z
 
 """ Navigation
 sethandler <c-j> a:vim
