@@ -64,7 +64,7 @@ map Y "+y$
 vnoremap y "+y 
 " paste all yanks in clipboard
 nnoremap y "+y
-nnoremap yw "+yiw
+nnoremap yw mz"+yiw`z
 " -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
 " remap ctrl+v to paste from clipboard
