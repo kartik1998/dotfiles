@@ -126,11 +126,6 @@
     "command": "workbench.files.action.focusFilesExplorer"
   },
   {
-    "key": "space e",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "explorerViewletFocus"
-  },
-  {
     "key": "ctrl+w ctrl+h",
     "command": "workbench.files.action.focusFilesExplorer"
   },
@@ -178,5 +173,10 @@
     "key": "ctrl+enter ctrl+enter",
     "command": "workbench.action.toggleFullScreen",
     "when": "!isIOS"
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.debug.stepOver",
+    "when": "debugState == 'stopped'"
   }
 ]
