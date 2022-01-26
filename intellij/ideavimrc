@@ -65,7 +65,7 @@ nmap <leader>gi :action GotoImplementation<cr>
 nmap <leader>gt :action GotoTest<cr>
 nmap <C-f> :action FindInPath<cr>
 
-" Building, running, debugging
+" Building, running, debugging, optimizing imports
 nmap tt :action RerunTests<cr>                                         
 nmap TT :action RerunFailedTests<cr>
 nmap <leader>ds :action Debug<cr>
@@ -73,7 +73,11 @@ nmap <leader>dd :action DebugClass<cr>
 nmap <leader>dT :action Debugger.RemoveAllBreakpoints<cr>
 nmap <leader>dc :action Resume<cr>
 nmap <leader>dt :action ToggleLineBreakpoint<cr>
-" nmap <leader>r :action Run<cr>
+nnoremap <M-b> :action Run<cr>
+nnoremap <M-l> :action StepInto<cr>
+nnoremap <M-h> :action StepOut<cr>
+nnoremap <M-j> :action StepOver<cr>
+nnoremap <leader>de :action Stop<cr>
 nmap <leader>R :action RunAnything<cr>
 nnoremap <leader>o :action OptimizeImports<CR>
 
@@ -82,7 +86,7 @@ map <C-a> ggVG
 nnoremap J mzJ`z 
 nmap <leader>je :action ShowErrorDescription<cr>
 nmap <C-t> :action ActivateTerminalToolWindow<cr>                          
-nmap <C-j> :action ActivateTerminalToolWindow<cr>                          
+nmap <C-j> :action ActivateTerminalToolWindow<cr>
 
 " Use leader l for formatting the current file (or visual selection)
 vmap <leader>l gq
