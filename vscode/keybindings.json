@@ -178,5 +178,15 @@
     "key": "cmd+j",
     "command": "workbench.action.debug.stepOver",
     "when": "debugState == 'stopped'"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.debug.stepInto",
+    "when": "debugState != 'inactive'"
+  },
+  {
+    "key": "cmd+h",
+    "command": "workbench.action.debug.stepOut",
+    "when": "debugState == 'stopped'"
   }
 ]
