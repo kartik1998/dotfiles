@@ -187,7 +187,7 @@ nmap <Leader>dr <Plug>VimspectorRestart
 nnoremap <leader>dt :call vimspector#ToggleBreakpoint()<CR>
 nnoremap <leader>dT :call vimspector#ClearBreakpoints()<CR>
 
-nnoremap <leader>dk :call vimspector#StepOut()<CR>
+nnoremap <leader>dh :call vimspector#StepOut()<CR>
 nnoremap <leader>dl :call vimspector#StepInto()<CR>
 nnoremap <leader>dj :call vimspector#StepOver()<CR>
 " nnoremap <leader>drc :call vimspector#RunToCursor()<CR>
