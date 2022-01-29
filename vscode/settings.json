@@ -76,6 +76,10 @@
       "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {
+      "before": ["<leader>", "o"],
+      "commands": ["editor.action.organizeImports"]
+    },
+    {
       "before": ["<leader>", "f"],
       "commands": ["revealInExplorer"]
     },
