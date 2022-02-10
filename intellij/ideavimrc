@@ -49,6 +49,7 @@ nnoremap yw mz"+yiw`z
 sethandler <c-j> a:vim
 sethandler <c-k> a:vim
 nnoremap <c-h> :action ActivateProjectToolWindow<CR>
+nnoremap <c-w>h :action ActivateProjectToolWindow<CR>
 nnoremap <c-l> <c-w>l
 " nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -97,4 +98,5 @@ let g:highlightedyank_highlight_duration = "1000"
 let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
 
 " Multi selection
-nmap <C-n> :action SelectNextOccurrence<cr>
+" nnoremap <C-n> :action SelectNextOccurrence<cr>
+
