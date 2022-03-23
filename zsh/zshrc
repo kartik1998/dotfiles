@@ -37,6 +37,7 @@ alias gblist="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEA
 alias gbl="gblist"
 alias gbla="gblista"
 alias v="nvim"
+alias gpa="git push origin --tags && git push"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # fzf specific stuff
@@ -45,14 +46,18 @@ bindkey ^P fzf-cd-widget
 # Automatically define aliases for first 16 directories on the directory stack (directories visited)
 alias d="dirs -v"
 for index ({1..15}) alias "$index"="cd +${index}"; unset index 
-export FZF_ALT_C_COMMAND="fd --full-path ~/. ~/Desktop ~/Downloads ~/Documents ~/dotfiles ~/.config ~/.ssh --type d"
+export FZF_ALT_C_COMMAND="fd --full-path ~/. ~/Desktop ~/Downloads ~/Documents ~/dotfiles ~/.config ~/.ssh ~/IdeaProjects --type d"
 gcoo() {
- git checkout "$(git branch --all | fzf | tr -d '[:space:]')"
+  git checkout "$(git branch --all | fzf | tr -d '[:space:]')"
 }
 zle -N gcoo
 bindkey "^G^B" gcoo
 
 #-- 
+
+#--- tmux specific stuff ---#
+export TERM="xterm-256color"
+#---
 
 function get_ssh_string {
 	ssh -A kartik.rawat@$1
@@ -65,4 +70,3 @@ alias sshv="get_ssh_string $1"
 ssh-add ~/.ssh/id_rsa &> /dev/null
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
