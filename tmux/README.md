@@ -5,6 +5,9 @@ sudo apt-get update <br/>
 sudo apt-get install tmux
 </blockquote>
 
+- To enable copying to clipboad in iterm2: `If using iTerm on macOS, goto iTerm2 > Preferences > “General” tab, and in the “Selection” section, check “Applications in terminal may access clipboard”.`
+- Reference: [link](https://unix.stackexchange.com/questions/318281/how-to-copy-and-paste-with-a-mouse-with-tmux)
+
 - tmux cheatsheet: https://tmuxcheatsheet.com
 
 | Mappings                 | Action                                            |
