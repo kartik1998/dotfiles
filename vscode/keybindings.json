@@ -188,5 +188,20 @@
     "key": "cmd+h",
     "command": "workbench.action.debug.stepOut",
     "when": "debugState == 'stopped'"
+  },
+  {
+    "key": "ctrl+.",
+    "command": "editor.toggleFold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+]",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
   }
 ]
