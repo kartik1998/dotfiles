@@ -5,9 +5,9 @@
   "editor.mouseWheelScrollSensitivity": 1.3,
   "solidity.compileUsingRemoteVersion": "v0.4.11+commit.68ef5810",
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
   },
-  "editor.fontSize": 12.5,
+  "editor.fontSize": 12.7,
   "vim.leader": "<space>",
   "vim.easymotion": true,
   "vim.surround": true,
@@ -156,9 +156,6 @@
   },
   "editor.lineNumbers": "relative",
   "editor.cursorBlinking": "solid",
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "files.exclude": {
@@ -182,11 +179,18 @@
     "statusBar.debuggingBackground": "#456151"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
   },
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "window.restoreFullscreen": true,
   "workbench.editor.restoreViewState": true,
-  "window.newWindowDimensions": "maximized"
+  "window.newWindowDimensions": "maximized",
+  "[markdown]": {
+    "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
+  }
 }
