@@ -82,6 +82,10 @@ nnoremap <leader>de :action Stop<cr>
 nmap <leader>R :action RunAnything<cr>
 nnoremap <leader>o :action OptimizeImports<CR>
 
+" Code folding
+nnoremap <C-[> :action CollapseAllRegions<cr>
+nnoremap <C-]> :action ExpandAllRegions<cr>
+
 """ Miscellaneous
 map <C-a> ggVG
 nnoremap J mzJ`z 
