@@ -84,6 +84,7 @@ nnoremap <leader>o :action OptimizeImports<CR>
 
 " Code folding
 nnoremap <C-[> :action CollapseAllRegions<cr>
+nnoremap <C-.> :action CollapseBlock<cr>
 nnoremap <C-]> :action ExpandAllRegions<cr>
 
 """ Miscellaneous
@@ -103,4 +104,3 @@ let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
 
 " Multi selection
 " nnoremap <C-n> :action SelectNextOccurrence<cr>
-
