@@ -201,7 +201,7 @@
   },
   {
     "key": "ctrl+[",
-    "command": "editor.foldAll",
+    "command": "editor.foldLevel1",
     "when": "editorTextFocus && foldingEnabled"
   }
 ]
