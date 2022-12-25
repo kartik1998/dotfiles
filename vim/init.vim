@@ -153,6 +153,12 @@ nnoremap <C-g>log :Telescope git_commits<cr>
 nnoremap <C-g>st :Telescope git_status<cr>
 nnoremap <leader>st :Telescope git_stash<cr>
 
+" Make <enter> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo
+" reference: https://vi.stackexchange.com/questions/38690/change-the-keys-for-accepting-coc-dropdown
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 "ignore node modules for live grep
 lua << EOF
 require('telescope').setup{
