@@ -116,6 +116,12 @@ nnoremap <C-f> :Rg <CR>
 
 let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
 
+" Make <enter> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo
+" reference: https://vi.stackexchange.com/questions/38690/change-the-keys-for-accepting-coc-dropdown
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 "easymotion/vim-easymotion
 " Move to word
 map  <Leader>f <Plug>(easymotion-bd-w)
