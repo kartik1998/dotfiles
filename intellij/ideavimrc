@@ -93,6 +93,7 @@ nnoremap J mzJ`z
 nmap <leader>je :action ShowErrorDescription<cr>
 nmap <C-t> :action ActivateTerminalToolWindow<cr>                          
 nmap <C-j> :action ActivateTerminalToolWindow<cr>
+nmap <leader>jd :action QuickJavaDoc<cr>
 
 " Use leader l for formatting the current file (or visual selection)
 vmap <leader>l gq
@@ -104,3 +105,4 @@ let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
 
 " Multi selection
 " nnoremap <C-n> :action SelectNextOccurrence<cr>
+
