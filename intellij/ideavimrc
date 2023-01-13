@@ -94,6 +94,7 @@ nmap <leader>je :action ShowErrorDescription<cr>
 nmap <C-t> :action ActivateTerminalToolWindow<cr>                          
 nmap <C-j> :action ActivateTerminalToolWindow<cr>
 nmap <leader>jd :action QuickJavaDoc<cr>
+nnoremap <C-q> :q <cr>
 
 " Use leader l for formatting the current file (or visual selection)
 vmap <leader>l gq
