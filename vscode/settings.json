@@ -7,7 +7,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.fontSize": 12.7,
+  "editor.fontSize": 13,
   "vim.leader": "<space>",
   "vim.easymotion": true,
   "vim.surround": true,
@@ -192,5 +192,6 @@
   "go.toolsManagement.autoUpdate": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.inlineSuggest.enabled": false
 }
