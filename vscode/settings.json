@@ -64,6 +64,10 @@
       "commands": ["workbench.action.splitEditor"]
     },
     {
+      "before": ["<leader>", "f", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
       "before": ["<leader>", "j"],
       "commands": ["extension.js-debug.createDebuggerTerminal"]
     },
