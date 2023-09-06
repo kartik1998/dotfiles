@@ -146,6 +146,7 @@ Sample `.vimspector.json`:
 ```
 ## Clipboard Manager
 - [Maccy](https://maccy.app/)
+- In preferences set hotkey to `^V`
 
 ## LICENSE
 
