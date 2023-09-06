@@ -144,6 +144,8 @@ Sample `.vimspector.json`:
   }
 }
 ```
+## Clipboard Manager
+- [Maccy](https://maccy.app/)
 
 ## LICENSE
 
