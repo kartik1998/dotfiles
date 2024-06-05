@@ -148,6 +148,10 @@ Sample `.vimspector.json`:
 - [Maccy](https://maccy.app/)
 - In preferences set hotkey to `^m`
 
+## Screen Capture Text from Screen to Clipboard (OCR)
+- Mac shortcut link - [Screen capture text to clipboard](https://www.icloud.com/shortcuts/e0b934eda6ce4969808a433f518c69b0)
+- Reference link to see how to setup the shortcut - [youtube-macmost](https://www.youtube.com/watch?v=BZVlifUpr_c)
+
 ## LICENSE
 
 <b>[WTFPL](http://www.wtfpl.net/)</b>
