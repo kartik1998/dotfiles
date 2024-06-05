@@ -156,6 +156,7 @@ Sample `.vimspector.json`:
 - Reference link to see how to setup the shortcut - [youtube-macmost](https://www.youtube.com/watch?v=BZVlifUpr_c)
 
 <p> <img src = "https://raw.githubusercontent.com/kartik1998/dotfiles/master/assets/screen_capture.png" alt="dotfiles" width=700 height=460> </p>
+
 ## LICENSE
 
 <b>[WTFPL](http://www.wtfpl.net/)</b>
