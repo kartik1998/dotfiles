@@ -155,7 +155,7 @@ Sample `.vimspector.json`:
 - Mac shortcut link - [Screen capture text to clipboard](https://www.icloud.com/shortcuts/fda17e5b8d4c49319a44591a3e4bda74) [Breaks for MacOS Sonoma, try the link below the note for MacOS Sonoma]
 - Reference link to see how to setup the shortcut - [youtube-macmost](https://www.youtube.com/watch?v=BZVlifUpr_c)  
 - Note: Shortcuts app is very buggy and sometimes breaks with releases, `Take screenshot` is currently breaking for macOS sonoma so i've switched to using [grab text](https://github.com/e-kotov/macos-shortcuts?tab=readme-ov-file). Forked repo [macos-shortcuts](https://github.com/kartik1998/macos-shortcuts)
-  - Mac shortcut link - [Grab Text via Clipboard Screenshot](https://www.icloud.com/shortcuts/47792fa3950b4aa9a7e287f701705ec3) 
+  - Mac shortcut link - [Grab Text via Clipboard Screenshot](https://www.icloud.com/shortcuts/0ea4aa3a91be481984a39158b578e7b6) 
 
 <p> <img src = "https://raw.githubusercontent.com/kartik1998/dotfiles/master/assets/screen_capture.png" alt="dotfiles" width=700 height=460> </p>
 
