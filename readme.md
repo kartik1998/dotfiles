@@ -152,8 +152,8 @@ Sample `.vimspector.json`:
 
 ## Screen Capture Text from Screen to Clipboard (OCR)
 
-- Mac shortcut link - [Screen capture text to clipboard](https://www.icloud.com/shortcuts/fda17e5b8d4c49319a44591a3e4bda74)
-- Reference link to see how to setup the shortcut - [youtube-macmost](https://www.youtube.com/watch?v=BZVlifUpr_c)
+- Mac shortcut link - [Screen capture text to clipboard](https://www.icloud.com/shortcuts/fda17e5b8d4c49319a44591a3e4bda74) [Breaks for MacOS Sonoma, try the link below the note for MacOS Sonoma]
+- Reference link to see how to setup the shortcut - [youtube-macmost](https://www.youtube.com/watch?v=BZVlifUpr_c)  
 - Note: Shortcuts app is very buggy and sometimes breaks with releases, `Take screenshot` is currently breaking for macOS sonoma so i've switched to using [grab text](https://github.com/e-kotov/macos-shortcuts?tab=readme-ov-file). Forked repo [macos-shortcuts](https://github.com/kartik1998/macos-shortcuts)
   - Mac shortcut link - [Grab Text via Clipboard Screenshot](https://www.icloud.com/shortcuts/47792fa3950b4aa9a7e287f701705ec3) 
 
