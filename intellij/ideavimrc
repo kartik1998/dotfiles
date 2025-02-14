@@ -74,6 +74,8 @@ nmap <leader>dd :action DebugClass<cr>
 nmap <leader>dT :action Debugger.RemoveAllBreakpoints<cr>
 nmap <leader>dc :action Resume<cr>
 nmap <leader>dt :action ToggleLineBreakpoint<cr>
+nmap <leader>da :action XDebugger.AttachToProcess<cr>
+
 nnoremap <M-b> :action Run<cr>
 nnoremap <M-l> :action StepInto<cr>
 nnoremap <M-h> :action StepOut<cr>
@@ -106,4 +108,3 @@ let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
 
 " Multi selection
 " nnoremap <C-n> :action SelectNextOccurrence<cr>
-
