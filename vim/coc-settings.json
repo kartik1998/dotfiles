@@ -7,5 +7,9 @@
     "jsonc",
     "java"
   ],
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "snippets.ultisnips.pythonPrompt": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
