@@ -3,5 +3,10 @@
 - reference article: [link](https://www.typefloundry.com/1-800-iterm-bling.html)
 
 ### HotKey conf
+- Create a new hotkey profile first. 
 
 <p> <img src = "https://raw.githubusercontent.com/kartik1998/dotfiles/master/assets/hotkey.png" alt="dotfiles" width=700 height=460> </p>
+
+![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
