@@ -128,3 +128,6 @@ map  <Leader>f <Plug>(easymotion-bd-w)
 
 " <Leader>f{char} to move to {char}
 map  , <Plug>(easymotion-bd-f)
+
+" Autoformat JSON files using jq when pressing <leader>l
+autocmd FileType json nnoremap <buffer> <leader>l :%!jq .<CR>
