@@ -17,10 +17,10 @@ set hidden
 set cmdheight=1
 set scrolloff=10 "start scrolling down / up when you are 10 lines away
 set shiftwidth=2
-set nohlsearch "remove highlight from text after search 
+set nohlsearch "remove highlight from text after search
 set hidden "navigate away from buffers without saving them, takes a little bit more RAM but basically peanuts compared to VS code
 set ignorecase "ignore case sensitivity while searching
-set smartcase 
+set smartcase
 "set signcolumn=yes
 set undofile
 set undodir=~/.vim/undodir
@@ -38,7 +38,7 @@ endif
 
 filetype plugin indent on
 
-let mapleader=" " 
+let mapleader=" "
 let g:netrw_banner=0 "remove banner from file explorer
 let g:markdown_fenced_languages = ["javascript", "js=javascript", "json=javascript"] "syntax highlighting for code snippets and markdown files
 
@@ -54,9 +54,9 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " Trigger a highlight only when pressing f and F.
 let g:qs_highlight_on_keys = ['f', 'F']
 
-"split view remaps 
+"split view remaps
 "vertical split
-nnoremap <leader>v :vsplit <CR> 
+nnoremap <leader>v :vsplit <CR>
 "horizontal split
 nnoremap <leader>h :split <CR>
 
@@ -70,12 +70,40 @@ vnoremap y "+y
 nnoremap y "+y
 nnoremap yw "+yiw
 
+" Make <enter> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo
+" reference: https://vi.stackexchange.com/questions/38690/change-the-keys-for-accepting-coc-dropdown
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+nnoremap <silent> <Leader>st :call FzfGitStash()<CR>
+
+" Git stash viewer with fzf
+function! FzfGitStash()
+  let stashes = systemlist('git stash list')
+  if empty(stashes)
+    echo 'No stashes found'
+    return
+  endif
+  call fzf#run(fzf#wrap({
+    \ 'source': stashes,
+    \ 'sink': function('s:HandleStash'),
+    \ 'options': ['--preview', 'echo {} | cut -d: -f1 | xargs git stash show -p', '--preview-window=right:70%']
+  \ }))
+endfunction
+
+function! s:HandleStash(line)
+  let stash_id = split(a:line, ':')[0]
+  execute 'terminal git stash show -p ' . stash_id
+  setlocal filetype=diff
+endfunction
+
 " select entire file
 map <C-a> ggVG
 
 " join line i.e. <shift> j takes the cursor to the joined line first char.
 " Below remap keeps the cursor IN PLACE
-nnoremap J mzJ`z
+" nnoremap J mzJ`z
 
 call plug#begin('~/.vim/plugged')
 
@@ -100,7 +128,7 @@ call plug#end()
 "scrooloose/nerdtree
 map <leader>e :NERDTreeToggle<cr>
 " auto refresh nerd tree for when a file is added / removed
-autocmd BufEnter NERD_tree_* | execute 'normal R' 
+autocmd BufEnter NERD_tree_* | execute 'normal R'
 " show dotfiles in NERDTree
 let NERDTreeShowHidden=1
 " ignore .git directory in nerd tree
@@ -115,12 +143,6 @@ nnoremap <C-p> :Files <CR>
 nnoremap <C-f> :Rg <CR>
 
 let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
-
-" Make <enter> to accept selected completion item or notify coc.nvim to format
-" <C-g>u breaks current undo
-" reference: https://vi.stackexchange.com/questions/38690/change-the-keys-for-accepting-coc-dropdown
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 "easymotion/vim-easymotion
 " Move to word
