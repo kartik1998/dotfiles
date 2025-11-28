@@ -94,8 +94,8 @@ endfunction
 
 function! s:HandleStash(line)
   let stash_id = split(a:line, ':')[0]
-  execute 'terminal git stash show -p ' . stash_id
-  setlocal filetype=diff
+  call system('git stash apply ' . stash_id)
+  quit
 endfunction
 
 " select entire file
