@@ -1,15 +1,9 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "go",
-    "python",
-    "markdown",
-    "json",
-    "jsonc",
-    "java"
-  ],
+  "coc.preferences.formatOnSaveFiletypes": [],
   "eslint.autoFixOnSave": true,
-  "snippets.ultisnips.pythonPrompt": false,
+  "snippets.ultisnips.enable": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "java.jdt.ls.vmargs": "-Xmx2g -Xms512m"
 }
