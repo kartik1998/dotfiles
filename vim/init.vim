@@ -82,9 +82,9 @@ map <C-a> ggVG
 "replace ~ (EndOfBuffer) with '-', ref: https://github.com/neovim/neovim/issues/2067 
 set fcs=eob:- 
 
-"go to definition with coc-definition
-nmap <silent> gd :call CocAction('jumpDefinition', 'drop')<CR>
-nmap <silent> gD <Plug>(coc-implementation)
+"go to definition with coc-definition (skip for java)
+nmap <silent><expr> gd &filetype ==# 'java' ? '' : ":call CocAction('jumpDefinition', 'drop')\<CR>"
+nmap <silent><expr> gD &filetype ==# 'java' ? '' : "\<Plug>(coc-implementation)"
 
 "remap <ctrl>+q to quit buffer
 function! NumberOfOpenBuffers()
