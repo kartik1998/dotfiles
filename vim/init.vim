@@ -218,6 +218,9 @@ EOF
 
 " neoclide/coc.nvim
 
+" format with coc-prettier
+nmap <silent> <leader>l <Plug>(coc-format)
+
 " coc config
 let g:coc_global_extensions = [
   \ 'coc-snippets',
