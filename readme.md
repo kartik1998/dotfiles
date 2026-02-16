@@ -73,77 +73,9 @@ Leader is `<spacebar>`
 | `<leader> f`        | vim easy motion (find beginning of word)           |
 | `,`                 | vim easy motion (find char)                        |
 
-## Debugger
+## Debugger (deprecated)
 
-<p> <img src = "https://raw.githubusercontent.com/kartik1998/dotfiles/master/assets/debugger.png" alt="dotfiles" width=700 height=460> </p>
-
-**vimspector** is used for debugging applications. [docs](https://puremourning.github.io/vimspector-web/demo-setup.html). <br/>
-You'll need a `.vimspector.json` file in your project to run the debugger. <br/>
-Sample `.vimspector.json`:
-
-```json
-{
-  "configurations": {
-    "run": {
-      "adapter": "vscode-node",
-      "configuration": {
-        "request": "launch",
-        "protocol": "auto",
-        "stopOnEntry": true,
-        "console": "integratedTerminal",
-        "program": "${workspaceRoot}/index.js",
-        "cwd": "${workspaceRoot}"
-      },
-      "breakpoints": {
-        "exception": {
-          "all": "Y",
-          "uncaught": "Y"
-        }
-      }
-    }
-  }
-}
-```
-
-| Mappings       | Action             |
-| -------------- | ------------------ |
-| `<Leader-ds>`  | debugger start     |
-| `<Leader-de>`  | debugger end       |
-| `<Leader-dc>`  | debugger continue  |
-| `<Leader-dr>`  | debugger restart   |
-| `<Leader-dt>`  | toggle break point |
-| `<Leader-dT>`  | clear break points |
-| `<Leader-dk>`  | Step out           |
-| `<Leader-dl>`  | Step into          |
-| `<Leader-dj>`  | Step over          |
-| `<Leader-drc>` | Run to cursor      |
-
-- `.vimspector.json` to attach to a node server:
-- run `node --inspect <filename>.js` and start the debugger with `<Leader-ds>`
-
-```json
-{
-  "configurations": {
-    "run": {
-      "adapter": "vscode-node",
-      "default": true,
-      "breakpoints": {
-        "exception": {
-          "all": "N",
-          "uncaught": "N"
-        }
-      },
-      "configuration": {
-        "name": "Attaching to a process ID",
-        "type": "node",
-        "request": "attach",
-        "skipFiles": ["node_modules/**/*.js", "<node_internals>/**/*.js"],
-        "processId": "${processId}"
-      }
-    }
-  }
-}
-```
+> **vimspector** has been removed to improve startup performance (~2.5s savings). If you need it, check the git history for the last commit that included vimspector config and keybindings.
 
 ## Clipboard Manager
 

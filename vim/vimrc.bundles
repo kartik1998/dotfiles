@@ -10,9 +10,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tomasiser/vim-code-dark'
 
 "syntax highlighting / autocompletion
-Plug 'pangloss/vim-javascript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sheerun/vim-polyglot'
 
 "git
 Plug 'itchyny/vim-gitbranch' 
@@ -25,14 +23,11 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 
-"debugging
-Plug 'puremourning/vimspector' " debugger
-
 "go specific
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 "treesitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  
+Plug 'nvim-treesitter/nvim-treesitter', {'branch': 'main', 'do': ':TSUpdate'}  
 
 "accessories
 Plug 'vim-airline/vim-airline' "statusline, tabline, etc 
@@ -45,7 +40,7 @@ Plug 'sbdchd/neoformat' "to format source code
 Plug 'janko/vim-test' "test runner to easily run tests
 Plug 'machakann/vim-highlightedyank' "highlighted yanking
 Plug 'luochen1990/rainbow' "bracket pair colorizing
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi' "multiple cursors (replaces deprecated vim-multiple-cursors)
 Plug 'tpope/vim-surround' "surround your text effectively
 Plug 'jiangmiao/auto-pairs' "auto pairing improved
 Plug 'alvan/vim-closetag' "auto close tags useful for html

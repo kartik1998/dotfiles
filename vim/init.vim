@@ -1,3 +1,9 @@
+" Disable unused providers to speed up startup
+let g:loaded_python3_provider = 0
+let g:loaded_perl_provider = 0
+let g:loaded_ruby_provider = 0
+let g:loaded_node_provider = 0
+
 if filereadable(expand("~/.config/nvim/vimrc.bundles"))
   source ~/.config/nvim/vimrc.bundles
 endif
@@ -181,22 +187,6 @@ nnoremap <silent> ts :TestSuite<CR>
 nnoremap <silent> t_ :TestLast<CR>
 let test#strategy = "neovim"
 let test#neovim#term_position = "vertical"
-
-" puremourning/vimspector
-" run :VimspectorInstall vscode-node-debug2 for nodejs debugging. 
-" launch.json will be .vimspector.json 
-nnoremap <leader>ds :call vimspector#Launch()<CR> 
-nnoremap <leader>de :call vimspector#Reset()<CR>
-nnoremap <Leader>dc :call vimspector#Continue()<CR>
-nmap <Leader>dr <Plug>VimspectorRestart
-
-nnoremap <leader>dt :call vimspector#ToggleBreakpoint()<CR>
-nnoremap <leader>dT :call vimspector#ClearBreakpoints()<CR>
-
-nnoremap <leader>dh :call vimspector#StepOut()<CR>
-nnoremap <leader>dl :call vimspector#StepInto()<CR>
-nnoremap <leader>dj :call vimspector#StepOver()<CR>
-" nnoremap <leader>drc :call vimspector#RunToCursor()<CR>
 
 " vim-airline/vim-airline tabline settings
 let g:airline#extensions#tabline#left_sep = ''
