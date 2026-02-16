@@ -224,7 +224,6 @@ nmap <silent> <leader>l <Plug>(coc-format)
 " coc config
 let g:coc_global_extensions = [
   \ 'coc-snippets',
-  \ 'coc-tsserver',
   \ 'coc-eslint',
   \ 'coc-prettier',
   \ 'coc-json',
@@ -232,8 +231,8 @@ let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-highlight',
   \ 'coc-yaml',
-  \ 'coc-java',
   \ ]
+
 
 " vim-go
 " go syntax highlighting
