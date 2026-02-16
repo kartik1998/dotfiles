@@ -295,24 +295,9 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
 end
 
--- detect java binary from JAVA_HOME or PATH
-local java_bin = 'java'
-if vim.env.JAVA_HOME then
-  java_bin = vim.env.JAVA_HOME .. '/bin/java'
-end
-
--- detect OS-specific jdtls config dir
-local jdtls_server = vim.fn.expand('~/.config/coc/extensions/node_modules/coc-java/server')
-local config_dir = jdtls_server .. '/config_linux'
-if vim.fn.has('mac') == 1 then
-  config_dir = jdtls_server .. (vim.fn.system('uname -m'):find('arm64') and '/config_mac_arm' or '/config_mac')
-elseif vim.fn.has('win32') == 1 then
-  config_dir = jdtls_server .. '/config_win'
-end
-
 lspconfig.jdtls.setup({
   cmd = {
-    java_bin,
+    '/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/bin/java',
     '-Declipse.application=org.eclipse.jdt.ls.core.id1',
     '-Dosgi.bundles.defaultStartLevel=4',
     '-Declipse.product=org.eclipse.jdt.ls.core.product',
@@ -323,8 +308,8 @@ lspconfig.jdtls.setup({
     '--add-modules=ALL-SYSTEM',
     '--add-opens', 'java.base/java.util=ALL-UNNAMED',
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-    '-jar', vim.fn.glob(jdtls_server .. '/plugins/org.eclipse.equinox.launcher_*.jar'),
-    '-configuration', config_dir,
+    '-jar', vim.fn.glob(vim.fn.expand('~/.config/coc/extensions/node_modules/coc-java/server/plugins/org.eclipse.equinox.launcher_*.jar')),
+    '-configuration', vim.fn.expand('~/.config/coc/extensions/node_modules/coc-java/server/config_mac_arm'),
     '-data', vim.fn.expand('~/.cache/jdtls/workspace'),
   },
   root_dir = function(fname)
