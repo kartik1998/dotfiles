@@ -1,9 +1,5 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [],
-  "eslint.autoFixOnSave": true,
-  "snippets.ultisnips.enable": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "java.jdt.ls.vmargs": "-Xmx2g -Xms512m"
+  "eslint.autoFixOnSave": false,
+  "snippets.ultisnips.enable": false
 }
