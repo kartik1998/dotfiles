@@ -49,11 +49,6 @@ nnoremap <C-s> <Esc>:w<cr>
 " yanks to clipboard in visual mode
 vnoremap <C-c> "+y
 
-" Trigger a highlight in the appropriate direction when pressing these keys:
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-" Trigger a highlight only when pressing f and F.
-let g:qs_highlight_on_keys = ['f', 'F']
-
 "split view remaps
 "vertical split
 nnoremap <leader>v :vsplit <CR>
@@ -117,7 +112,7 @@ Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'szw/vim-maximizer' "to maximize the split
 Plug 'tpope/vim-commentary' "to comment source code
 Plug 'machakann/vim-highlightedyank' "highlighted yanking
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi' "multiple cursors
 Plug 'tpope/vim-surround' "surround your text effectively
 Plug 'jiangmiao/auto-pairs' "auto pairing improved
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
