@@ -232,10 +232,8 @@ let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-highlight',
   \ 'coc-yaml',
+  \ 'coc-java',
   \ ]
-
-" disable coc for java (use native LSP instead)
-autocmd FileType java let b:coc_enabled = 0
 
 " vim-go
 " go syntax highlighting
@@ -279,43 +277,4 @@ nnoremap <Leader>f <cmd>lua require('flash').jump()<CR>
 xnoremap <Leader>f <cmd>lua require('flash').jump()<CR>
 nnoremap , <cmd>lua require('flash').treesitter()<CR>
 xnoremap , <cmd>lua require('flash').treesitter()<CR>
-
-" neovim/nvim-lspconfig (Java via jdtls)
-lua << EOF
-local lspconfig = require('lspconfig')
-
--- LSP keymaps (only attached when an LSP server connects)
-local on_attach = function(client, bufnr)
-  local opts = { buffer = bufnr, silent = true }
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-  vim.keymap.set('n', 'gD', vim.lsp.buf.implementation, opts)
-  vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-  vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
-  vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
-end
-
-lspconfig.jdtls.setup({
-  cmd = {
-    '/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/bin/java',
-    '-Declipse.application=org.eclipse.jdt.ls.core.id1',
-    '-Dosgi.bundles.defaultStartLevel=4',
-    '-Declipse.product=org.eclipse.jdt.ls.core.product',
-    '-Dlog.protocol=true',
-    '-Dlog.level=ALL',
-    '-Xmx2g',
-    '-Xms512m',
-    '--add-modules=ALL-SYSTEM',
-    '--add-opens', 'java.base/java.util=ALL-UNNAMED',
-    '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-    '-jar', vim.fn.glob(vim.fn.expand('~/.config/coc/extensions/node_modules/coc-java/server/plugins/org.eclipse.equinox.launcher_*.jar')),
-    '-configuration', vim.fn.expand('~/.config/coc/extensions/node_modules/coc-java/server/config_mac_arm'),
-    '-data', vim.fn.expand('~/.cache/jdtls/workspace'),
-  },
-  root_dir = function(fname)
-    return lspconfig.util.root_pattern('pom.xml', 'gradle.build', 'build.gradle', '.git')(fname) or vim.fn.getcwd()
-  end,
-  on_attach = on_attach,
-})
-EOF
 
