@@ -13,10 +13,9 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "git
-Plug 'itchyny/vim-gitbranch' 
 Plug 'tpope/vim-fugitive' "git interactions
 Plug 'airblade/vim-gitgutter' "to show git signs in code
-Plug 'jreybert/vimagit'
+Plug 'jreybert/vimagit', {'on': 'Magit'}
 
 "search, navigation related 
 Plug 'nvim-lua/plenary.nvim'
@@ -24,28 +23,23 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 
 "go specific
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
 
 "treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'branch': 'main', 'do': ':TSUpdate'}  
 
+"statusline (lua-native, replaces vim-airline)
+Plug 'nvim-lualine/lualine.nvim'
+
 "accessories
-Plug 'vim-airline/vim-airline' "statusline, tabline, etc 
-Plug 'vim-airline/vim-airline-themes' "statusline, tabline, etc 
 Plug 'szw/vim-maximizer' "to maximize the split
 Plug 'christoomey/vim-tmux-navigator' "to easily move accross splits
 Plug 'kassio/neoterm' "to spawn a terminal
-Plug 'tpope/vim-commentary' "to comment source code
-Plug 'sbdchd/neoformat' "to format source code
-Plug 'janko/vim-test' "test runner to easily run tests
-Plug 'machakann/vim-highlightedyank' "highlighted yanking
-Plug 'luochen1990/rainbow' "bracket pair colorizing
-Plug 'mg979/vim-visual-multi' "multiple cursors (replaces deprecated vim-multiple-cursors)
+Plug 'janko/vim-test', {'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestLast']} "test runner
+Plug 'HiPhish/rainbow-delimiters.nvim' "treesitter-based bracket colorizing (replaces rainbow)
+Plug 'mg979/vim-visual-multi' "multiple cursors
 Plug 'tpope/vim-surround' "surround your text effectively
 Plug 'jiangmiao/auto-pairs' "auto pairing improved
-Plug 'alvan/vim-closetag' "auto close tags useful for html
-Plug 'easymotion/vim-easymotion' "easymotion
-
-" Plug 'lukas-reineke/indent-blankline.nvim' "lines inside brackets like vscode highlighting them, ref: https://www.reddit.com/r/neovim/comments/n3b74y/question_how_i_make_line_inside_brackets_like/
+Plug 'folke/flash.nvim', {'branch': 'main'} "jump anywhere (replaces easymotion)
 
 call plug#end()

@@ -79,11 +79,6 @@ inoremap <C-v> <ESC>"+p<cr>i
 " select entire file
 map <C-a> ggVG
 
-" Trigger a highlight in the appropriate direction when pressing these keys:
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-" Trigger a highlight only when pressing f and F.
-let g:qs_highlight_on_keys = ['f', 'F']
-
 "replace ~ (EndOfBuffer) with '-', ref: https://github.com/neovim/neovim/issues/2067 
 set fcs=eob:- 
 
@@ -140,15 +135,8 @@ let g:neoterm_term_per_tab = 1
 nnoremap <C-t> :Ttoggle<CR>
 tnoremap <C-t> <C-\><C-n>:Ttoggle<CR>
 
-" machakann/vim-highlightedyank for highlighted yankiing
-if !has('nvim')
-  map y <Plug>(highlightedyank)
-endif
-
-" sbdchd/neoformat
-nnoremap <leader>l :Neoformat prettier<CR> 
-
-" commenting code: gc [in visual mode]
+" built-in highlighted yank (nvim 0.11+)
+au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=200})
 
 " nvim-telescope/telescope.nvim
 nnoremap <C-p> <cmd>Telescope find_files<cr>
@@ -188,52 +176,45 @@ nnoremap <silent> t_ :TestLast<CR>
 let test#strategy = "neovim"
 let test#neovim#term_position = "vertical"
 
-" vim-airline/vim-airline tabline settings
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#enabled = 1 
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_theme='codedark'
-let g:airline#extensions#tabline#buffers_label = ''
+" nvim-lualine/lualine.nvim
+lua << EOF
+require('lualine').setup {
+  options = {
+    theme = 'codedark',
+    section_separators = '',
+    component_separators = '|',
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  tabline = {
+    lualine_a = {{'buffers', mode = 4}},
+    lualine_z = {}
+  },
+}
+EOF
 nnoremap <leader>[ :bprevious<CR>
 nnoremap <leader>] :bnext<CR>
 
-" luochen1990/rainbow (bracket pair colorizing)
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
-let g:rainbow_conf = {
-\	'guifgs': ['#61AFEF', '#e6e600', '#00a550', '#C678DD'],
-\	'ctermfgs': ['darkblue', 'darkyellow', 'darkcyan', 'darkmagenta'],
-\	'operators': '',
-\	'parentheses': map(['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/'], 'v:val." fold"'),
-\	'parentheses_options': 'contains=@NoSpell',
-\	'separately': {
-\		'csv': {
-\			'parentheses': ['start=/\v[^,]*\,/ step=// end=/$/ keepend'],
-\		},
-\		'coq': 0,
-\	}
-\}
-
-""lukas-reineke/indent-blankline.nvim
-"lua << EOF
-"vim.opt.list = true
-
-"require("indent_blankline").setup {
-"    show_end_of_line = true,
-"}
-"EOF
-
-" alvan/vim-closetag
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
-let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
-let g:closetag_filetypes = 'html,xhtml,phtml'
-let g:closetag_xhtml_filetypes = 'xhtml,jsx'
-let g:closetag_regions = {
-    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
-    \ 'javascript.jsx': 'jsxRegion',
-    \ 'typescriptreact': 'jsxRegion,tsxRegion',
-    \ 'javascriptreact': 'jsxRegion',
-    \ }
+" HiPhish/rainbow-delimiters.nvim (treesitter-based bracket colorizing)
+lua << EOF
+local rainbow_delimiters = require('rainbow-delimiters')
+vim.g.rainbow_delimiters = {
+  strategy = { [''] = rainbow_delimiters.strategy['global'] },
+  query = { [''] = 'rainbow-delimiters' },
+  highlight = {
+    'RainbowDelimiterBlue',
+    'RainbowDelimiterYellow',
+    'RainbowDelimiterGreen',
+    'RainbowDelimiterViolet',
+  },
+}
+EOF
 
 " neoclide/coc.nvim
 
@@ -244,7 +225,6 @@ let g:coc_global_extensions = [
   \ 'coc-eslint',
   \ 'coc-prettier',
   \ 'coc-json',
-  \ 'coc-tabnine',
   \ 'coc-html',
   \ 'coc-css',
   \ 'coc-highlight',
@@ -283,10 +263,14 @@ autocmd FileType go nmap <leader>gt  <Plug>(go-test)
 "jreybert/vimagit
 nnoremap <leader>m :Magit <cr>
 
-"easymotion/vim-easymotion 
-" Move to word
-map  <Leader>f <Plug>(easymotion-bd-w)
-
-" <Leader>f{char} to move to {char}
-map  , <Plug>(easymotion-bd-f)
+" folke/flash.nvim (jump anywhere)
+lua << EOF
+require('flash').setup({
+  modes = { char = { enabled = true } },
+})
+EOF
+nnoremap <Leader>f <cmd>lua require('flash').jump()<CR>
+xnoremap <Leader>f <cmd>lua require('flash').jump()<CR>
+nnoremap , <cmd>lua require('flash').treesitter()<CR>
+xnoremap , <cmd>lua require('flash').treesitter()<CR>
 
