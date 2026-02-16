@@ -22,6 +22,9 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 
+"native LSP
+Plug 'neovim/nvim-lspconfig'
+
 "go specific
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
 
