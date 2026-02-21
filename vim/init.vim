@@ -83,6 +83,11 @@ map <C-a> ggVG
 set fcs=eob:- 
 
 "go to definition — ctags via gutentags (fast, no LSP)
+let g:gutentags_ctags_exclude = ['node_modules', 'dist', 'build', 'coverage', '.git', 'vendor', '*.min.js', '*.bundle.js']
+let g:gutentags_cache_dir = expand('~/.ctags.d/tags')
+let g:gutentags_generate_on_new = 1
+let g:gutentags_generate_on_missing = 1
+let g:gutentags_generate_on_write = 1
 nnoremap gd <C-]>
 nnoremap gD g<C-]>
 "find references — ripgrep via Telescope

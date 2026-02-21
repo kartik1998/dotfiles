@@ -29,6 +29,11 @@ fi
 mkdir -p $HOME/.config
 ln -s $PWD/vim $HOME/.config/nvim
 
+# Setup ctags config
+mkdir -p $HOME/.ctags.d
+mkdir -p $HOME/.ctags.d/tags
+ln -sf $PWD/vim/ctags.d/default.ctags $HOME/.ctags.d/default.ctags
+
 # Install neovim and coc plugins
 nvim +PlugInstall 
 

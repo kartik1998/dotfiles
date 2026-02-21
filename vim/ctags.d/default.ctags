@@ -1,0 +1,23 @@
+--recurse=yes
+--exclude=node_modules
+--exclude=dist
+--exclude=build
+--exclude=coverage
+--exclude=.git
+--exclude=vendor
+--exclude=*.min.js
+--exclude=*.bundle.js
+
+--languages=JavaScript,TypeScript,Go,Python,Java,Ruby,Rust
+
+--kinddef-TypeScript=z,constant,constants
+--regex-TypeScript=/^[ \t]*(export[ \t]+)?const[ \t]+([A-Za-z0-9_]+)/\2/z,constant/
+--regex-TypeScript=/^[ \t]*(export[ \t]+)?function[ \t]+([A-Za-z0-9_]+)/\2/f,function/
+--regex-TypeScript=/^[ \t]*(export[ \t]+)?(default[ \t]+)?class[ \t]+([A-Za-z0-9_]+)/\3/c,class/
+--regex-TypeScript=/^[ \t]*(export[ \t]+)?interface[ \t]+([A-Za-z0-9_]+)/\2/i,interface/
+--regex-TypeScript=/^[ \t]*(export[ \t]+)?type[ \t]+([A-Za-z0-9_]+)/\2/t,type/
+--regex-TypeScript=/^[ \t]*(export[ \t]+)?enum[ \t]+([A-Za-z0-9_]+)/\2/e,enum/
+
+--regex-JavaScript=/^[ \t]*(export[ \t]+)?const[ \t]+([A-Za-z0-9_]+)/\2/c,constant/
+--regex-JavaScript=/^[ \t]*(export[ \t]+)?function[ \t]+([A-Za-z0-9_]+)/\2/f,function/
+--regex-JavaScript=/^[ \t]*(export[ \t]+)?(default[ \t]+)?class[ \t]+([A-Za-z0-9_]+)/\3/c,class/
