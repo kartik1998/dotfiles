@@ -21,6 +21,7 @@ Plug 'jreybert/vimagit', {'on': 'Magit'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'ludovicchabant/vim-gutentags'
 
 "go specific
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }

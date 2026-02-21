@@ -16,6 +16,15 @@ check_nvim
 
 rm -rf .vim*
 
+# Install universal-ctags (required for vim-gutentags)
+if ! command -v ctags &> /dev/null; then
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    brew install universal-ctags
+  else
+    sudo apt-get install -y universal-ctags
+  fi
+fi
+
 # Setup neovim 
 mkdir -p $HOME/.config
 ln -s $PWD/vim $HOME/.config/nvim

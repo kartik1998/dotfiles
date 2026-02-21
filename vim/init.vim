@@ -82,9 +82,12 @@ map <C-a> ggVG
 "replace ~ (EndOfBuffer) with '-', ref: https://github.com/neovim/neovim/issues/2067 
 set fcs=eob:- 
 
-"go to definition — ripgrep via Telescope (fast, no LSP)
-nnoremap gd :Telescope grep_string word_match=-w additional_args={'--case-sensitive'}<CR>
-nnoremap gD :Telescope live_grep default_text=\b<C-r>=expand('<cword>')<CR>\b<CR>
+"go to definition — ctags via gutentags (fast, no LSP)
+nnoremap gd <C-]>
+nnoremap gD g<C-]>
+"find references — ripgrep via Telescope
+nnoremap gr :Telescope grep_string word_match=-w additional_args={'--case-sensitive'}<CR>
+nnoremap gR :Telescope live_grep default_text=\b<C-r>=expand('<cword>')<CR>\b<CR>
 
 "remap <ctrl>+q to quit buffer
 function! NumberOfOpenBuffers()
