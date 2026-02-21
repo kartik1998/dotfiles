@@ -82,9 +82,9 @@ map <C-a> ggVG
 "replace ~ (EndOfBuffer) with '-', ref: https://github.com/neovim/neovim/issues/2067 
 set fcs=eob:- 
 
-"go to definition with coc-definition (skip for java)
-nmap <silent><expr> gd &filetype ==# 'java' ? '' : ":call CocAction('jumpDefinition', 'drop')\<CR>"
-nmap <silent><expr> gD &filetype ==# 'java' ? '' : "\<Plug>(coc-implementation)"
+"go to definition — ripgrep via Telescope (fast, no LSP)
+nnoremap gd :Telescope grep_string word_match=-w additional_args={'--case-sensitive'}<CR>
+nnoremap gD :Telescope live_grep default_text=\b<C-r>=expand('<cword>')<CR>\b<CR>
 
 "remap <ctrl>+q to quit buffer
 function! NumberOfOpenBuffers()
