@@ -148,3 +148,7 @@ map  , <Plug>(easymotion-bd-f)
 
 " Autoformat JSON files using jq when pressing <leader>l
 autocmd FileType json nnoremap <buffer> <leader>l :%!jq .<CR>
+
+" vim-highlightedyank
+let g:highlightedyank_highlight_duration = 167
+highlight HighlightedyankRegion cterm=reverse gui=reverse
