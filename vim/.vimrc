@@ -151,4 +151,4 @@ autocmd FileType json nnoremap <buffer> <leader>l :%!jq .<CR>
 
 " vim-highlightedyank
 let g:highlightedyank_highlight_duration = 167
-highlight HighlightedyankRegion cterm=reverse gui=reverse
+highlight HighlightedyankRegion guibg=#4a4a4a ctermbg=239
