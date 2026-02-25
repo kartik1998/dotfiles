@@ -20,6 +20,7 @@ Plug 'jreybert/vimagit', {'on': 'Magit'}
 "search, navigation related 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'branch': 'main', 'do': 'make' }
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'ludovicchabant/vim-gutentags'
 
@@ -40,7 +41,7 @@ Plug 'janko/vim-test', {'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestLast
 Plug 'HiPhish/rainbow-delimiters.nvim' "treesitter-based bracket colorizing (replaces rainbow)
 Plug 'mg979/vim-visual-multi' "multiple cursors
 Plug 'tpope/vim-surround' "surround your text effectively
-Plug 'jiangmiao/auto-pairs' "auto pairing improved
+Plug 'windwp/nvim-autopairs' "treesitter-aware auto pairing
 Plug 'folke/flash.nvim', {'branch': 'main'} "jump anywhere (replaces easymotion)
 
 call plug#end()

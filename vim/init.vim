@@ -8,19 +8,16 @@ if filereadable(expand("~/.config/nvim/vimrc.bundles"))
   source ~/.config/nvim/vimrc.bundles
 endif
 set rtp^=/usr/share/vim/vimfiles/
-syntax on
 set completeopt=menuone,noinsert,noselect
 set splitright
 set splitbelow
 set number
 set relativenumber
-set hlsearch
 set incsearch
 set magic
 set smarttab
 set autoindent
 set smartindent
-set showmatch "Highlights matching parentheses
 set autoread
 set tabstop=2 softtabstop=2
 set nowrap
@@ -30,7 +27,7 @@ set cmdheight=1
 set scrolloff=10 "start scrolling down / up when you are 10 lines away
 set shiftwidth=2
 set nohlsearch "remove highlight from text after search 
-set hidden "navigate away from buffers without saving them, takes a little bit more RAM but basically peanuts compared to VS code
+set lazyredraw
 set ignorecase "ignore case sensitivity while searching
 set smartcase 
 "set signcolumn=yes
@@ -124,11 +121,7 @@ nnoremap J mzJ`z
 
 "scrooloose/nerdtree
 map <leader>e :NERDTreeToggle<cr>
-" auto refresh nerd tree for when a file is added / removed
-autocmd BufEnter NERD_tree_* | execute 'normal R' 
-" show dotfiles in NERDTree
 let NERDTreeShowHidden=1
-" ignore .git directory in nerd tree
 let NERDTreeIgnore=['\.git$']
 
 " szw/vim-maximizer - to maximize the split
@@ -143,8 +136,14 @@ let g:neoterm_term_per_tab = 1
 nnoremap <C-t> :Ttoggle<CR>
 tnoremap <C-t> <C-\><C-n>:Ttoggle<CR>
 
-" built-in highlighted yank (nvim 0.11+)
-au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=200})
+augroup vimrc
+  autocmd!
+  autocmd BufEnter NERD_tree_* | execute 'normal R'
+  autocmd TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=200})
+  autocmd FileType go nmap <leader>gb :<C-u>call <SID>build_go_files()<CR>
+  autocmd FileType go nmap <leader>gr  <Plug>(go-run)
+  autocmd FileType go nmap <leader>gt  <Plug>(go-test)
+augroup END
 
 " nvim-telescope/telescope.nvim
 nnoremap <C-p> <cmd>Telescope find_files<cr>
@@ -160,13 +159,16 @@ nnoremap <leader>st :Telescope git_stash<cr>
 " reference: https://vi.stackexchange.com/questions/38690/change-the-keys-for-accepting-coc-dropdown
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+inoremap <silent><expr> <S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-"ignore node modules for live grep
 lua << EOF
 require('telescope').setup{
   defaults = { file_ignore_patterns = {"node_modules",".git"} },
-  pickers = { find_files = { hidden = true } }
+  pickers = { find_files = { hidden = true } },
+  extensions = { fzf = { fuzzy = true, override_generic_sorter = true, override_file_sorter = true } },
 }
+require('telescope').load_extension('fzf')
 EOF
 
 nnoremap <leader>b :Telescope buffers <CR>
@@ -267,10 +269,6 @@ function! s:build_go_files()
   endif
 endfunction
 
-autocmd FileType go nmap <leader>gb :<C-u>call <SID>build_go_files()<CR>
-autocmd FileType go nmap <leader>gr  <Plug>(go-run)
-autocmd FileType go nmap <leader>gt  <Plug>(go-test)
-
 "jreybert/vimagit
 nnoremap <leader>m :Magit <cr>
 
@@ -284,4 +282,22 @@ nnoremap <Leader>f <cmd>lua require('flash').jump()<CR>
 xnoremap <Leader>f <cmd>lua require('flash').jump()<CR>
 nnoremap , <cmd>lua require('flash').treesitter()<CR>
 xnoremap , <cmd>lua require('flash').treesitter()<CR>
+
+" nvim-treesitter (replaces regex-based syntax highlighting)
+lua << EOF
+require('nvim-treesitter').setup({
+  ensure_installed = { "javascript", "typescript", "json", "go", "lua", "html", "css", "yaml", "markdown", "java" },
+})
+vim.api.nvim_create_autocmd("FileType", {
+  group = vim.api.nvim_create_augroup("treesitter_start", { clear = true }),
+  callback = function()
+    pcall(vim.treesitter.start)
+  end,
+})
+EOF
+
+" windwp/nvim-autopairs (treesitter-aware)
+lua << EOF
+require('nvim-autopairs').setup({ check_ts = true })
+EOF
 
