@@ -48,6 +48,7 @@ nnoremap yw mz"+yiw`z
 """ Navigation
 sethandler <c-j> a:vim
 sethandler <c-k> a:vim
+sethandler <D-l> a:vim
 nnoremap <c-h> :action ActivateProjectToolWindow<CR>
 nnoremap <c-w>h :action ActivateProjectToolWindow<CR>
 nnoremap <c-l> <c-w>l
@@ -107,4 +108,8 @@ let g:highlightedyank_highlight_duration = "1000"
 let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
 
 " Multi selection
-" nnoremap <C-n> :action SelectNextOccurrence<cr>
+nnoremap <C-n> :action SelectNextOccurrence<cr>
+
+" Claude Code (Anthropic plugin) - open chat, or send selection to Claude
+nmap <D-l> :action com.anthropic.code.plugin.actions.OpenClaudeInTerminalAction<cr>
+vmap <D-l> :action com.anthropic.code.plugin.actions.SendToClaudeAction<cr>
