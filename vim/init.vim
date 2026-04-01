@@ -296,6 +296,10 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 EOF
 
+" Copy @filepath#Lstart-end to system clipboard from visual mode
+" Usage: visually select lines, then press Ctrl+L
+vnoremap <C-l> :<C-u>let @+ = '@' . expand('%') . '#L' . line("'<") . '-' . line("'>")<CR>
+
 " windwp/nvim-autopairs (treesitter-aware)
 lua << EOF
 require('nvim-autopairs').setup({ check_ts = true })
