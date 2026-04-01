@@ -113,3 +113,6 @@ nnoremap <C-n> :action SelectNextOccurrence<cr>
 " Claude Code (Anthropic plugin) - open chat, or send selection to Claude
 nmap <D-l> :action com.anthropic.code.plugin.actions.OpenClaudeInTerminalAction<cr>
 vmap <D-l> :action com.anthropic.code.plugin.actions.SendToClaudeAction<cr>
+
+" Copy @filepath#Lstart-end to system clipboard from visual mode
+vnoremap <C-l> :<C-u>let @+ = '@' . expand('%') . '#L' . line("'<") . '-' . line("'>")<CR>gv
