@@ -47,9 +47,12 @@ bindkey ^P fzf-cd-widget
 alias d="dirs -v"
 for index ({1..15}) alias "$index"="cd +${index}"; unset index 
 export FZF_ALT_C_COMMAND="fd --full-path ~/. ~/Desktop ~/Downloads ~/Documents ~/dotfiles ~/.config ~/.ssh ~/IdeaProjects --type d"
+
 gcoo() {
-  git checkout "$(git branch --all | fzf | tr -d '[:space:]')"
+  branch=$(git branch --sort=-committerdate | fzf | tr -d '[:space:]')
+  git checkout "${branch#remotes/origin/}"
 }
+
 zle -N gcoo
 bindkey "^G^B" gcoo
 
