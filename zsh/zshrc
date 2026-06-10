@@ -73,3 +73,22 @@ alias sshv="get_ssh_string $1"
 ssh-add ~/.ssh/id_rsa &> /dev/null
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Git worktree helper — usage: worktree
+worktree() {
+  local folder branch
+
+  echo -n "Worktree folder name: "
+  read folder
+  [[ -z "$folder" ]] && { echo "Aborted: no folder name given."; return 1; }
+
+  branch=$(git branch -a --format='%(refname:short)' \
+    | sed 's|^origin/||' \
+    | sort -u \
+    | fzf --prompt="Branch to checkout: " --height=40% --reverse --preview='git log --oneline -10 {1} 2>/dev/null')
+  [[ -z "$branch" ]] && { echo "Aborted: no branch selected."; return 1; }
+
+  git checkout "$branch" \
+    && git worktree add -b "$folder" "../$folder" "$branch" \
+    && cd "../$folder"
+}
