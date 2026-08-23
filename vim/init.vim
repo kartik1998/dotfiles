@@ -162,15 +162,6 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
 inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 inoremap <silent><expr> <S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-lua << EOF
-require('telescope').setup{
-  defaults = { file_ignore_patterns = {"node_modules",".git"} },
-  pickers = { find_files = { hidden = true } },
-  extensions = { fzf = { fuzzy = true, override_generic_sorter = true, override_file_sorter = true } },
-}
-require('telescope').load_extension('fzf')
-EOF
-
 nnoremap <leader>b :Telescope buffers <CR>
 "nnoremap <leader>fh :Telescope help_tags<cr>
 
@@ -210,21 +201,6 @@ require('lualine').setup {
 EOF
 nnoremap <leader>[ :bprevious<CR>
 nnoremap <leader>] :bnext<CR>
-
-" HiPhish/rainbow-delimiters.nvim (treesitter-based bracket colorizing)
-lua << EOF
-local rainbow_delimiters = require('rainbow-delimiters')
-vim.g.rainbow_delimiters = {
-  strategy = { [''] = rainbow_delimiters.strategy['global'] },
-  query = { [''] = 'rainbow-delimiters' },
-  highlight = {
-    'RainbowDelimiterBlue',
-    'RainbowDelimiterYellow',
-    'RainbowDelimiterGreen',
-    'RainbowDelimiterViolet',
-  },
-}
-EOF
 
 " neoclide/coc.nvim
 
@@ -273,35 +249,65 @@ endfunction
 nnoremap <leader>m :Magit <cr>
 
 " folke/flash.nvim (jump anywhere)
-lua << EOF
-require('flash').setup({
-  modes = { char = { enabled = true } },
-})
-EOF
 nnoremap <Leader>f <cmd>lua require('flash').jump()<CR>
 xnoremap <Leader>f <cmd>lua require('flash').jump()<CR>
 nnoremap , <cmd>lua require('flash').treesitter()<CR>
 xnoremap , <cmd>lua require('flash').treesitter()<CR>
 
-" nvim-treesitter (replaces regex-based syntax highlighting)
-lua << EOF
-require('nvim-treesitter').setup({
-  ensure_installed = { "javascript", "typescript", "json", "go", "lua", "html", "css", "yaml", "markdown", "java" },
-})
-vim.api.nvim_create_autocmd("FileType", {
-  group = vim.api.nvim_create_augroup("treesitter_start", { clear = true }),
-  callback = function()
-    pcall(vim.treesitter.start)
-  end,
-})
-EOF
-
 " Copy @filepath#Lstart-end to system clipboard from visual mode
 " Usage: visually select lines, then press Ctrl+L
 vnoremap <C-l> :<C-u>let @+ = '@' . expand('%') . '#L' . line("'<") . '-' . line("'>")<CR>
 
-" windwp/nvim-autopairs (treesitter-aware)
+" --- Deferred plugin setup: runs once after first screen paint (VimEnter) ---
+" Keeps ~20ms of require()/setup() off the startup critical path.
+augroup DeferredPluginSetup
+  autocmd!
+  autocmd VimEnter * ++once lua DeferredPluginSetup()
+augroup END
+
 lua << EOF
-require('nvim-autopairs').setup({ check_ts = true })
+function DeferredPluginSetup()
+  -- nvim-telescope/telescope.nvim
+  require('telescope').setup{
+    defaults = { file_ignore_patterns = {"node_modules",".git"} },
+    pickers = { find_files = { hidden = true } },
+    extensions = { fzf = { fuzzy = true, override_generic_sorter = true, override_file_sorter = true } },
+  }
+  require('telescope').load_extension('fzf')
+
+  -- HiPhish/rainbow-delimiters.nvim (treesitter-based bracket colorizing)
+  local rainbow_delimiters = require('rainbow-delimiters')
+  vim.g.rainbow_delimiters = {
+    strategy = { [''] = rainbow_delimiters.strategy['global'] },
+    query = { [''] = 'rainbow-delimiters' },
+    highlight = {
+      'RainbowDelimiterBlue',
+      'RainbowDelimiterYellow',
+      'RainbowDelimiterGreen',
+      'RainbowDelimiterViolet',
+    },
+  }
+
+  -- folke/flash.nvim
+  require('flash').setup({
+    modes = { char = { enabled = true } },
+  })
+
+  -- nvim-treesitter (replaces regex-based syntax highlighting)
+  require('nvim-treesitter').setup({
+    ensure_installed = { "javascript", "typescript", "json", "go", "lua", "html", "css", "yaml", "markdown", "java" },
+  })
+  vim.api.nvim_create_autocmd("FileType", {
+    group = vim.api.nvim_create_augroup("treesitter_start", { clear = true }),
+    callback = function()
+      pcall(vim.treesitter.start)
+    end,
+  })
+  -- fire treesitter for the buffer already open at startup
+  pcall(vim.treesitter.start)
+
+  -- windwp/nvim-autopairs (treesitter-aware)
+  require('nvim-autopairs').setup({ check_ts = true })
+end
 EOF
 
