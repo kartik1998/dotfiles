@@ -76,19 +76,25 @@ ssh-add ~/.ssh/id_rsa &> /dev/null
 
 # Git worktree helper — usage: worktree
 worktree() {
-  local folder branch
-
-  echo -n "Worktree folder name: "
-  read folder
-  [[ -z "$folder" ]] && { echo "Aborted: no folder name given."; return 1; }
+  local branch project_path wt_dir
 
   branch=$(git branch -a --format='%(refname:short)' \
     | sed 's|^origin/||' \
     | sort -u \
-    | fzf --prompt="Branch to checkout: " --height=40% --reverse --preview='git log --oneline -10 {1} 2>/dev/null')
+    | fzf --prompt="Branch: " --height=40% --reverse --preview='git log --oneline -10 {1} 2>/dev/null')
   [[ -z "$branch" ]] && { echo "Aborted: no branch selected."; return 1; }
 
-  git checkout "$branch" \
-    && git worktree add -b "$folder" "../$folder" "$branch" \
-    && cd "../$folder"
+  project_path=$(cd "$(dirname "$(git rev-parse --git-common-dir)")" && pwd) || return 1
+  wt_dir="$project_path/.claude/worktrees/$branch"
+
+  if [[ -d "$wt_dir" ]]; then
+    echo "Worktree already exists at $wt_dir — resuming."
+    cd "$wt_dir" && claude
+    return
+  fi
+
+  mkdir -p "$(dirname "$wt_dir")" \
+    && git worktree add "$wt_dir" "$branch" \
+    && cd "$wt_dir" \
+    && claude
 }
