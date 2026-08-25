@@ -78,9 +78,10 @@ ssh-add ~/.ssh/id_rsa &> /dev/null
 worktree() {
   local branch project_path wt_dir
 
-  branch=$(git branch -a --format='%(refname:short)' \
+  branch=$(git for-each-ref --sort=-committerdate refs/heads refs/remotes/origin \
+      --format='%(refname:short)' \
     | sed 's|^origin/||' \
-    | sort -u \
+    | awk '!seen[$0]++' \
     | fzf --prompt="Branch: " --height=40% --reverse --preview='git log --oneline -10 {1} 2>/dev/null')
   [[ -z "$branch" ]] && { echo "Aborted: no branch selected."; return 1; }
 
